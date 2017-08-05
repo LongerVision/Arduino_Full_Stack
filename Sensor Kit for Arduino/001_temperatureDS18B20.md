@@ -1,4 +1,4 @@
-# Temperature Sensor DS18B20
+# Temperature Sensor - DS18B20
 
 ## Hardware Wiring
 ![Image](../Examples/sensor-kit-for-arduino/001_DS18B20.jpg)

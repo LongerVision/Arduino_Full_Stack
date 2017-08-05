@@ -1,7 +1,7 @@
-# Tap Sensor
+# Hall Magnetic Sensor
 
 ## Hardware Wiring
-![Image](../Examples/sensor-kit-for-arduino/002_Tap.jpg)
+![Image](../Examples/sensor-kit-for-arduino/003_Hall.jpg)
 
 ## Sketch
 ```
