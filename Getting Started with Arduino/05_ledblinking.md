@@ -3,7 +3,7 @@
 Our first LED example is **LED Blinking**.
 
 ## Hardware Wiring
-![Image](../Examples/00_ledblinking.jpg)
+![Image](../Examples/geek-workshop/studynotes/00_ledblinking.jpg)
 
 ## Sketch
 ```

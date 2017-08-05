@@ -1,7 +1,7 @@
 # LED PWM Fading
 
 ## Hardware Wiring
-![Image](../Examples/05_ledpwmfading.jpg)
+![Image](../Examples/geek-workshop/studynotes/05_ledpwmfading.jpg)
 
 ## Sketch
 ```

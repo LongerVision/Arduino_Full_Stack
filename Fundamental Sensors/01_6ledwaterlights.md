@@ -3,7 +3,7 @@
 In our first class, a single LED example was given. Now, we'll discuss a bit more about LED control with 6 LED lights.
 
 ## Hardware Wiring
-![Image](../Examples/01_6ledwaterlights.jpg)
+![Image](../Examples/geek-workshop/studynotes/01_6ledwaterlights.jpg)
 
 ## Sketch
 ```

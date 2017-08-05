@@ -1,7 +1,7 @@
 # Photoresistor
 
 ## Hardware Wiring
-![Image](../Examples/06_buttondice.jpg)
+![Image](../Examples/geek-workshop/studynotes/06_buttondice.jpg)
 
 ## Sketch
 ```
