@@ -1,1 +1,1 @@
-# DC  Motor
+# DC Motor
