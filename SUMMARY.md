@@ -17,6 +17,7 @@
     * [Infrared Emitter and Receiver](Sensor Kit for Arduino/005_infrared.md)
     * [Passive Buzzer](Sensor Kit for Arduino/006_passivebuzzer.md)
     * [Laser Emitter](Sensor Kit for Arduino/007_laseremitter.md)
+    * [SMD RGB](Sensor Kit for Arduino/008_smdrgb.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
