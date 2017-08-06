@@ -13,9 +13,9 @@ void setup()
 void loop() {
   digitalWrite(13, HIGH); // 打开激光头
   delay(1000);
-  // 延时一秒
+  // Delay 1 second
   digitalWrite(13, LOW); // 关闭激光头
   delay(1000);
-  // 延时一秒
+  // Delay 1 second
 }
 ```
