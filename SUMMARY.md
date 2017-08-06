@@ -14,6 +14,7 @@
     * [Tap Sensor](Sensor Kit for Arduino/002_tap.md)
     * [Hall Magnetic Sensor](Sensor Kit for Arduino/003_hallmagnetic.md)
     * [Button](Sensor Kit for Arduino/004_button.md)
+    * [Infrared Emitter and Receiver](Sensor Kit for Arduino/005_infrared.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
