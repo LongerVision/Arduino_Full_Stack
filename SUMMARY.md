@@ -18,6 +18,7 @@
     * [Passive Buzzer](Sensor Kit for Arduino/006_passivebuzzer.md)
     * [Laser Emitter](Sensor Kit for Arduino/007_laseremitter.md)
     * [LED SMD RGB](Sensor Kit for Arduino/008_led_smdrgb.md)
+    * [LED Red Green GND-Shared](Sensor Kit for Arduino/009_led_rg.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
