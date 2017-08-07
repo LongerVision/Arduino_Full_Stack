@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Infrared Emitter and Receiver · GitBook</title>
+        <title>Active Buzzer · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="006_passivebuzzer.html" />
+    <link rel="next" href="../More Discussions on Sensors/" />
     
     
-    <link rel="prev" href="004_button.html" />
+    <link rel="prev" href="009_led_rg.html" />
     
 
     </head>
@@ -259,7 +259,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.5" data-path="005_infrared.html">
+        <li class="chapter " data-level="2.2.5" data-path="005_infrared.html">
             
                 <a href="005_infrared.html">
             
@@ -324,7 +324,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.10" data-path="010_activebuzzer.html">
+        <li class="chapter active" data-level="2.2.10" data-path="010_activebuzzer.html">
             
                 <a href="010_activebuzzer.html">
             
@@ -669,7 +669,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Infrared Emitter and Receiver</a>
+        <a href=".." >Active Buzzer</a>
     </h1>
 </div>
 
@@ -684,40 +684,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="infrared-controller">Infrared Controller</h1>
+                                <h1 id="active-buzzer">Active Buzzer</h1>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
-<p><img src="../Examples/sensor-kit-for-arduino/005_infrared.jpg" alt="Image"></p>
+<p><img src="../Examples/sensor-kit-for-arduino/010_activebuzzer.jpg" alt="Image"></p>
 <h2 id="sketch">Sketch</h2>
 <h3 id="emit">Emit</h3>
-<pre><code>#include &lt;IRremote.h&gt;
-IRsend irsend;
-void setup()
-{
-  Serial.begin(9600);
+<pre><code>int speakerPin = 8;//&#x63A7;&#x5236;&#x5587;&#x53ED;&#x7684;&#x5F15;&#x811A;
+int potPin = 4;//&#x63A7;&#x5236;&#x53EF;&#x8C03;&#x7535;&#x963B;&#x5668;&#x7684;&#x5F15;&#x811A;
+int value = 0;
+void setup() {
+  pinMode(speakerPin, OUTPUT);
 }
 void loop() {
-  for (int i = 0; i &lt; 50; i++) {
-    irsend.sendSony(0xa90, 12); // Sony TV power code
-    delay(40);
-  }
-}
-</code></pre><h3 id="receive">Receive</h3>
-<pre><code>#include &lt;IRremote.h&gt;
-int RECV_PIN = 11; //define input pin on Arduino
-IRrecv irrecv(RECV_PIN);
-decode_results results;
-void setup()
-{
-  Serial.begin(9600);
-  irrecv.enableIRIn(); // Start the receiver
-}
-void loop() {
-  irrecv.decode(&amp;results);
-  Serial.println(results.value, HEX);
-if (irrecv.decode(&amp;results)) {
-  Serial.println(results.value, HEX);
-  irrecv.resume(); // Receive the next value
-  }
+  value = analogRead(potPin);//&#x8BFB;&#x7535;&#x963B;&#x5668;&#x5F15;&#x811A;&#x7684;&#x503C;
+  digitalWrite(speakerPin, HIGH);
+  delay(value);//&#x8C03;&#x8282;&#x5587;&#x53ED;&#x54CD;&#x7684;&#x65F6;&#x95F4;;
+  digitalWrite(speakerPin, LOW);
+  delay(value);//&#x8C03;&#x8282;&#x5587;&#x53ED;&#x4E0D;&#x54CD;&#x7684;&#x65F6;&#x95F4;;
 }
 </code></pre>
                                 
@@ -746,12 +729,12 @@ if (irrecv.decode(&amp;results)) {
 
             
                 
-                <a href="004_button.html" class="navigation navigation-prev " aria-label="Previous page: Button">
+                <a href="009_led_rg.html" class="navigation navigation-prev " aria-label="Previous page: LED Red Green GND-Shared">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="006_passivebuzzer.html" class="navigation navigation-next " aria-label="Next page: Passive Buzzer">
+                <a href="../More Discussions on Sensors/" class="navigation navigation-next " aria-label="Next page: More Discussions on Sensors">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -762,7 +745,7 @@ if (irrecv.decode(&amp;results)) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Infrared Emitter and Receiver","level":"2.2.5","depth":2,"next":{"title":"Passive Buzzer","level":"2.2.6","depth":2,"path":"Sensor Kit for Arduino/006_passivebuzzer.md","ref":"Sensor Kit for Arduino/006_passivebuzzer.md","articles":[]},"previous":{"title":"Button","level":"2.2.4","depth":2,"path":"Sensor Kit for Arduino/004_button.md","ref":"Sensor Kit for Arduino/004_button.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sensor Kit for Arduino/005_infrared.md","mtime":"2017-08-06T09:38:01.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-07T08:52:25.878Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Active Buzzer","level":"2.2.10","depth":2,"next":{"title":"More Discussions on Sensors","level":"2.3","depth":1,"path":"More Discussions on Sensors/README.md","ref":"More Discussions on Sensors/README.md","articles":[{"title":"6 LED Water Lights","level":"2.3.1","depth":2,"path":"More Discussions on Sensors/01_6ledwaterlights.md","ref":"More Discussions on Sensors/01_6ledwaterlights.md","articles":[]},{"title":"Passive Buzzer","level":"2.3.2","depth":2,"path":"More Discussions on Sensors/02_passivebuzzer.md","ref":"More Discussions on Sensors/02_passivebuzzer.md","articles":[]},{"title":"Nixie Light LG5011BSR","level":"2.3.3","depth":2,"path":"More Discussions on Sensors/03_nixielightLG5011BSR.md","ref":"More Discussions on Sensors/03_nixielightLG5011BSR.md","articles":[]},{"title":"Button","level":"2.3.4","depth":2,"path":"More Discussions on Sensors/04_button.md","ref":"More Discussions on Sensors/04_button.md","articles":[]},{"title":"LED PWM Fading","level":"2.3.5","depth":2,"path":"More Discussions on Sensors/05_ledpwmfading.md","ref":"More Discussions on Sensors/05_ledpwmfading.md","articles":[]},{"title":"Digital Dice","level":"2.3.6","depth":2,"path":"More Discussions on Sensors/06_digitaldice.md","ref":"More Discussions on Sensors/06_digitaldice.md","articles":[]},{"title":"Photoresistor","level":"2.3.7","depth":2,"path":"More Discussions on Sensors/07_photoresistor.md","ref":"More Discussions on Sensors/07_photoresistor.md","articles":[]},{"title":"Crystal Display 1602A","level":"2.3.8","depth":2,"path":"More Discussions on Sensors/08_crystaldisplay1602A.md","ref":"More Discussions on Sensors/08_crystaldisplay1602A.md","articles":[]},{"title":"Liquid Crystal Display Thermometer LM35","level":"2.3.9","depth":2,"path":"More Discussions on Sensors/09_liquidcrystalthermometerLM35.md","ref":"More Discussions on Sensors/09_liquidcrystalthermometerLM35.md","articles":[]}]},"previous":{"title":"LED Red Green GND-Shared","level":"2.2.9","depth":2,"path":"Sensor Kit for Arduino/009_led_rg.md","ref":"Sensor Kit for Arduino/009_led_rg.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sensor Kit for Arduino/010_activebuzzer.md","mtime":"2017-08-07T08:52:52.695Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-07T08:52:25.878Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
