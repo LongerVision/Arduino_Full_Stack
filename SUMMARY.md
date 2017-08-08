@@ -22,6 +22,7 @@
     * [Active Buzzer](Sensor Kit for Arduino/010_activebuzzer.md)
     * [Analog Thermister](Sensor Kit for Arduino/011_analogthermist.md)
     * [Temperature and Humidity Sensor](Sensor Kit for Arduino/012_DHT11.md)
+    * [LED RGB GND-Shared](Sensor Kit for Arduino/013_led_rgb.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
