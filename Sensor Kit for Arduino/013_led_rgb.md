@@ -1,4 +1,4 @@
-# Temperature and Humidity Sensor
+# LED RGB
 
 ## Hardware Wiring
 ![Image](../Examples/sensor-kit-for-arduino/013_led_rgb.jpg)
