@@ -27,6 +27,7 @@
     * [Photoresistor](Sensor Kit for Arduino/015_photoresistor.md)
     * [Relay](Sensor Kit for Arduino/016_relay.md)
     * [Switch - Ball](Sensor Kit for Arduino/017_switch_ball.md)
+    * [Mini Reed](Sensor Kit for Arduino/018_minireed.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
