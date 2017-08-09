@@ -29,6 +29,7 @@
     * [Switch - Ball](Sensor Kit for Arduino/017_switch_ball.md)
     * [Mini Reed](Sensor Kit for Arduino/018_minireed.md)
     * [Infrared Remote Control](Sensor Kit for Arduino/019_infrared_controller.md)
+    * [Joystick](Sensor Kit for Arduino/020_joystick.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
