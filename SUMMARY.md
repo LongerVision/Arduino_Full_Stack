@@ -31,6 +31,7 @@
     * [Infrared Remote Control](Sensor Kit for Arduino/019_infrared_controller.md)
     * [Joystick](Sensor Kit for Arduino/020_joystick.md)
     * [Linear Hall Magnetic Sensor](Sensor Kit for Arduino/021_linearhall.md)
+    * [Reed](Sensor Kit for Arduino/022_reed.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
