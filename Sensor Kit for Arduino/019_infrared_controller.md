@@ -1,4 +1,4 @@
-# Relay
+# Infrared Controller
 
 ## Hardware Wiring
 ![Image](../Examples/sensor-kit-for-arduino/019_infrared_controller.jpg)
