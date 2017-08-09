@@ -1,4 +1,4 @@
-# Relay
+# Mini Reed
 
 ## Hardware Wiring
 ![Image](../Examples/sensor-kit-for-arduino/018_minireed.jpg)
