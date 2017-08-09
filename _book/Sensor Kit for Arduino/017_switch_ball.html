@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>LED SMD RGB · GitBook</title>
+        <title>Switch - Ball · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="009_led_rg.html" />
+    <link rel="next" href="../More Discussions on Sensors/" />
     
     
-    <link rel="prev" href="007_laseremitter.html" />
+    <link rel="prev" href="016_relay.html" />
     
 
     </head>
@@ -298,7 +298,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.8" data-path="008_led_smdrgb.html">
+        <li class="chapter " data-level="2.2.8" data-path="008_led_smdrgb.html">
             
                 <a href="008_led_smdrgb.html">
             
@@ -415,7 +415,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.17" data-path="017_switch_ball.html">
+        <li class="chapter active" data-level="2.2.17" data-path="017_switch_ball.html">
             
                 <a href="017_switch_ball.html">
             
@@ -760,7 +760,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >LED SMD RGB</a>
+        <a href=".." >Switch - Ball</a>
     </h1>
 </div>
 
@@ -775,41 +775,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="led-smd-rgb">LED SMD RGB</h1>
+                                <h1 id="relay">Relay</h1>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
-<p><img src="../Examples/sensor-kit-for-arduino/008_led_smdrgb.jpg" alt="Image"></p>
+<p><img src="../Examples/sensor-kit-for-arduino/017_switch_ball.jpg" alt="Image"></p>
 <h2 id="sketch">Sketch</h2>
 <h3 id="emit">Emit</h3>
-<pre><code>int redpin = 11; //select the pin for the red LED
-int bluepin =10; // select the pin for the  blue LED
-int greenpin =9;// select the pin for the green LED
-
-int val;
-
-void setup() {
-  pinMode(redpin, OUTPUT);
-  pinMode(bluepin, OUTPUT);
-  pinMode(greenpin, OUTPUT);
-  Serial.begin(9600);
-}
-
-void loop() 
+<pre><code>int Led=13;//&#x5B9A;&#x4E49;LED &#x63A5;&#x53E3;
+int buttonpin=3; //&#x5B9A;&#x4E49;&#x503E;&#x659C;&#x5F00;&#x5173;&#x4F20;&#x611F;&#x5668;&#x63A5;&#x53E3;
+int val;//&#x5B9A;&#x4E49;&#x6570;&#x5B57;&#x53D8;&#x91CF;val
+void setup()
 {
-  for(val=255; val&gt;0; val--)
+  pinMode(Led,OUTPUT);//&#x5B9A;&#x4E49;LED &#x4E3A;&#x8F93;&#x51FA;&#x63A5;&#x53E3;
+  pinMode(buttonpin,INPUT);//&#x5B9A;&#x4E49;&#x503E;&#x659C;&#x5F00;&#x5173;&#x4F20;&#x611F;&#x5668;&#x4E3A;&#x8F93;&#x51FA;&#x63A5;&#x53E3;
+}
+void loop()
+{
+  val=digitalRead(buttonpin);//&#x5C06;&#x6570;&#x5B57;&#x63A5;&#x53E3;3&#x7684;&#x503C;&#x8BFB;&#x53D6;&#x8D4B;&#x7ED9;val
+  if(val==HIGH)//&#x5F53;&#x503E;&#x659C;&#x5F00;&#x5173;&#x4F20;&#x611F;&#x5668;&#x68C0;&#x6D4B;&#x6709;&#x4FE1;&#x53F7;&#x65F6;&#xFF0C;LED &#x95EA;&#x70C1;
   {
-    analogWrite(11, val);
-    analogWrite(10, 255-val);
-    analogWrite(9, 128-val);
-    delay(1); 
+    digitalWrite(Led,HIGH);
   }
-  for(val=0; val&lt;255; val++)
+  else
   {
-    analogWrite(11, val);
-    analogWrite(10, 255-val);
-    analogWrite(9, 128-val);
-    delay(1); 
+    digitalWrite(Led,LOW);
   }
-  Serial.println(val, DEC);
 }
 </code></pre>
                                 
@@ -838,12 +827,12 @@ void loop()
 
             
                 
-                <a href="007_laseremitter.html" class="navigation navigation-prev " aria-label="Previous page: Laser Emitter">
+                <a href="016_relay.html" class="navigation navigation-prev " aria-label="Previous page: Relay">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="009_led_rg.html" class="navigation navigation-next " aria-label="Next page: LED Red Green GND-Shared">
+                <a href="../More Discussions on Sensors/" class="navigation navigation-next " aria-label="Next page: More Discussions on Sensors">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -854,7 +843,7 @@ void loop()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"LED SMD RGB","level":"2.2.8","depth":2,"next":{"title":"LED Red Green GND-Shared","level":"2.2.9","depth":2,"path":"Sensor Kit for Arduino/009_led_rg.md","ref":"Sensor Kit for Arduino/009_led_rg.md","articles":[]},"previous":{"title":"Laser Emitter","level":"2.2.7","depth":2,"path":"Sensor Kit for Arduino/007_laseremitter.md","ref":"Sensor Kit for Arduino/007_laseremitter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sensor Kit for Arduino/008_led_smdrgb.md","mtime":"2017-08-07T05:02:27.667Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-09T03:58:49.758Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Switch - Ball","level":"2.2.17","depth":2,"next":{"title":"More Discussions on Sensors","level":"2.3","depth":1,"path":"More Discussions on Sensors/README.md","ref":"More Discussions on Sensors/README.md","articles":[{"title":"6 LED Water Lights","level":"2.3.1","depth":2,"path":"More Discussions on Sensors/01_6ledwaterlights.md","ref":"More Discussions on Sensors/01_6ledwaterlights.md","articles":[]},{"title":"Passive Buzzer","level":"2.3.2","depth":2,"path":"More Discussions on Sensors/02_passivebuzzer.md","ref":"More Discussions on Sensors/02_passivebuzzer.md","articles":[]},{"title":"Nixie Light LG5011BSR","level":"2.3.3","depth":2,"path":"More Discussions on Sensors/03_nixielightLG5011BSR.md","ref":"More Discussions on Sensors/03_nixielightLG5011BSR.md","articles":[]},{"title":"Button","level":"2.3.4","depth":2,"path":"More Discussions on Sensors/04_button.md","ref":"More Discussions on Sensors/04_button.md","articles":[]},{"title":"LED PWM Fading","level":"2.3.5","depth":2,"path":"More Discussions on Sensors/05_ledpwmfading.md","ref":"More Discussions on Sensors/05_ledpwmfading.md","articles":[]},{"title":"Digital Dice","level":"2.3.6","depth":2,"path":"More Discussions on Sensors/06_digitaldice.md","ref":"More Discussions on Sensors/06_digitaldice.md","articles":[]},{"title":"Photoresistor","level":"2.3.7","depth":2,"path":"More Discussions on Sensors/07_photoresistor.md","ref":"More Discussions on Sensors/07_photoresistor.md","articles":[]},{"title":"Crystal Display 1602A","level":"2.3.8","depth":2,"path":"More Discussions on Sensors/08_crystaldisplay1602A.md","ref":"More Discussions on Sensors/08_crystaldisplay1602A.md","articles":[]},{"title":"Liquid Crystal Display Thermometer LM35","level":"2.3.9","depth":2,"path":"More Discussions on Sensors/09_liquidcrystalthermometerLM35.md","ref":"More Discussions on Sensors/09_liquidcrystalthermometerLM35.md","articles":[]}]},"previous":{"title":"Relay","level":"2.2.16","depth":2,"path":"Sensor Kit for Arduino/016_relay.md","ref":"Sensor Kit for Arduino/016_relay.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sensor Kit for Arduino/017_switch_ball.md","mtime":"2017-08-09T05:18:49.223Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-09T03:58:49.758Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
