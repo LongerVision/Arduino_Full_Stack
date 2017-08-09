@@ -1,4 +1,4 @@
-# Relay
+# Switch - Ball
 
 ## Hardware Wiring
 ![Image](../Examples/sensor-kit-for-arduino/017_switch_ball.jpg)
