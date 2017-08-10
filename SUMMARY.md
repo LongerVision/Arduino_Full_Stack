@@ -39,6 +39,8 @@
     * [Shock Sensor](Sensor Kit for Arduino/027_shock.md)
     * [IR Obstacle Avoidance](Sensor Kit for Arduino/028_ir_obstacleavoidance.md)
     * [IR Line Tracking](Sensor Kit for Arduino/029_ir_linetracking.md)
+    * [LED 7 Colors](Sensor Kit for Arduino/030_led_7colors.md)
+    * [Analog Hall](Sensor Kit for Arduino/031_analoghall.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
