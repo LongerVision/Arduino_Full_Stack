@@ -42,6 +42,7 @@
     * [LED 7 Colors](Sensor Kit for Arduino/030_led_7colors.md)
     * [Analog Hall](Sensor Kit for Arduino/031_analoghall.md)
     * [Touch](Sensor Kit for Arduino/032_touch.md)
+    * [Microphone Big Sound](Sensor Kit for Arduino/033_microphone_bigsound.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
