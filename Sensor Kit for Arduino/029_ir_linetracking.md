@@ -1,4 +1,4 @@
-# IR Obstacle Avoidance
+# IR Line Tracking
 
 ## Hardware Wiring
 ![Image](../Examples/sensor-kit-for-arduino/029_ir_linetracking.jpg)
