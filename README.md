@@ -1,4 +1,4 @@
-# Introduction
+# Preface
 
 **Arduino Full Stack** is an open source book entirely written by [NanJing Longer Vision Robot Technology Ltd.](http://www.longervisionrobot.com). In this book, over 50 examples are to be discussed for the Arduino applications. You will get familiar with:
 
