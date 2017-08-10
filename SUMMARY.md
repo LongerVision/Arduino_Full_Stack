@@ -36,6 +36,7 @@
     * [LED Light Cup](Sensor Kit for Arduino/024_led_lightcup.md)
     * [Digital Temperature](Sensor Kit for Arduino/025_digitaltemperature.md)
     * [LED Red Green GND-Shared](Sensor Kit for Arduino/026_led_rg.md)
+    * [Shock Sensor](Sensor Kit for Arduino/027_shock.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
