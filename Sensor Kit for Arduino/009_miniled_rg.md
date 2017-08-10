@@ -1,7 +1,7 @@
-# LED Red Green
+# Mini LED Red Green
 
 ## Hardware Wiring
-![Image](../Examples/sensor-kit-for-arduino/009_led_rg.jpg)
+![Image](../Examples/sensor-kit-for-arduino/009_miniled_rg.jpg)
 
 ## Sketch
 ### Emit
