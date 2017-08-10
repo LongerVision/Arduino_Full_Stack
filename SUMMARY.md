@@ -43,6 +43,7 @@
     * [Analog Hall](Sensor Kit for Arduino/031_analoghall.md)
     * [Touch](Sensor Kit for Arduino/032_touch.md)
     * [Microphone Big Sound](Sensor Kit for Arduino/033_microphone_bigsound.md)
+    * [Microphone](Sensor Kit for Arduino/034_microphone.md)
 3. [More Discussions on Sensors](More Discussions on Sensors/README.md)
     * [6 LED Water Lights](More Discussions on Sensors/01_6ledwaterlights.md)
     * [Passive Buzzer](More Discussions on Sensors/02_passivebuzzer.md)
