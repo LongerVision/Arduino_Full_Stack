@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/007_laseremitter.jpg)
 
 ## Sketch
-### Emit
 ```
 void setup()
 {

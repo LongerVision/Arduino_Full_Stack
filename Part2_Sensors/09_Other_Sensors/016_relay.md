@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/016_relay.jpg)
 
 ## Sketch
-### Emit
 ```
 int relay = 10; //继电器导通触发信号-高电平有效;
 void setup()

@@ -69,5 +69,5 @@
 
 * [Part 4](Part4_MiniAutomatedVehicle/README.md)
 12. [12_Chapter12](Part4_MiniAutomatedVehicle/12_Chapter12/README.md)
-    * [First Step](Part4_MiniAutomatedVehicle/12_Chapter12/Part4_MiniAutomatedVehicle/01_step1.md)
-    * [Second Step](Part4_MiniAutomatedVehicle/12_Chapter12/Part4_MiniAutomatedVehicle/02_step2.md)
+    * [First Step](Part4_MiniAutomatedVehicle/12_Chapter12/01_step1.md)
+    * [Second Step](Part4_MiniAutomatedVehicle/12_Chapter12/02_step2.md)

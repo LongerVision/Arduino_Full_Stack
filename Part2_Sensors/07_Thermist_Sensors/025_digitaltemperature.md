@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/025_digitaltemperature.jpg)
 
 ## Sketch
-### Emit
 ```
 int Led=13;//定义LED 接口
 int buttonpin=3; //定义数字温度传感器接口

@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/015_photoresistor.jpg)
 
 ## Sketch
-### Emit
 ```
 int sensorPin = 2;
 int value = 0;

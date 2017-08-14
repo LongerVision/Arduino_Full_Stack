@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/028_ir_obstacleavoidance.jpg)
 
 ## Sketch
-### Emit
 ```
 int Led=13;//定义LED 接口
 int buttonpin=3; //定义避障传感器接口

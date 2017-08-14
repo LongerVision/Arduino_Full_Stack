@@ -995,7 +995,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.16.1" data-path="../../Part4_MiniAutomatedVehicle/12_Chapter12/Part4_MiniAutomatedVehicle/01_step1.md">
+        <li class="chapter " data-level="2.16.1" data-path="../../Part4_MiniAutomatedVehicle/12_Chapter12/01_step1.md">
             
                 <span>
             
@@ -1008,7 +1008,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.16.2" data-path="../../Part4_MiniAutomatedVehicle/12_Chapter12/Part4_MiniAutomatedVehicle/02_step2.md">
+        <li class="chapter " data-level="2.16.2" data-path="../../Part4_MiniAutomatedVehicle/12_Chapter12/02_step2.md">
             
                 <span>
             
@@ -1072,7 +1072,41 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="stepper-motor">Stepper Motor</h1>
+<h2 id="hardware-wiring">Hardware Wiring</h2>
+<p><img src="../../Examples/geek-workshop/essence/03_stepper.jpg" alt="Image"></p>
+<h2 id="sketch">Sketch</h2>
+<pre><code>// http://blog.sina.com.cn/s/blog_8043e91a0102wiar.html
+//&#x4F7F;&#x7528;arduino IDE&#x81EA;&#x5E26;&#x7684;Stepper.h&#x5E93;&#x6587;&#x4EF6;
+#include &quot;Stepper.h&quot; 
+// &#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x6B65;&#x8FDB;&#x7535;&#x673A;&#x65CB;&#x8F6C;&#x4E00;&#x5708;&#x662F;&#x591A;&#x5C11;&#x6B65;
+#define STEPS 100 
+//&#x8BBE;&#x7F6E;&#x6B65;&#x8FDB;&#x7535;&#x673A;&#x7684;&#x6B65;&#x6570;&#x548C;&#x5F15;&#x811A;&#xFF08;&#x5C31;&#x662F;&#x6CE8;&#x610F;&#x70B9;2&#x91CC;&#x9762;&#x8BF4;&#x7684;&#x9A71;&#x52A8;&#x677F;&#x4E0A;IN0&#xFF5E;IN4&#x8FDE;&#x63A5;&#x7684;&#x56DB;&#x4E2A;&#x6570;&#x5B57;&#x53E3;&#xFF09;&#x3002;
+Stepper stepper(STEPS, 
+8, 
+9, 
+10, 
+11);
 
+void setup() { 
+  // &#x8BBE;&#x7F6E;&#x7535;&#x673A;&#x7684;&#x8F6C;&#x901F;&#xFF1A;&#x6BCF;&#x5206;&#x949F;&#x4E3A;90&#x6B65; 
+  stepper.setSpeed(90); 
+  // &#x521D;&#x59CB;&#x5316;&#x4E32;&#x53E3;&#xFF0C;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x8F93;&#x51FA;&#x4FE1;&#x606F; 
+  Serial.begin(9600);
+}
+
+void loop() { 
+  // &#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x4E00;&#x5468; 
+  Serial.println(&quot;shun&quot;);
+  stepper.step(2048); 
+  //4&#x6B65;&#x6A21;&#x5F0F;&#x4E0B;&#x65CB;&#x8F6C;&#x4E00;&#x5468;&#x7528;2048 &#x6B65;&#x3002; 
+  delay(50); 
+  // &#x9006;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x534A;&#x5468; 
+  Serial.println(&quot;ni&quot;);
+  stepper.step(-1024); 
+  //4&#x6B65;&#x6A21;&#x5F0F;&#x4E0B;&#x65CB;&#x8F6C;&#x4E00;&#x5468;&#x7528;2048 &#x6B65;&#x3002; 
+  delay(50);
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -1115,7 +1149,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Stepper Motor","level":"2.14.3","depth":2,"next":{"title":"Servo Motor","level":"2.14.4","depth":2,"path":"Part3_Motors/11_Motors/04_servomotor.md","ref":"Part3_Motors/11_Motors/04_servomotor.md","articles":[]},"previous":{"title":"AC Motor","level":"2.14.2","depth":2,"path":"Part3_Motors/11_Motors/02_acmotor.md","ref":"Part3_Motors/11_Motors/02_acmotor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part3_Motors/11_Motors/03_steppermotor.md","mtime":"2017-08-14T08:49:14.754Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-12T22:00:05.664Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Stepper Motor","level":"2.14.3","depth":2,"next":{"title":"Servo Motor","level":"2.14.4","depth":2,"path":"Part3_Motors/11_Motors/04_servomotor.md","ref":"Part3_Motors/11_Motors/04_servomotor.md","articles":[]},"previous":{"title":"AC Motor","level":"2.14.2","depth":2,"path":"Part3_Motors/11_Motors/02_acmotor.md","ref":"Part3_Motors/11_Motors/02_acmotor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part3_Motors/11_Motors/03_steppermotor.md","mtime":"2017-08-14T08:51:46.366Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-14T08:52:36.965Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

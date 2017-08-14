@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/024_led_lightcup.jpg)
 
 ## Sketch
-### Emit
 ```
 int LedPinA = 5;
 int LedPinB = 6;

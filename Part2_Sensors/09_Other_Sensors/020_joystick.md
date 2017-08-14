@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/020_joystick.jpg)
 
 ## Sketch
-### Emit
 ```
 int sensorPin = 5;
 int value = 0;

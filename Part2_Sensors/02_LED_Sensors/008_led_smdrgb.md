@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/008_led_smdrgb.jpg)
 
 ## Sketch
-### Emit
 ```
 int redpin = 11; //select the pin for the red LED
 int bluepin =10; // select the pin for the  blue LED

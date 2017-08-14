@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/018_minireed.jpg)
 
 ## Sketch
-### Emit
 ```
 int Led=13;//定义LED 接口
 int buttonpin=3; //定义磁环传感器接口

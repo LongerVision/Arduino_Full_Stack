@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/010_activebuzzer.jpg)
 
 ## Sketch
-### Emit
 ```
 int speakerPin = 8;//控制喇叭的引脚
 int potPin = 4;//控制可调电阻器的引脚

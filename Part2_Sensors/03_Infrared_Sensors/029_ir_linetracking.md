@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/029_ir_linetracking.jpg)
 
 ## Sketch
-### Emit
 ```
 int Led=13;//定义LED 接口
 int buttonpin=3; //定义寻线传感器接口

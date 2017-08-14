@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/014_switch_mercurytilt.jpg)
 
 ## Sketch
-### Emit
 ```
 /*
   Button

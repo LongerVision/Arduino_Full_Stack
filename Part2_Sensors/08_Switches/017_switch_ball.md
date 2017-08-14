@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/017_switch_ball.jpg)
 
 ## Sketch
-### Emit
 ```
 int Led=13;//定义LED 接口
 int buttonpin=3; //定义倾斜开关传感器接口

@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/030_led_7colors.jpg)
 
 ## Sketch
-### Emit
 ```
 /*
   Blink

@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/006_passivebuzzer.jpg)
 
 ## Sketch
-### Emit
 ```
 int buzzer=8;//设置控制蜂鸣器的数字 IO 脚
 void setup()

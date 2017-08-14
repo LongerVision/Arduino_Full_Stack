@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/011_analogthermist.jpg)
 
 ## Sketch
-### Emit
 ```
 #include <math.h>
 double Thermister(int RawADC) {

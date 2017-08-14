@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/009_miniled_rg.jpg)
 
 ## Sketch
-### Emit
 ```
  //Arduino test code:
 int redpin = 11;    // select the pin for the red LED

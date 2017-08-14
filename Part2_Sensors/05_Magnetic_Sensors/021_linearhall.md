@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/021_linearhall.jpg)
 
 ## Sketch
-### Emit
 ```
 int Led=13;//定义LED 接口
 int buttonpin=3; //定义线性霍尔磁力传感器接口

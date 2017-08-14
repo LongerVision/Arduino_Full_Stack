@@ -4,7 +4,6 @@
 ![Image](../../Examples/sensor-kit-for-arduino/027_shock.jpg)
 
 ## Sketch
-### Emit
 ```
 int Led=13;//定义LED 接口
 int Shock=3;//定义震动传感器接口
