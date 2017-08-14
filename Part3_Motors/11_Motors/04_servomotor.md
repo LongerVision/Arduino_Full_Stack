@@ -64,6 +64,7 @@ void stopRobot() {
 
 ### Sketch
 ```
+// The 2nd example
 ```
 
 ## Example 3: Sweep
@@ -72,4 +73,5 @@ void stopRobot() {
 
 ### Sketch
 ```
+// The 3rd example
 ```
