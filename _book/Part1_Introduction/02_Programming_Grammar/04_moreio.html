@@ -1208,8 +1208,13 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="24-more-about-arduino-io">2.4 More about Arduino IO</h1>
+<h2 id="241-pulseinpin-state-timeout">2.4.1 PulseIn(pin, state, timeout);</h2>
 <ul>
-<li>PulseIn(pin, state, timeout);</li>
+<li><strong>brief</strong>: read pulse length.</li>
+<li><strong>pin</strong>: analog IO pin index, must be a value between 0 and 5, corresponding to analog pin A0 ~ A5.</li>
+<li><strong>value</strong>: <strong>HIGH</strong> or <strong>LOW</strong>. <strong>HIGH</strong> refers to a high level pulse, entering and leaving at a high level voltage; <strong>LOW</strong> refers to a low level pulse, entering and leaving at a low level voltage.</li>
+<li><strong>timeout (optional)</strong>: <strong>ms</strong> to wait for the pulse to be completed.</li>
+<li><strong>return</strong>: the length of a pulse, a value in <strong>ms</strong>.</li>
 </ul>
 
                                 
@@ -1254,7 +1259,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.4 More about IO","level":"2.3.4","depth":2,"next":{"title":"2.5 Time Functions","level":"2.3.5","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","articles":[]},"previous":{"title":"2.3 Analog IO","level":"2.3.3","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/03_analogio.md","ref":"Part1_Introduction/02_Programming_Grammar/03_analogio.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1_Introduction/02_Programming_Grammar/04_moreio.md","mtime":"2017-08-18T03:10:01.867Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-18T17:08:53.206Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.4 More about IO","level":"2.3.4","depth":2,"next":{"title":"2.5 Time Functions","level":"2.3.5","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","articles":[]},"previous":{"title":"2.3 Analog IO","level":"2.3.3","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/03_analogio.md","ref":"Part1_Introduction/02_Programming_Grammar/03_analogio.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1_Introduction/02_Programming_Grammar/04_moreio.md","mtime":"2017-08-18T20:22:27.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-18T21:16:10.647Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1262,10 +1267,6 @@
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

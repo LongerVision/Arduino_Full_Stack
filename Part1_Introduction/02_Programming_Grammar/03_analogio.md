@@ -1,9 +1,23 @@
 # 2.3 Arduino Analog IO
 
 ## 2.3.1 analogReference(type);
+* **brief**: set analog reference voltage to a particular value according to different **type**. 
+    - **DEFAULT**: 5 Volt; 
+    - **INTERNAL**: 2.56 Volt
+    - **EXTERNAL**: get the voltage value via **AREF pin**. There must be a 5K ohm pull-up resistor．
+* **type**: **DEFAULT**, **INTERNAL** or **EXTERNAL**.
+* **return**: void.
 
 ## 2.3.2 analogRead(pin);
+* **brief**: read analog voltage from a particular **pin**, at a period about **100US**.
+* **pin**: analog IO pin index, must be a value between 0 and 5, corresponding to analog pin A0 ~ A5.
+* **return**: an integer value between 0 and 1023.
 
 ## 2.3.3 analogWrite(pin, value);
-* **pin**: digital IO pin index, must be a value between 0 and 19, but 2 ~ 13 is preferred. Normally, pin number should be 0 ~ 13. Analog pins A0 ~ A5 can also be adopted, which is according to number 14 ~ 19.
+* **brief**: write voltage **value** to **pin**, by PWM.
+    - Arduino PWM is typically of frequency **490HZ**.
+    - On an Arduino UNO, digital pins 3, 5, 6, 9, 10, 11 with a **~** sign support PWM analog output.
+    - PWM output is of 8 bits, namely, a value between 0 and 255.
+* **pin**: analog IO pin index, must be a value between 0 and 5, corresponding to analog pin A0 ~ A5.
 * **value**: **HIGH** or **LOW**, where **HIGH** is for high level voltage, **LOW** is for low level voltage.
+* **return**: void.
