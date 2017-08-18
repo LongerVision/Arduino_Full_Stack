@@ -1,4 +1,6 @@
-# 2.1 AVR C Gramma
+# 2.1 AVR C Grammar
+
+An implementation of GCC for Atmel AVR microcontrollers is [AVR Libc](http://www.nongnu.org/avr-libc/).
 
 ## Keywords
 * if
@@ -26,18 +28,19 @@
 * %
 
 ## Data Types
-* boolean
-* char
 * byte
+* short
 * int
-* unsigned int
 * long
-* unsigned long
 * float
 * double
+* boolean
+* char
 * string
 * array
 * void
+* unsigned int
+* unsigned long
 
 ## Data Type Conversion
 * char()

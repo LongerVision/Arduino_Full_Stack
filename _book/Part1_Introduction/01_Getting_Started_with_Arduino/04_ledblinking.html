@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1.4 Arduino IDE for Prototyping · GitBook</title>
+        <title>1.4 FIRST Arduino Project - LED Blinking · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="05_ledblinking.html" />
+    <link rel="next" href="../02_Programming_Grammar/" />
     
     
-    <link rel="prev" href="03_community.html" />
+    <link rel="prev" href="03_ide.html" />
     
 
     </head>
@@ -162,12 +162,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="03_community.html">
+        <li class="chapter " data-level="2.2.3" data-path="03_ide.html">
             
-                <a href="03_community.html">
+                <a href="03_ide.html">
             
                     
-                    1.3 Arduino Community and Ecosystem
+                    1.3 Arduino IDE for Prototyping
             
                 </a>
             
@@ -175,25 +175,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.4" data-path="04_ide.html">
+        <li class="chapter active" data-level="2.2.4" data-path="04_ledblinking.html">
             
-                <a href="04_ide.html">
-            
-                    
-                    1.4 Arduino IDE for Prototyping
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2.5" data-path="05_ledblinking.html">
-            
-                <a href="05_ledblinking.html">
+                <a href="04_ledblinking.html">
             
                     
-                    1.5 FIRST Arduino Project - LED Blinking
+                    1.4 FIRST Arduino Project - LED Blinking
             
                 </a>
             
@@ -220,9 +207,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="../02_Programming_Grammar/01_avr_c.html">
+        <li class="chapter " data-level="2.3.1" data-path="../02_Programming_Grammar/01_avr_c_grammar.html">
             
-                <a href="../02_Programming_Grammar/01_avr_c.html">
+                <a href="../02_Programming_Grammar/01_avr_c_grammar.html">
             
                     
                     2.1 AVR C
@@ -1179,7 +1166,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >1.4 Arduino IDE for Prototyping</a>
+        <a href="../.." >1.4 FIRST Arduino Project - LED Blinking</a>
     </h1>
 </div>
 
@@ -1194,13 +1181,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="14-arduino-ide-for-prototyping">1.4 Arduino IDE for Prototyping</h1>
-<p>The most recent Arduino IDE can be downloaded from <a href="http://www.arduino.org/downloads" target="_blank">http://www.arduino.org/downloads</a>. The version that we are using when writing <strong>Arduino Full Stack</strong> is 1.8.3. </p>
-<p><img src="arduino-ide-1-8-3.jpg" alt="Image"></p>
-<p>Default Arduino sketch looks like the following:</p>
-<p><img src="arduinosketch.jpg" alt="Image"></p>
-<p>When Arduino board is connected to the host computer via USB cable, you will be able to see <strong>Arduino/Genuino Uno</strong> is automatically ticked and selected under the menu <strong>Tools-&gt;Board</strong>. And the users have to manually select/tick the port, here in my case is: <strong>Tools-&gt;Port-&gt;/dev/ttyACM0(Arduino/Genuino Uno)</strong>.</p>
-<p>Here, <strong>ttyACM0</strong> is a USB communication <strong>device</strong> (CDC) of sub-type &quot;<strong>abstract control model</strong>&quot; (<strong>ACM</strong>). In UNIX, <strong>tty</strong> is any device that acts like a &quot;<strong>teletype</strong>&quot;, ie, <strong>terminal</strong>.</p>
+                                <h1 id="15-first-arduino-project---led-blinking">1.5 FIRST Arduino Project - LED Blinking</h1>
+<p>Our first LED example is <strong>LED Blinking</strong>.</p>
+<h2 id="hardware-wiring">Hardware Wiring</h2>
+<p><img src="../../Examples/geek-workshop/studynotes/00_ledblinking.jpg" alt="Image"></p>
+<h2 id="sketch">Sketch</h2>
+<pre><code>/*
+  Blink
+  Turns on an LED on for one second, then off for one second, repeatedly.
+
+  This example code is in the public domain.
+ */
+
+// Pin 9 has an LED connected on most Arduino boards.
+// give it a name:
+int led = 9;
+
+// the setup routine runs once when you press reset:
+void setup() {                
+  // initialize the digital pin as an output.
+  pinMode(led, OUTPUT);     
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);               // wait for a second
+  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);               // wait for a second
+}
+</code></pre><h2 id="verify--compile">Verify &amp; Compile</h2>
+<p>In Arduino IDe, to compile the above codes, click <strong>Sketch-&gt;Verify/Compile</strong>; to upload the code onto Arduino board afterwards, click <strong>Sketch-&gt;Upload</strong>.</p>
 
                                 
                                 </section>
@@ -1228,12 +1239,12 @@
 
             
                 
-                <a href="03_community.html" class="navigation navigation-prev " aria-label="Previous page: 1.3 Arduino Community and Ecosystem">
+                <a href="03_ide.html" class="navigation navigation-prev " aria-label="Previous page: 1.3 Arduino IDE for Prototyping">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="05_ledblinking.html" class="navigation navigation-next " aria-label="Next page: 1.5 FIRST Arduino Project - LED Blinking">
+                <a href="../02_Programming_Grammar/" class="navigation navigation-next " aria-label="Next page: Chapter 2. Programming Grammar">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1244,7 +1255,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.4 Arduino IDE for Prototyping","level":"2.2.4","depth":2,"next":{"title":"1.5 FIRST Arduino Project - LED Blinking","level":"2.2.5","depth":2,"path":"Part1_Introduction/01_Getting_Started_with_Arduino/05_ledblinking.md","ref":"Part1_Introduction/01_Getting_Started_with_Arduino/05_ledblinking.md","articles":[]},"previous":{"title":"1.3 Arduino Community and Ecosystem","level":"2.2.3","depth":2,"path":"Part1_Introduction/01_Getting_Started_with_Arduino/03_community.md","ref":"Part1_Introduction/01_Getting_Started_with_Arduino/03_community.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1_Introduction/01_Getting_Started_with_Arduino/04_ide.md","mtime":"2017-08-14T09:02:17.463Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-18T02:40:55.372Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.4 FIRST Arduino Project - LED Blinking","level":"2.2.4","depth":2,"next":{"title":"Chapter 2. Programming Grammar","level":"2.3","depth":1,"path":"Part1_Introduction/02_Programming_Grammar/README.md","ref":"Part1_Introduction/02_Programming_Grammar/README.md","articles":[{"title":"2.1 AVR C","level":"2.3.1","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/01_avr_c_grammar.md","ref":"Part1_Introduction/02_Programming_Grammar/01_avr_c_grammar.md","articles":[]},{"title":"2.2 Digital IO","level":"2.3.2","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/02_digitalio.md","ref":"Part1_Introduction/02_Programming_Grammar/02_digitalio.md","articles":[]},{"title":"2.3 Analog IO","level":"2.3.3","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/03_analogio.md","ref":"Part1_Introduction/02_Programming_Grammar/03_analogio.md","articles":[]},{"title":"2.4 More about IO","level":"2.3.4","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/04_moreio.md","ref":"Part1_Introduction/02_Programming_Grammar/04_moreio.md","articles":[]},{"title":"2.5 Time Functions","level":"2.3.5","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","articles":[]},{"title":"2.6 Interrupt Functions","level":"2.3.6","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md","articles":[]},{"title":"2.7 Serial Communication","level":"2.3.7","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/07_serial_communication.md","ref":"Part1_Introduction/02_Programming_Grammar/07_serial_communication.md","articles":[]},{"title":"2.8 Math Functions","level":"2.3.8","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/08_math_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/08_math_functions.md","articles":[]}]},"previous":{"title":"1.3 Arduino IDE for Prototyping","level":"2.2.3","depth":2,"path":"Part1_Introduction/01_Getting_Started_with_Arduino/03_ide.md","ref":"Part1_Introduction/01_Getting_Started_with_Arduino/03_ide.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1_Introduction/01_Getting_Started_with_Arduino/04_ledblinking.md","mtime":"2017-08-18T05:07:23.156Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-18T04:37:25.187Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
