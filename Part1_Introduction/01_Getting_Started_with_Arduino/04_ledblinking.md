@@ -1,4 +1,4 @@
-# 1.5 FIRST Arduino Project - LED Blinking
+# 1.4 FIRST Arduino Project - LED Blinking
 
 Our first LED example is **LED Blinking**.
 
