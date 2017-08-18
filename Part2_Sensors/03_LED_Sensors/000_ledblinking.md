@@ -1,6 +1,4 @@
-# 1.4 FIRST Arduino Project - LED Blinking
-
-Our first LED example is **LED Blinking**.
+# LED Blinking
 
 ## Hardware Wiring
 ![Image](../../Examples/geek-workshop/studynotes/00_ledblinking.jpg)

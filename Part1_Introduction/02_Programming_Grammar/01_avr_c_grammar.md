@@ -1,6 +1,6 @@
 # 2.1 AVR C Grammar
 
-An implementation of GCC for Atmel AVR microcontrollers is [AVR Libc](http://www.nongnu.org/avr-libc/).
+One of the GCC mplementations for Atmel AVR microcontrollers is [Savannah NonGNU AVR Libc](http://www.nongnu.org/avr-libc/), which is adopted in this course. A full user manual can be found at [http://www.nongnu.org/avr-libc/user-manual/index.html](http://www.nongnu.org/avr-libc/user-manual/index.html).
 
 ## Keywords
 * if
