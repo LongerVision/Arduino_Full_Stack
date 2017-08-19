@@ -14,11 +14,10 @@
     * [2.1 AVR C](Part1_Introduction/02_Programming_Grammar/01_avr_c_grammar.md)
     * [2.2 Digital IO](Part1_Introduction/02_Programming_Grammar/02_digitalio.md)
     * [2.3 Analog IO](Part1_Introduction/02_Programming_Grammar/03_analogio.md)
-    * [2.4 More about IO](Part1_Introduction/02_Programming_Grammar/04_moreio.md)
+    * [2.4 More About IO](Part1_Introduction/02_Programming_Grammar/04_moreio.md)
     * [2.5 Time Functions](Part1_Introduction/02_Programming_Grammar/05_time_functions.md)
     * [2.6 Interrupt Functions](Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md)
-    * [2.7 Serial Communication](Part1_Introduction/02_Programming_Grammar/07_serial_communication.md)
-    * [2.8 Math Functions](Part1_Introduction/02_Programming_Grammar/08_math_functions.md)
+    * [2.7 Communication Classes](Part1_Introduction/02_Programming_Grammar/07_communication_classes.md)
 
 * [Part 2](Part2_Sensors/README.md)
 3. [Chapter 3. LED Sensors](Part2_Sensors/03_LED_Sensors/README.md)
