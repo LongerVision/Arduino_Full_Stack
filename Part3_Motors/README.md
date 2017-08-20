@@ -1,3 +1,3 @@
 # Part 3 - Motors
 
-In this Part, motor.
+In this Part, DC motor, stepper motor, and servo motor for Arduino are to be discussed.

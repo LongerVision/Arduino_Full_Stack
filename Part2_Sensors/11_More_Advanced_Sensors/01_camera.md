@@ -1,8 +1,7 @@
 # Camera - ArduCAM
 
-## Hardware Wiring
-![Image](../../Examples/geek-workshop/essence/01_camera.jpg)
+Camera is one of the most important sensors widely used in various applications. In our Arduino based robotic vehicle, ArduCAM is to be adopted. 
 
-## Sketch
-```
-```
+The course content for ArduCAM is **NOT** to be disclosed. Some online resource can be found at:
+*  [Arducam Official Website](http://www.arducam.com/)
+*  [Arducam github](https://github.com/ArduCAM)
