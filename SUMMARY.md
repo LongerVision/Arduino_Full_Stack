@@ -78,4 +78,10 @@
     * [12.4 Servo Motor](Part3_Motors/12_Motors/04_servomotor.md)
 
 * [Part 4 - Arduino Based Mini Automated Vehicle](Part4_MiniAutomatedVehicle/README.md)
-13. [Chapter13. Build a Mini Automated Vehicle](Part4_MiniAutomatedVehicle/13_Chapter13/README.md)
+13. [Chapter13. Assemble a Mini Automated Vehicle](Part4_MiniAutomatedVehicle/13_Assembling/README.md)
+    * [13.1 4-Wheel DC-Motor Driven](Part4_MiniAutomatedVehicle/13_Assembling/01_4wheel_dcmotor_driven.md)
+    * [13.2 2 Servo Motor for Pan Tilt Control](Part4_MiniAutomatedVehicle/13_Assembling/02_pantilt_servomotor.md)
+14. [Chapter14. Remote Control](Part4_MiniAutomatedVehicle/14_Remote_Control/README.md)
+    * [14.1 IR Remote Control](Part4_MiniAutomatedVehicle/14_Remote_Control/01_ir_remote_control.md)
+    * [14.2 Bluetooth Remote Control](Part4_MiniAutomatedVehicle/14_Remote_Control/02_bluetooth_remote_control.md)
+    * [14.3 Wifi Remote Control](Part4_MiniAutomatedVehicle/14_Remote_Control/03_wifi_remote_control.md)

@@ -1117,16 +1117,106 @@
             
         </li>
     
-        <li class="chapter " data-level="2.17" data-path="../../Part4_MiniAutomatedVehicle/13_Chapter13/">
+        <li class="chapter " data-level="2.17" data-path="../../Part4_MiniAutomatedVehicle/13_Assembling/">
             
-                <a href="../../Part4_MiniAutomatedVehicle/13_Chapter13/">
+                <a href="../../Part4_MiniAutomatedVehicle/13_Assembling/">
             
                     
-                    Chapter13. Build a Mini Automated Vehicle
+                    Chapter13. Assemble a Mini Automated Vehicle
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.17.1" data-path="../../Part4_MiniAutomatedVehicle/13_Assembling/01_4wheel_dcmotor_driven.html">
+            
+                <a href="../../Part4_MiniAutomatedVehicle/13_Assembling/01_4wheel_dcmotor_driven.html">
+            
+                    
+                    13.1 4-Wheel DC-Motor Driven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17.2" data-path="../../Part4_MiniAutomatedVehicle/13_Assembling/02_pantilt_servomotor.html">
+            
+                <a href="../../Part4_MiniAutomatedVehicle/13_Assembling/02_pantilt_servomotor.html">
+            
+                    
+                    13.2 2 Servo Motor for Pan Tilt Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="../../Part4_MiniAutomatedVehicle/14_Remote_Control/">
+            
+                <a href="../../Part4_MiniAutomatedVehicle/14_Remote_Control/">
+            
+                    
+                    Chapter14. Remote Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.18.1" data-path="../../Part4_MiniAutomatedVehicle/14_Remote_Control/01_ir_remote_control.html">
+            
+                <a href="../../Part4_MiniAutomatedVehicle/14_Remote_Control/01_ir_remote_control.html">
+            
+                    
+                    14.1 IR Remote Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18.2" data-path="../../Part4_MiniAutomatedVehicle/14_Remote_Control/02_bluetooth_remote_control.html">
+            
+                <a href="../../Part4_MiniAutomatedVehicle/14_Remote_Control/02_bluetooth_remote_control.html">
+            
+                    
+                    14.2 Bluetooth Remote Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18.3" data-path="../../Part4_MiniAutomatedVehicle/14_Remote_Control/03_wifi_remote_control.html">
+            
+                <a href="../../Part4_MiniAutomatedVehicle/14_Remote_Control/03_wifi_remote_control.html">
+            
+                    
+                    14.3 Wifi Remote Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1176,9 +1266,76 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="servo-motor">Servo Motor</h1>
-<h2 id="example-1-pan-tilt">Example 1: Pan Tilt</h2>
+<h2 id="example-1-knob">Example 1: Knob</h2>
+<p>Directly referenced from <a href="https://www.arduino.cc/en/Tutorial/Knob" target="_blank">Official Arduino Tutorial - Knob</a>.</p>
 <h3 id="hardware-wiring">Hardware Wiring</h3>
-<p><img src="../../Examples/geek-workshop/essence/04_servo_pantilt.jpg" alt="Image"></p>
+<p><img src="../../Examples/geek-workshop/essence/04_servo_knob.jpg" alt="Image"></p>
+<h3 id="sketch">Sketch</h3>
+<pre><code>/*
+ Controlling a servo position using a potentiometer (variable resistor)
+ by Michal Rinott &lt;http://people.interaction-ivrea.it/m.rinott&gt;
+
+ modified on 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Knob
+*/
+
+#include &lt;Servo.h&gt;
+
+Servo myservo;  // create servo object to control a servo
+
+int potpin = 0;  // analog pin used to connect the potentiometer
+int val;    // variable to read the value from the analog pin
+
+void setup() {
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+  val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
+  val = map(val, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
+  myservo.write(val);                  // sets the servo position according to the scaled value
+  delay(15);                           // waits for the servo to get there
+}
+</code></pre><h2 id="example-2-sweep">Example 2: Sweep</h2>
+<p>Directly referenced from <a href="https://www.arduino.cc/en/Tutorial/Sweep" target="_blank">Official Arduino Tutorial - Sweep</a>.</p>
+<h3 id="hardware-wiring">Hardware Wiring</h3>
+<p><img src="../../Examples/geek-workshop/essence/04_servo_sweep.jpg" alt="Image"></p>
+<h3 id="sketch">Sketch</h3>
+<pre><code>/* Sweep
+ by BARRAGAN &lt;http://barraganstudio.com&gt;
+ This example code is in the public domain.
+
+ modified 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Sweep
+*/
+
+#include &lt;Servo.h&gt;
+
+Servo myservo;  // create servo object to control a servo
+// twelve servo objects can be created on most boards
+
+int pos = 0;    // variable to store the servo position
+
+void setup() {
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+  for (pos = 0; pos &lt;= 180; pos += 1) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    myservo.write(pos);              // tell servo to go to position in variable &apos;pos&apos;
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos = 180; pos &gt;= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+    myservo.write(pos);              // tell servo to go to position in variable &apos;pos&apos;
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+}
+</code></pre><h2 id="assignment-pan-tilt">Assignment: Pan Tilt</h2>
+<h3 id="hardware-wiring">Hardware Wiring</h3>
+<p>The hardware wiring is left for students to finish as an in-class assignment.</p>
 <h3 id="sketch">Sketch</h3>
 <pre><code>// http://www.robotoid.com/appnotes/arduino-operating-two-servos.html
 
@@ -1230,16 +1387,6 @@ void stopRobot() {
   servoPan.write(90);
   servoTilt.write(90);
 }
-</code></pre><h2 id="example-2-knob">Example 2: Knob</h2>
-<h3 id="hardware-wiring">Hardware Wiring</h3>
-<p><img src="../../Examples/geek-workshop/essence/04_servo_knob.jpg" alt="Image"></p>
-<h3 id="sketch">Sketch</h3>
-<pre><code>// The 2nd example
-</code></pre><h2 id="example-3-sweep">Example 3: Sweep</h2>
-<h3 id="hardware-wiring">Hardware Wiring</h3>
-<p><img src="../../Examples/geek-workshop/essence/04_servo_sweep.jpg" alt="Image"></p>
-<h3 id="sketch">Sketch</h3>
-<pre><code>// The 3rd example
 </code></pre>
                                 
                                 </section>
@@ -1283,7 +1430,7 @@ void stopRobot() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"12.4 Servo Motor","level":"2.15.4","depth":2,"next":{"title":"Part 4 - Arduino Based Mini Automated Vehicle","level":"2.16","depth":1,"path":"Part4_MiniAutomatedVehicle/README.md","ref":"Part4_MiniAutomatedVehicle/README.md","articles":[]},"previous":{"title":"12.3 Stepper Motor","level":"2.15.3","depth":2,"path":"Part3_Motors/12_Motors/03_steppermotor.md","ref":"Part3_Motors/12_Motors/03_steppermotor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part3_Motors/12_Motors/04_servomotor.md","mtime":"2017-08-14T09:13:40.569Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-21T10:31:45.673Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"12.4 Servo Motor","level":"2.15.4","depth":2,"next":{"title":"Part 4 - Arduino Based Mini Automated Vehicle","level":"2.16","depth":1,"path":"Part4_MiniAutomatedVehicle/README.md","ref":"Part4_MiniAutomatedVehicle/README.md","articles":[]},"previous":{"title":"12.3 Stepper Motor","level":"2.15.3","depth":2,"path":"Part3_Motors/12_Motors/03_steppermotor.md","ref":"Part3_Motors/12_Motors/03_steppermotor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part3_Motors/12_Motors/04_servomotor.md","mtime":"2017-08-21T23:13:05.807Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-21T23:13:29.640Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
