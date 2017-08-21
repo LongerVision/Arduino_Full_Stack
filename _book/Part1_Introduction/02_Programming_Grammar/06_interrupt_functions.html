@@ -114,7 +114,7 @@
                 <a href="../">
             
                     
-                    Part 1
+                    Part 1 - Introduction
             
                 </a>
             
@@ -136,12 +136,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../01_Getting_Started_with_Arduino/01_theboard.html">
+        <li class="chapter " data-level="2.2.1" data-path="../01_Getting_Started_with_Arduino/01_uno_r3.html">
             
-                <a href="../01_Getting_Started_with_Arduino/01_theboard.html">
+                <a href="../01_Getting_Started_with_Arduino/01_uno_r3.html">
             
                     
-                    1.1 About the Board
+                    1.1 Arduino UNO R3
             
                 </a>
             
@@ -149,12 +149,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="../01_Getting_Started_with_Arduino/02_kits.html">
+        <li class="chapter " data-level="2.2.2" data-path="../01_Getting_Started_with_Arduino/02_sensorkits.html">
             
-                <a href="../01_Getting_Started_with_Arduino/02_kits.html">
+                <a href="../01_Getting_Started_with_Arduino/02_sensorkits.html">
             
                     
-                    1.2 List of Arduino Kit's Components
+                    1.2 Sensor Kits for Arduino
             
                 </a>
             
@@ -311,6 +311,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.3.8" data-path="08_libraries.html">
+            
+                <a href="08_libraries.html">
+            
+                    
+                    2.8 Arduino Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -321,7 +334,7 @@
                 <a href="../../Part2_Sensors/">
             
                     
-                    Part 2
+                    Part 2 - Sensors
             
                 </a>
             
@@ -789,12 +802,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10.3" data-path="../../Part2_Sensors/08_Thermist_Sensors/012_DHT11.html">
+        <li class="chapter " data-level="2.10.3" data-path="../../Part2_Sensors/08_Thermist_Sensors/025_digitaltemperature.html">
             
-                <a href="../../Part2_Sensors/08_Thermist_Sensors/012_DHT11.html">
+                <a href="../../Part2_Sensors/08_Thermist_Sensors/025_digitaltemperature.html">
             
                     
-                    8.3 Temperature and Humidity Sensor
+                    8.3 Digital Temperature
             
                 </a>
             
@@ -802,12 +815,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10.4" data-path="../../Part2_Sensors/08_Thermist_Sensors/025_digitaltemperature.html">
+        <li class="chapter " data-level="2.10.4" data-path="../../Part2_Sensors/08_Thermist_Sensors/012_DHT11.html">
             
-                <a href="../../Part2_Sensors/08_Thermist_Sensors/025_digitaltemperature.html">
+                <a href="../../Part2_Sensors/08_Thermist_Sensors/012_DHT11.html">
             
                     
-                    8.4 Digital Temperature
+                    8.4 Temperature and Humidity Sensor
             
                 </a>
             
@@ -1012,7 +1025,7 @@
                 <a href="../../Part3_Motors/">
             
                     
-                    Part 3
+                    Part 3 - Motors
             
                 </a>
             
@@ -1096,7 +1109,7 @@
                 <a href="../../Part4_MiniAutomatedVehicle/">
             
                     
-                    Part 4
+                    Part 4 - Arduino Based Mini Automated Vehicle
             
                 </a>
             
@@ -1165,26 +1178,41 @@
                                 <h1 id="26-arduino-interrupt-functions">2.6 Arduino Interrupt Functions</h1>
 <h2 id="261-void-interrupts">2.6.1 void interrupts();</h2>
 <ul>
-<li><strong>brief</strong>:</li>
-<li><strong>param</strong>:</li>
+<li><strong>brief</strong>: re-enable interrupts after having been disabled by function <strong>noInterrupts()</strong>.</li>
+<li><strong>param</strong>: void</li>
 <li><strong>return</strong>: void.</li>
 </ul>
 <h2 id="262-void-nointerrupts">2.6.2 void noInterrupts();</h2>
 <ul>
-<li><strong>brief</strong>:</li>
-<li><strong>param</strong>:</li>
+<li><strong>brief</strong>: disable interrupts.</li>
+<li><strong>param</strong>: void</li>
 <li><strong>return</strong>: void.</li>
 </ul>
-<h2 id="263-void-attachinterruptinterrupt-function-mode">2.6.3 void attachInterrupt(interrupt, function, mode);</h2>
+<h2 id="263-void-attachinterruptdigitalpintointerruptpin-isr-mode">2.6.3 void attachInterrupt(digitalPinToInterrupt(pin), ISR, mode);</h2>
 <ul>
-<li><strong>brief</strong>:</li>
-<li><strong>param</strong>:</li>
+<li><strong>brief</strong>: attach interrupt to some particular digital pin. Whenever there is an interrupt, function ISR will be called.</li>
+<li><strong>param</strong>:<ul>
+<li><strong>digitalPinToInterrupt(pin)</strong>: an interrupt is normally triggered from a particular <strong>pin</strong>.</li>
+<li><strong>ISR</strong>: Interrupt Service Routine, a function has <strong>NO</strong> parameters and has <strong>NO</strong> return value.</li>
+<li><strong>mode</strong>: <strong>LOW</strong>, <strong>HIGH</strong>, <strong>CHANGE</strong>, <strong>RISING</strong> or <strong>FALLING</strong>.<ol>
+<li><strong>LOW</strong>&#xFF1A; trigger the interrupt whenever the pin is at low-level.</li>
+<li><strong>HIGH</strong>: trigger the interrupt whenever the pin is at high-level.</li>
+<li><strong>CHANGE</strong>: trigger the interrupt whenever the pin changes from <strong>HIGH</strong> to <strong>LOW</strong>, or from <strong>LOW</strong> to <strong>HIGH</strong>.</li>
+<li><strong>RISING</strong>: trigger the interrupt whenever the pin changes from <strong>LOW</strong> to <strong>HIGH</strong>.</li>
+<li><strong>FALLING</strong>: trigger the interrupt whenever the pin changes from <strong>HIGH</strong> to <strong>LOW</strong>.</li>
+</ol>
+</li>
+</ul>
+</li>
 <li><strong>return</strong>: void.</li>
 </ul>
-<h2 id="264-void-detachinterruptinterrupt">2.6.4 void detachInterrupt(interrupt);</h2>
+<h2 id="264-void-detachinterruptdigitalpintointerruptpin">2.6.4 void detachInterrupt(digitalPinToInterrupt(pin));</h2>
 <ul>
-<li><strong>brief</strong>:</li>
-<li><strong>param</strong>:</li>
+<li><strong>brief</strong>: detach interrupt from some particular digital pin.</li>
+<li><strong>param</strong>:<ul>
+<li><strong>digitalPinToInterrupt(pin)</strong>: an interrupt is normally triggered from a particular <strong>pin</strong>.</li>
+</ul>
+</li>
 <li><strong>return</strong>: void.</li>
 </ul>
 
@@ -1230,7 +1258,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.6 Interrupt Functions","level":"2.3.6","depth":2,"next":{"title":"2.7 Communication Classes","level":"2.3.7","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/07_communication_classes.md","ref":"Part1_Introduction/02_Programming_Grammar/07_communication_classes.md","articles":[]},"previous":{"title":"2.5 Time Functions","level":"2.3.5","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md","mtime":"2017-08-20T20:20:18.477Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T23:43:03.747Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.6 Interrupt Functions","level":"2.3.6","depth":2,"next":{"title":"2.7 Communication Classes","level":"2.3.7","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/07_communication_classes.md","ref":"Part1_Introduction/02_Programming_Grammar/07_communication_classes.md","articles":[]},"previous":{"title":"2.5 Time Functions","level":"2.3.5","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/05_time_functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md","mtime":"2017-08-21T01:41:35.343Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-21T10:31:45.673Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

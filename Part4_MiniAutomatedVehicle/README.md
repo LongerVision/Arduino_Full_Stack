@@ -1,3 +1,3 @@
-# Part 4 - Mini Automated Vehicle
+# Part 4 - Arduino Based Mini Automated Vehicle
 
-In this Part, a mini automated vehicle is to be built and able to run.
+In this Part, an Arduino based mini automated vehicle is to be built and able to run.

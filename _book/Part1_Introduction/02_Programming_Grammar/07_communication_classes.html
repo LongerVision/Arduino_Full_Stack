@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../Part2_Sensors/" />
+    <link rel="next" href="08_libraries.html" />
     
     
     <link rel="prev" href="06_interrupt_functions.html" />
@@ -114,7 +114,7 @@
                 <a href="../">
             
                     
-                    Part 1
+                    Part 1 - Introduction
             
                 </a>
             
@@ -136,12 +136,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="../01_Getting_Started_with_Arduino/01_theboard.html">
+        <li class="chapter " data-level="2.2.1" data-path="../01_Getting_Started_with_Arduino/01_uno_r3.html">
             
-                <a href="../01_Getting_Started_with_Arduino/01_theboard.html">
+                <a href="../01_Getting_Started_with_Arduino/01_uno_r3.html">
             
                     
-                    1.1 About the Board
+                    1.1 Arduino UNO R3
             
                 </a>
             
@@ -149,12 +149,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="../01_Getting_Started_with_Arduino/02_kits.html">
+        <li class="chapter " data-level="2.2.2" data-path="../01_Getting_Started_with_Arduino/02_sensorkits.html">
             
-                <a href="../01_Getting_Started_with_Arduino/02_kits.html">
+                <a href="../01_Getting_Started_with_Arduino/02_sensorkits.html">
             
                     
-                    1.2 List of Arduino Kit's Components
+                    1.2 Sensor Kits for Arduino
             
                 </a>
             
@@ -311,6 +311,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.3.8" data-path="08_libraries.html">
+            
+                <a href="08_libraries.html">
+            
+                    
+                    2.8 Arduino Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -321,7 +334,7 @@
                 <a href="../../Part2_Sensors/">
             
                     
-                    Part 2
+                    Part 2 - Sensors
             
                 </a>
             
@@ -789,12 +802,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10.3" data-path="../../Part2_Sensors/08_Thermist_Sensors/012_DHT11.html">
+        <li class="chapter " data-level="2.10.3" data-path="../../Part2_Sensors/08_Thermist_Sensors/025_digitaltemperature.html">
             
-                <a href="../../Part2_Sensors/08_Thermist_Sensors/012_DHT11.html">
+                <a href="../../Part2_Sensors/08_Thermist_Sensors/025_digitaltemperature.html">
             
                     
-                    8.3 Temperature and Humidity Sensor
+                    8.3 Digital Temperature
             
                 </a>
             
@@ -802,12 +815,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10.4" data-path="../../Part2_Sensors/08_Thermist_Sensors/025_digitaltemperature.html">
+        <li class="chapter " data-level="2.10.4" data-path="../../Part2_Sensors/08_Thermist_Sensors/012_DHT11.html">
             
-                <a href="../../Part2_Sensors/08_Thermist_Sensors/025_digitaltemperature.html">
+                <a href="../../Part2_Sensors/08_Thermist_Sensors/012_DHT11.html">
             
                     
-                    8.4 Digital Temperature
+                    8.4 Temperature and Humidity Sensor
             
                 </a>
             
@@ -1012,7 +1025,7 @@
                 <a href="../../Part3_Motors/">
             
                     
-                    Part 3
+                    Part 3 - Motors
             
                 </a>
             
@@ -1096,7 +1109,7 @@
                 <a href="../../Part4_MiniAutomatedVehicle/">
             
                     
-                    Part 4
+                    Part 4 - Arduino Based Mini Automated Vehicle
             
                 </a>
             
@@ -1163,9 +1176,25 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="27-arduino-communication-classes">2.7 Arduino Communication Classes</h1>
-<h2 id="271-stream">2.7.1 Stream</h2>
-<p>Stream is the base class for character and binary based streams.</p>
-<h2 id="272-serial">2.7.2 Serial</h2>
+<h2 id="271-enumeration-of-arduino-communication-classes">2.7.1 Enumeration of Arduino Communication Classes</h2>
+<p>Several Arduino communication classes are enumerated as follows:</p>
+<ul>
+<li><a href="https://www.arduino.cc/en/Reference/Stream" target="_blank">Arduino Stream</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/Serial" target="_blank">Arduino Serial</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/Wire" target="_blank">Arduino Wire</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/SD" target="_blank">Arduino SD</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/Ethernet" target="_blank">Arduino Ethernet</a></li>
+</ul>
+<h2 id="272-void-serialprintval-format-and-void-serialprintlnval-format">2.7.2 void Serial.print(val, format) and void Serial.println(val, format)</h2>
+<ul>
+<li><strong>brief</strong>: print data to the serial port, without/with carriage.</li>
+<li><strong>param</strong>:<ul>
+<li><strong>val</strong>: the value to print.</li>
+<li><strong>format</strong>: data format while printing.</li>
+</ul>
+</li>
+<li><strong>return</strong>: void.</li>
+</ul>
 
                                 
                                 </section>
@@ -1198,7 +1227,7 @@
                 </a>
                 
                 
-                <a href="../../Part2_Sensors/" class="navigation navigation-next " aria-label="Next page: Part 2">
+                <a href="08_libraries.html" class="navigation navigation-next " aria-label="Next page: 2.8 Arduino Libraries">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1209,7 +1238,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.7 Communication Classes","level":"2.3.7","depth":2,"next":{"title":"Part 2","level":"2.4","depth":1,"path":"Part2_Sensors/README.md","ref":"Part2_Sensors/README.md","articles":[]},"previous":{"title":"2.6 Interrupt Functions","level":"2.3.6","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1_Introduction/02_Programming_Grammar/07_communication_classes.md","mtime":"2017-08-20T20:20:40.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T23:43:03.747Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.7 Communication Classes","level":"2.3.7","depth":2,"next":{"title":"2.8 Arduino Libraries","level":"2.3.8","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/08_libraries.md","ref":"Part1_Introduction/02_Programming_Grammar/08_libraries.md","articles":[]},"previous":{"title":"2.6 Interrupt Functions","level":"2.3.6","depth":2,"path":"Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md","ref":"Part1_Introduction/02_Programming_Grammar/06_interrupt_functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1_Introduction/02_Programming_Grammar/07_communication_classes.md","mtime":"2017-08-21T03:01:22.554Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-21T10:31:45.673Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
