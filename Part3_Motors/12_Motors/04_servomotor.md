@@ -80,7 +80,8 @@ void loop() {
 
 ## Assignment: Pan Tilt
 ### Hardware Wiring
-The hardware wiring is left for students to finish as an in-class assignment.
+The hardware wiring is left for students to finish as an in-class assignment. The expected result can be referred to
+[**Chapter 13.2 - Pan Tilt Control by 2 Servo Motors**](../../Part5_MiniAutomatedVehicle/14_Assembling/02_pantilt_servomotor.md). 
 
 ### Sketch
 ```
