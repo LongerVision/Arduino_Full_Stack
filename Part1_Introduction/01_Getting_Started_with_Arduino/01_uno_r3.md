@@ -1,6 +1,6 @@
 # 1.1 About Arduino UNO R3
 
-Students who take our Arduino course on-site will be given a **FREE** set of Arduino UNO R3. Students are also welcome to puchase the kit from our website at [http://www.longervisionrobot.com/en/products/iot-arduino.html](http://www.longervisionrobot.com/en/products/iot-arduino.html). 
+Students who take our Arduino course on-site will be given a **FREE** set of Arduino UNO R3. Students are also welcome to puchase the kit from our website at [http://www.longervisionrobot.com/en/products/robotics-arduino.html](http://www.longervisionrobot.com/en/products/robotics-arduino.html). 
 
 Two Arduino official websites about Arduino UNO R3 are suggested: 
 * [https://www.arduino.cc/en/Reference/Board](https://www.arduino.cc/en/Reference/Board)
