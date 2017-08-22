@@ -5,7 +5,7 @@
 * Basic concepts on what Arduino is
 * 40 fundamental sensors by around 40 examples
 * DC motor, stepper motor, servor motor, etc., with several examples
-* Some other advanced sensors, including camera, 9-DOF Gyro, etc.
+* Some other advanced sensors, including camera, 9-DOF IMU, etc.
 * And our target of this book is to finally build an Arduino based race car, namely, an Mini-size Autonomous Vehicle with selected sensors.
 
 The book is put on gitbook at: [https://longervision.gitbooks.io/arduino-full-stack/](https://longervision.gitbooks.io/arduino-full-stack/), and all source code is tested and put on github at: [https://github.com/LongerVision/Arduino](https://github.com/LongerVision/Arduino) .
