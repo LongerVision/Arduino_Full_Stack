@@ -5,7 +5,7 @@
 * [http://www.arduino.org/](http://www.arduino.org/)
 
 ## 1.3.2 Third Party Open Source Code & Tutorials
-* [Github - Longer Vision](https://github.com/LongerVision/Arduino/)
+* [Github - Longer Vision](https://github.com/LongerVisionRobot/Arduino/)
 * [Official Tutorial](http://www.arduino.org/learning/tutorials)
 * [Github - Adafruit/](https://github.com/adafruit/)
 * [Github - Tech Explorations Arduino: Step by Step](https://github.com/futureshocked/arduino_sbs/)
