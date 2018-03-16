@@ -1,3 +1,0 @@
-# AC Motor
-
-N/A.

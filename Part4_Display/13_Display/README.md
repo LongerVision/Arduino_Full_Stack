@@ -1,3 +1,0 @@
-# Display
-
-Generally speaking, Display......
