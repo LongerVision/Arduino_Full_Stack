@@ -1,3 +1,3 @@
-# Display
+# Chapter 13 - Display
 
 Generally speaking, Display......
