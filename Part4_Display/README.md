@@ -1,3 +1,0 @@
-# Part 4 - Display
-
-In this Part, all about display...
