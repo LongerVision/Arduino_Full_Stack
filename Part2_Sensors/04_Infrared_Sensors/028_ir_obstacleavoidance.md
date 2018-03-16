@@ -1,4 +1,4 @@
-# IR Obstacle Avoidance
+# 4.4 IR Obstacle Avoidance
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/028_ir_obstacleavoidance.jpg)

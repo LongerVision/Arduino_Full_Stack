@@ -1,4 +1,4 @@
-# Pulse Monitor
+# 10.3 Pulse Monitor
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/035_pulsemonitor.jpg)

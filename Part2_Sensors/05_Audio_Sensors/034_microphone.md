@@ -1,4 +1,4 @@
-# Microphone
+# 5.4 Microphone
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/034_microphone.jpg)

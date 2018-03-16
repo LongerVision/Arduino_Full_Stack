@@ -1,4 +1,4 @@
-# Analog Thermist
+# 8.2 Analog Thermist
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/011_analogthermist.jpg)

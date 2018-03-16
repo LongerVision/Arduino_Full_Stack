@@ -1,4 +1,4 @@
-# Digital Temperature
+# 8.4 Digital Temperature
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/025_digitaltemperature.jpg)

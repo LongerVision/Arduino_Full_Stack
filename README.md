@@ -2,9 +2,10 @@
 
 [**Arduino Full Stack**](https://longer-vision-robot.gitbooks.io/arduino-full-stack/) is an open source book entirely written by [Longer Vision Robot](http://www.longervisionrobot.com). In this book, over 50 examples are to be discussed for the Arduino applications. You will get familiar with:
 
-* Basic concepts on what Arduino is
+* Basic concepts about Arduino
 * 40 fundamental sensors by around 40 examples
 * DC motor, stepper motor, servor motor, etc., with several examples
+* How to control the display via Arduino
 * Some communication sensors, including bluetooth and wifi, etc.
 * And our target of this book is to finally build an Arduino based race car, namely, an Mini-size Autonomous Vehicle with selected sensors.
 

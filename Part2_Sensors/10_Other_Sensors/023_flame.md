@@ -1,4 +1,4 @@
-# Flame
+# 10.2 Flame
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/023_flame.jpg)

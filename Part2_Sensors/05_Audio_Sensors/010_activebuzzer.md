@@ -1,4 +1,4 @@
-# Active Buzzer
+# 5.2 Active Buzzer
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/010_activebuzzer.jpg)

@@ -1,4 +1,4 @@
-# Stepper Motor
+# 12.3 Stepper Motor
 
 ## Hardware Wiring
 ![Image](../../Examples/geek-workshop/essence/03_stepper.jpg)

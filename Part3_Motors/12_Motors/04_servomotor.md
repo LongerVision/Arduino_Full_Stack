@@ -1,4 +1,4 @@
-# Servo Motor
+# 12.4 Servo Motor
 
 
 ## Example 1: Knob

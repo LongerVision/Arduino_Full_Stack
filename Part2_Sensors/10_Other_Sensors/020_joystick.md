@@ -1,4 +1,4 @@
-# Joystick
+# 10.1 Joystick
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/020_joystick.jpg)

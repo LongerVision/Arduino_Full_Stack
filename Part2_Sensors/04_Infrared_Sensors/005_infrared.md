@@ -1,4 +1,4 @@
-# Infrared Controller
+# 4.1 Infrared Controller
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/005_infrared.jpg)

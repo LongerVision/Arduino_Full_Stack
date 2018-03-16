@@ -1,4 +1,4 @@
-# Switch - Ball
+# 9.4 Switch - Ball
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/017_switch_ball.jpg)

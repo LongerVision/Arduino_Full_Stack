@@ -1,4 +1,4 @@
-# LED Red Green
+# 3.7 LED Red Green
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/026_led_rg.jpg)

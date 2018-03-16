@@ -1,4 +1,4 @@
-# LED Red Green
+# 7.2 LED Red Green
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/027_shock.jpg)

@@ -1,4 +1,4 @@
-# Mini LED Red Green
+# 3.3 Mini LED Red Green
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/009_miniled_rg.jpg)

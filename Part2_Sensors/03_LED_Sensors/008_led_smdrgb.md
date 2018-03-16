@@ -1,4 +1,4 @@
-# LED SMD RGB
+# 3.2 LED SMD RGB
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/008_led_smdrgb.jpg)

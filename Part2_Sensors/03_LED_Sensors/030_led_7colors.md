@@ -1,4 +1,4 @@
-# LED 7 Colors
+# 3.8 LED 7 Colors
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/030_led_7colors.jpg)

@@ -1,4 +1,4 @@
-# Switch - Reed
+# 6.4 Switch - Reed
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/022_reed.jpg)

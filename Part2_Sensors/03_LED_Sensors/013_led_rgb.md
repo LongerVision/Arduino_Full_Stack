@@ -1,4 +1,4 @@
-# LED RGB
+# 3.4 LED RGB
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/013_led_rgb.jpg)

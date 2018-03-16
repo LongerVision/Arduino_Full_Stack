@@ -1,4 +1,4 @@
-# 1.2 Race Car Chassis Model
+# 1.4 Race Car Chassis Model
 
 Students who take our Arduino course on-site will be given a **FREE** full set of race car chassis model. Students are also welcome to puchase the kits from our website at [http://www.longervisionrobot.com/en/products/robotics/race-car/chassis.html](http://www.longervisionrobot.com/en/products/robotics/race-car/chassis.html). A full set of race car chassis model from [Longer Vision Robot](http://www.longervisionrobot.com) contains:
 

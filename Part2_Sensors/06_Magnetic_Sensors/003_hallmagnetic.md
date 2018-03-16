@@ -1,4 +1,4 @@
-# Hall Magnetic Sensor
+# 6.1 Hall Magnetic Sensor
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/003_Hall.jpg)

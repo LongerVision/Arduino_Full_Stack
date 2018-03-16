@@ -1,4 +1,4 @@
-# Button
+# 9.1 Button
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/004_button.jpg)

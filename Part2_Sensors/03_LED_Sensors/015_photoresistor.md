@@ -1,4 +1,4 @@
-# Photoresistor
+# 3.5 Photoresistor
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/015_photoresistor.jpg)

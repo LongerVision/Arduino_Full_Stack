@@ -1,4 +1,4 @@
-# Passive Buzzer
+# 5.1 Passive Buzzer
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/006_passivebuzzer.jpg)

@@ -1,4 +1,4 @@
-# LED Blinking
+# 3.1 LED Blinking
 
 ## Hardware Wiring
 ![Image](../../Examples/geek-workshop/studynotes/00_ledblinking.jpg)

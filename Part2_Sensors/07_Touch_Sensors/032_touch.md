@@ -1,4 +1,4 @@
-# Touch Sensor
+# 7.3 Touch Sensor
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/032_touch.jpg)

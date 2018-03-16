@@ -1,4 +1,4 @@
-# Microphone Big Sound
+# 5.3 Microphone Big Sound
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/033_microphone_bigsound.jpg)

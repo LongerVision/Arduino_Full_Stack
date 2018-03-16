@@ -1,4 +1,4 @@
-# Laser Emitter
+# 4.2 Laser Emitter
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/007_laseremitter.jpg)

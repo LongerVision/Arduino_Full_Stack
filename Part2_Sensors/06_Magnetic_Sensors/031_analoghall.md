@@ -1,4 +1,4 @@
-# Analog Hall
+# 6.5 Analog Hall
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/031_analoghall.jpg)

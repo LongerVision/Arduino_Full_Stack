@@ -1,4 +1,4 @@
-# LED Light Cup
+# 3.6 LED Light Cup
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/024_led_lightcup.jpg)

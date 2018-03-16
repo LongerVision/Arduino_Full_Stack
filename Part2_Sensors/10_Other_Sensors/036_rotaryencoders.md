@@ -1,4 +1,4 @@
-# Rotary Encoders
+# 10.4 Rotary Encoders
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/036_rotaryencoders.jpg)

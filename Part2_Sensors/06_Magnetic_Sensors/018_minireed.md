@@ -1,4 +1,4 @@
-# Mini Reed
+# 6.2 Mini Reed
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/018_minireed.jpg)

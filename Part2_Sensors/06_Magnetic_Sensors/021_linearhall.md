@@ -1,4 +1,4 @@
-# Linear Hall
+# 6.3 Linear Hall
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/021_linearhall.jpg)
