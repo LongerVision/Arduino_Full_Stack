@@ -1,4 +1,4 @@
-# 9.3 Relay
+# 9.4 Relay
 
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/016_relay.jpg)
