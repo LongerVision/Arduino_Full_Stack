@@ -1,3 +1,3 @@
 # 12.2 AC Motor
 
-N/A.
+AC motor is **NOT** in our discussion list.

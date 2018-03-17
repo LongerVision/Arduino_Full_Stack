@@ -1,5 +1,7 @@
 # 12.4 Servo Motor
 
+We provide a Micro Servo SG90 in our race car kit, which looks like:
+![Image](./motor-servo.jpg)
 
 ## Example 1: Knob
 Directly referenced from [Official Arduino Tutorial - Knob](https://www.arduino.cc/en/Tutorial/Knob).
