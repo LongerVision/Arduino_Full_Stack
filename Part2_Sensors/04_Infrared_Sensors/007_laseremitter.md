@@ -7,13 +7,13 @@
 ```
 void setup()
 {
-  pinMode(13, OUTPUT); // 定义13脚为数字输出接口
+  pinMode(13, OUTPUT); // Define Pin 13 as Digital Output
 }
 void loop() {
-  digitalWrite(13, HIGH); // 打开激光头
+  digitalWrite(13, HIGH); // Open Laser Head
   delay(1000);
   // Delay 1 second
-  digitalWrite(13, LOW); // 关闭激光头
+  digitalWrite(13, LOW); // Close Laser Head
   delay(1000);
   // Delay 1 second
 }

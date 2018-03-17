@@ -5,14 +5,14 @@
 
 ## Sketch
 ```
-int buzzer=8;//设置控制蜂鸣器的数字 IO 脚
+int buzzer=8; //设置控制蜂鸣器的数字 IO 脚
 void setup()
 {
   pinMode(buzzer,OUTPUT);//设置数字 IO 脚模式,OUTPUT 为辒出
 }
 void loop()
 {
-  unsigned char i,j;//定义变量
+  unsigned char i,j;  // Variable Definition
   while(1)
   {
     for(i=0;i<80;i++)//辒出一个频率的声音

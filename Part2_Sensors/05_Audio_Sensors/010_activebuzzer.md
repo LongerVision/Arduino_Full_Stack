@@ -5,7 +5,7 @@
 
 ## Sketch
 ```
-int speakerPin = 8;//控制喇叭的引脚
+int speakerPin = 8; //控制喇叭的引脚
 int potPin = 4;//控制可调电阻器的引脚
 int value = 0;
 void setup() {
