@@ -6,12 +6,12 @@
 ## Sketch
 ```
 int Led=13;       // Define LDE Pin
-int buttonpin=3;  //定义磁环传感器接口
-int val;          //定义数字变量val
+int buttonpin=3;  // 定义磁环传感器接口
+int val;          // Define Variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//定义LED 为输出接口
-  pinMode(buttonpin,INPUT);//定义磁环传感器为输出接口
+  pinMode(Led,OUTPUT);  // Define LED as output
+  pinMode(buttonpin,INPUT);// 定义磁环传感器为输出接口
 }
 void loop()
 {

@@ -6,19 +6,19 @@
 ## Sketch
 ```
 int Led=13;       // Define LED Pin
-int buttonpin=3;  //定义寻线传感器接口
+int buttonpin=3;  // Define the line tracking sensor's pin
 int val;          // Define a variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//定义LED 为输出接口
-  pinMode(buttonpin,INPUT);//定义寻线传感器为输出接口
+  pinMode(Led,OUTPUT);  // Define LED as Output
+  pinMode(buttonpin,INPUT); // Define line tracking sensor as output
   Serial.begin(9600);
 }
 void loop()
 {
   val=digitalRead(buttonpin);//将数字接口3的值读取赋给val
   Serial.println(val);
-  if(val==HIGH)   //当寻线传感器检测有信号时，LED 闪烁
+  if(val==HIGH)   // if anything detected by line tracking sensor, LED starts flashing.
   {
     digitalWrite(Led,HIGH);
   }

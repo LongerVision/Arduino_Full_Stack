@@ -6,12 +6,12 @@
 ## Sketch
 ```
 int Led=13;       // Define LDE Pin
-int buttonpin=3;  // 定义传感器D0接口
+int buttonpin=3;  // Define D0 sensor's pin
 int val;          // Define Variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//定义LED 为输出接口
-  pinMode(buttonpin,INPUT);//定义传感器D0为输出接口
+  pinMode(Led,OUTPUT);      // Define LED as output
+  pinMode(buttonpin,INPUT); // Define sensor D0 as output
   Serial.begin(9600);
 }
 void loop()

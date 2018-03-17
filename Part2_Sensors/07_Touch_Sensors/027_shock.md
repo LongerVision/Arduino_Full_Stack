@@ -6,8 +6,8 @@
 ## Sketch
 ```
 int Led=13;     // Define LDE Pin
-int Shock=3;    //定义震动传感器接口
-int val;        //定义数字变量val
+int Shock=3;    // 定义震动传感器接口
+int val;        // Define Variable val
 void setup()
 {
   pinMode(Led,OUTPUT);//定义LED 为输出接口

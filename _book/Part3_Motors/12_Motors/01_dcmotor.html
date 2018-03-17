@@ -1457,7 +1457,6 @@ void Motor1(boolean reverse)//&#x7535;&#x673A;1&#x6B63;&#x8F6C;
     digitalWrite(IN1,LOW);
     digitalWrite(IN2,HIGH);
   }
-
 }
 
 void Motor2(boolean reverse)//&#x7535;&#x673A;2&#x8F6C;&#x52A8;
@@ -1473,13 +1472,10 @@ void Motor2(boolean reverse)//&#x7535;&#x673A;2&#x8F6C;&#x52A8;
     digitalWrite(IN3,LOW);
     digitalWrite(IN4,HIGH);
   }
-
 }
 
 void aa()//&#x5148;&#x6B63;&#x8F6C;1&#x79D2;&#x505C;1&#x79D2;&#x540E;&#x53CD;&#x8F6C;1&#x79D2;
 {
-
-
   //&#x6B63;&#x8F6C;
   digitalWrite(IN3,LOW);
   digitalWrite(IN4,HIGH);
@@ -1505,9 +1501,6 @@ void aa()//&#x5148;&#x6B63;&#x8F6C;1&#x79D2;&#x505C;1&#x79D2;&#x540E;&#x53CD;&#x
   stopMotor(true);
   delay(1000); 
   stopMotor(false);
-
-
-
 }
 
 void stopMotor(boolean r)//&#x7535;&#x673A;&#x505C;&#x8F6C;
@@ -1539,14 +1532,11 @@ void setup()
   pinMode(10,OUTPUT);//&#x8BBE;&#x7F6E;&#x6570;&#x5B57;&#x7AEF;&#x53E3;10  11&#x4E3A;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;
   pinMode(11,OUTPUT);
   Serial.begin(9600);
-
 }
 
 void loop()
 {
   aa();//&#x4E24;&#x4E2A;&#x76F4;&#x6D41;&#x7535;&#x673A;&#x6B63;&#x8F6C;1&#x79D2; &#x6682;&#x505C;&#x4E00;&#x79D2; &#x53CD;&#x8F6C;&#x4E00;&#x79D2;
-
-
 }
 </code></pre><h2 id="note">Note</h2>
 <p>We will use 4 <strong>L298N</strong> DC motors in our race car. Please refer to <a href="../../Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.html"><strong>Chapter 15.1 - 4-Wheel Driven Using 4 DC Motors</strong></a> for more details.</p>
@@ -1593,7 +1583,7 @@ void loop()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"12.1 DC Motor","level":"2.15.1","depth":2,"next":{"title":"12.2 AC Motor","level":"2.15.2","depth":2,"path":"Part3_Motors/12_Motors/02_acmotor.md","ref":"Part3_Motors/12_Motors/02_acmotor.md","articles":[]},"previous":{"title":"Chapter 12. Motors","level":"2.15","depth":1,"path":"Part3_Motors/12_Motors/README.md","ref":"Part3_Motors/12_Motors/README.md","articles":[{"title":"12.1 DC Motor","level":"2.15.1","depth":2,"path":"Part3_Motors/12_Motors/01_dcmotor.md","ref":"Part3_Motors/12_Motors/01_dcmotor.md","articles":[]},{"title":"12.2 AC Motor","level":"2.15.2","depth":2,"path":"Part3_Motors/12_Motors/02_acmotor.md","ref":"Part3_Motors/12_Motors/02_acmotor.md","articles":[]},{"title":"12.3 Stepper Motor","level":"2.15.3","depth":2,"path":"Part3_Motors/12_Motors/03_steppermotor.md","ref":"Part3_Motors/12_Motors/03_steppermotor.md","articles":[]},{"title":"12.4 Servo Motor","level":"2.15.4","depth":2,"path":"Part3_Motors/12_Motors/04_servomotor.md","ref":"Part3_Motors/12_Motors/04_servomotor.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part3_Motors/12_Motors/01_dcmotor.md","mtime":"2018-03-17T09:52:31.042Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-17T23:34:39.049Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"12.1 DC Motor","level":"2.15.1","depth":2,"next":{"title":"12.2 AC Motor","level":"2.15.2","depth":2,"path":"Part3_Motors/12_Motors/02_acmotor.md","ref":"Part3_Motors/12_Motors/02_acmotor.md","articles":[]},"previous":{"title":"Chapter 12. Motors","level":"2.15","depth":1,"path":"Part3_Motors/12_Motors/README.md","ref":"Part3_Motors/12_Motors/README.md","articles":[{"title":"12.1 DC Motor","level":"2.15.1","depth":2,"path":"Part3_Motors/12_Motors/01_dcmotor.md","ref":"Part3_Motors/12_Motors/01_dcmotor.md","articles":[]},{"title":"12.2 AC Motor","level":"2.15.2","depth":2,"path":"Part3_Motors/12_Motors/02_acmotor.md","ref":"Part3_Motors/12_Motors/02_acmotor.md","articles":[]},{"title":"12.3 Stepper Motor","level":"2.15.3","depth":2,"path":"Part3_Motors/12_Motors/03_steppermotor.md","ref":"Part3_Motors/12_Motors/03_steppermotor.md","articles":[]},{"title":"12.4 Servo Motor","level":"2.15.4","depth":2,"path":"Part3_Motors/12_Motors/04_servomotor.md","ref":"Part3_Motors/12_Motors/04_servomotor.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part3_Motors/12_Motors/01_dcmotor.md","mtime":"2018-03-17T23:39:30.702Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-17T23:56:00.248Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

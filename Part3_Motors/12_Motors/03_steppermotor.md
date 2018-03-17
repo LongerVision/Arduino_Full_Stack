@@ -9,7 +9,7 @@ We do **NOT** provide any stepper motor in our race car kit. Here, we are using 
 ## Sketch
 ```
 // http://blog.sina.com.cn/s/blog_8043e91a0102wiar.html
-//使用arduino IDE自带的Stepper.h库文件
+// Use the default Stepper.h in the Stepper library coming with Arduino IDE.
 #include "Stepper.h" 
 // 这里设置步进电机旋转一圈是多少步
 #define STEPS 100 

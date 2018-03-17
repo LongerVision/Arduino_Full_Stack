@@ -5,8 +5,8 @@
 
 ## Sketch
 ```
-const int interruptA = 0;       // Interrupt 0 在 pin 2 上
-const int interruptB = 1;       // Interrupt 1 在 pin 3 上 沒用
+const int interruptA = 0;       // Interrupt 0 - pin 2
+const int interruptB = 1;       // Interrupt 1 - pin 3  NO USE
 
 int CLK = 2;     // PIN2
 int DAT = 3;     // PIN3

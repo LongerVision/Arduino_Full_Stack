@@ -55,7 +55,6 @@ void Motor1(boolean reverse)//电机1正转
     digitalWrite(IN1,LOW);
     digitalWrite(IN2,HIGH);
   }
-
 }
 
 void Motor2(boolean reverse)//电机2转动
@@ -71,13 +70,10 @@ void Motor2(boolean reverse)//电机2转动
     digitalWrite(IN3,LOW);
     digitalWrite(IN4,HIGH);
   }
-
 }
 
 void aa()//先正转1秒停1秒后反转1秒
 {
-
-
   //正转
   digitalWrite(IN3,LOW);
   digitalWrite(IN4,HIGH);
@@ -103,9 +99,6 @@ void aa()//先正转1秒停1秒后反转1秒
   stopMotor(true);
   delay(1000); 
   stopMotor(false);
-
-
-
 }
 
 void stopMotor(boolean r)//电机停转
@@ -137,14 +130,11 @@ void setup()
   pinMode(10,OUTPUT);//设置数字端口10  11为输出模式
   pinMode(11,OUTPUT);
   Serial.begin(9600);
-
 }
 
 void loop()
 {
   aa();//两个直流电机正转1秒 暂停一秒 反转一秒
-
-
 }
 ```
 

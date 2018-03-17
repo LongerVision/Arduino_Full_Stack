@@ -6,12 +6,12 @@
 ## Sketch
 ```
 int Led=13;   // Define LDE Pin
-int SENSOR=3; //定义 霍尔磁力传感器接 口
-int val;      //定义数字变量val
+int SENSOR=3; // Define 霍尔磁力传感器接口
+int val;      // Define variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//定义LED 为输出接口
-  pinMode(SENSOR,INPUT);//定义 霍尔磁力传感器 为输入接口
+  pinMode(Led,OUTPUT);  // Define LED as output
+  pinMode(SENSOR,INPUT);// Define Hall Magnetic Sensor as input
 }
 
 void loop()
