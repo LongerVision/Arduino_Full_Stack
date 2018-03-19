@@ -4,10 +4,11 @@
 ![Image](../../Examples/sensor-kit-for-arduino/008_led_smdrgb.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _008_LED_SMDRGB - _008_LED_SMDRGB.ino](https://github.com/LongerVisionRobot/Examples_Arduino/tree/master/sensor-kit-for-arduino/_008_LED_SMDRGB/_008_LED_SMDRGB.ino).
 ```
-int redpin = 11; //select the pin for the red LED
-int bluepin =10; // select the pin for the  blue LED
-int greenpin =9;// select the pin for the green LED
+int redpin = 11;  //select the pin for the red LED
+int bluepin =10;  // select the pin for the  blue LED
+int greenpin =9;  // select the pin for the green LED
 
 int val;
 

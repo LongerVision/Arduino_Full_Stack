@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/019_infrared_controller.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _019_IRRemote_Controller - _019_IRRemote_Controller.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_019_IRRemote_Controller/_019_IRRemote_Controller.ino).
 ```
 #include <IRremote.h>
 int RECV_PIN = 11; //define input pin on Arduino

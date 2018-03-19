@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/031_analoghall.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _031_Analog_Hall - _031_Analog_Hall.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_031_Analog_Hall/_031_Analog_Hall.ino).
 ```
 int sensorPin = A5;   // select the input pin for the potentiometer
 int ledPin = 13;      // select the pin for the LED

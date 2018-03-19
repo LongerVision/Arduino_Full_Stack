@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/021_linearhall.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _021_LinearHall - _021_LinearHall.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_021_LinearHall/_021_LinearHall.ino).
 ```
 int Led=13;       // Define LDE Pin
 int buttonpin=3;  // Define linear hall sensor's pin

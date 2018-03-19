@@ -4,10 +4,11 @@
 ![Image](../../Examples/sensor-kit-for-arduino/009_miniled_rg.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _009_MiniLED_RG - _009_MiniLED_RG.ino](https://github.com/LongerVisionRobot/Examples_Arduino/tree/master/sensor-kit-for-arduino/_009_MiniLED_RG/_009_MiniLED_RG.ino).
 ```
  //Arduino test code:
-int redpin = 11;    // select the pin for the red LED
-int bluepin =10;    // select the pin for the blueLED
+int redpin = 11;  // select the pin for the red LED
+int bluepin =10;  // select the pin for the blueLED
 int val;
 void setup() {
   pinMode(redpin, OUTPUT);

@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/006_passivebuzzer.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _006_PassiveBuzzer - _006_PassiveBuzzer.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_006_PassiveBuzzer/_006_PassiveBuzzer.ino).
 ```
 int buzzer=8; // Set buzzer IO pin, here 8
 void setup()

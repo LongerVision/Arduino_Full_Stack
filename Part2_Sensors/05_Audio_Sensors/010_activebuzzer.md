@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/010_activebuzzer.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _010_ActiveBuzzer - _010_ActiveBuzzer.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_010_ActiveBuzzer/_010_ActiveBuzzer.ino).
 ```
 int speakerPin = 8; // Define speaker's pin, here 8
 int potPin = 4;     // Define the pin to control the adjustable resistor

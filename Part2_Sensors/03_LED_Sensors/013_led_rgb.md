@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/013_led_rgb.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _013_LED_RGB - _013_LED_RGB.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_013_LED_RGB/_013_LED_RGB.ino).
 ```
 int redpin = 11; //select the pin for the red LED
 int bluepin =10; // select the pin for the  blue LED

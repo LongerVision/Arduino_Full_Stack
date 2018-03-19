@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/026_led_rg.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _026_LED_RG - _026_LED_RG.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_026_LED_RG/_026_LED_RG.ino).
 ```
 //Arduino test code:
 int redpin = 11;    // select the pin for the red LED

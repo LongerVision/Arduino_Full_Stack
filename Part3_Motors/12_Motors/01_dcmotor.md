@@ -20,8 +20,7 @@ Please refer to [https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors
 /*
 Adafruit Arduino - Lesson 13. DC Motor
 */
- 
- 
+
 int motorPin = 3;
  
 void setup() 
@@ -31,8 +30,7 @@ void setup()
   while (! Serial);
   Serial.println("Speed 0 to 255");
 } 
- 
- 
+
 void loop() 
 { 
   if (Serial.available())

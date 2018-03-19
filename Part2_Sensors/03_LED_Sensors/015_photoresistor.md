@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/015_photoresistor.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _015_PhotoResistor - _015_PhotoResistor.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_015_PhotoResistor/_015_PhotoResistor.ino).
 ```
 int sensorPin = 2;
 int value = 0;

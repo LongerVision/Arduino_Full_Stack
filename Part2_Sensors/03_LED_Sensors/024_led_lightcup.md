@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/024_led_lightcup.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _024_LED_LightCup - _024_LED_LightCup.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_024_LED_LightCup/_024_LED_LightCup.ino).
 ```
 int LedPinA = 5;
 int LedPinB = 6;

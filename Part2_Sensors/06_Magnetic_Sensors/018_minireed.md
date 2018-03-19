@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/018_minireed.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _018_MiniReed - _018_MiniReed.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_018_MiniReed/_018_MiniReed.ino).
 ```
 int Led=13;       // Define LDE Pin
 int buttonpin=3;  // Define mini reed sensor's pin

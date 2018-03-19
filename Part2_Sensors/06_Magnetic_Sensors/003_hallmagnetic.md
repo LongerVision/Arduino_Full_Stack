@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/003_Hall.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _003_Hall_Magnetic - _003_Hall_Magnetic.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_003_Hall_Magnetic/_003_Hall_Magnetic.ino).
 ```
 int Led=13;   // Define LDE Pin
 int SENSOR=3; // Define Hall Magnetic Sensor's pin

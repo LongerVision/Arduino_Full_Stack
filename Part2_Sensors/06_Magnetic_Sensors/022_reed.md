@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/022_reed.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _022_Reed - _022_Reed.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_022_Reed/_022_Reed.ino).
 ```
 int Led=13;      // Define LDE Pin
 int buttonpin=3; // Define reed sensor's pin
