@@ -1411,18 +1411,18 @@
 <h2 id="hardware-wiring">Hardware Wiring</h2>
 <p><img src="../../Examples/sensor-kit-for-arduino/010_activebuzzer.jpg" alt="Image"></p>
 <h2 id="sketch">Sketch</h2>
-<pre><code>int speakerPin = 8; //&#x63A7;&#x5236;&#x5587;&#x53ED;&#x7684;&#x5F15;&#x811A;
-int potPin = 4;//&#x63A7;&#x5236;&#x53EF;&#x8C03;&#x7535;&#x963B;&#x5668;&#x7684;&#x5F15;&#x811A;
+<pre><code>int speakerPin = 8; // Define speaker&apos;s pin, here 8
+int potPin = 4;     // Define the pin to control the adjustable resistor
 int value = 0;
 void setup() {
   pinMode(speakerPin, OUTPUT);
 }
 void loop() {
-  value = analogRead(potPin);//&#x8BFB;&#x7535;&#x963B;&#x5668;&#x5F15;&#x811A;&#x7684;&#x503C;
+  value = analogRead(potPin); // Read the analog value of the adjustable resistor&apos;s pin
   digitalWrite(speakerPin, HIGH);
-  delay(value);//&#x8C03;&#x8282;&#x5587;&#x53ED;&#x54CD;&#x7684;&#x65F6;&#x95F4;;
+  delay(value); // adjust the buzzing time
   digitalWrite(speakerPin, LOW);
-  delay(value);//&#x8C03;&#x8282;&#x5587;&#x53ED;&#x4E0D;&#x54CD;&#x7684;&#x65F6;&#x95F4;;
+  delay(value); // adjust the NOT buzzing time
 }
 </code></pre>
                                 
@@ -1467,7 +1467,7 @@ void loop() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.2 Active Buzzer","level":"2.7.2","depth":2,"next":{"title":"5.3 Microphone Big Sound","level":"2.7.3","depth":2,"path":"Part2_Sensors/05_Audio_Sensors/033_microphone_bigsound.md","ref":"Part2_Sensors/05_Audio_Sensors/033_microphone_bigsound.md","articles":[]},"previous":{"title":"5.1 Passive Buzzer","level":"2.7.1","depth":2,"path":"Part2_Sensors/05_Audio_Sensors/006_passivebuzzer.md","ref":"Part2_Sensors/05_Audio_Sensors/006_passivebuzzer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part2_Sensors/05_Audio_Sensors/010_activebuzzer.md","mtime":"2018-03-17T08:53:05.397Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-17T23:56:00.248Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.2 Active Buzzer","level":"2.7.2","depth":2,"next":{"title":"5.3 Microphone Big Sound","level":"2.7.3","depth":2,"path":"Part2_Sensors/05_Audio_Sensors/033_microphone_bigsound.md","ref":"Part2_Sensors/05_Audio_Sensors/033_microphone_bigsound.md","articles":[]},"previous":{"title":"5.1 Passive Buzzer","level":"2.7.1","depth":2,"path":"Part2_Sensors/05_Audio_Sensors/006_passivebuzzer.md","ref":"Part2_Sensors/05_Audio_Sensors/006_passivebuzzer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part2_Sensors/05_Audio_Sensors/010_activebuzzer.md","mtime":"2018-03-18T00:45:03.242Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-19T00:31:58.757Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1478,10 +1478,6 @@ void loop() {
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

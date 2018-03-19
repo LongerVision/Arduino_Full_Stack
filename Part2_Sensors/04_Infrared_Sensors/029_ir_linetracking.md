@@ -16,7 +16,7 @@ void setup()
 }
 void loop()
 {
-  val=digitalRead(buttonpin);//将数字接口3的值读取赋给val
+  val=digitalRead(buttonpin);// Assign the value of digital pin 3 to val
   Serial.println(val);
   if(val==HIGH)   // if anything detected by line tracking sensor, LED starts flashing.
   {

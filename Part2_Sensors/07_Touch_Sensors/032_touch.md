@@ -6,17 +6,17 @@
 ## Sketch
 ```
 int Led=13;       // Define LDE Pin
-int buttonpin=3;  //定义金属触摸传感器接口
+int buttonpin=3;  // Define pin for touch sensor
 int val;          // Define Variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//定义LED 为输出接口
-  pinMode(buttonpin,INPUT);//定义金属触摸传感器为输出接口
+  pinMode(Led,OUTPUT);  // Define LED as output
+  pinMode(buttonpin,INPUT); // Define touch sensor as input
 }
 void loop()
 {
-  val=digitalRead(buttonpin);//将数字接口3的值读取赋给val
-  if(val==HIGH)//当金属触摸传感器检测有信号时，LED 闪烁
+  val=digitalRead(buttonpin);// assign digital pin 3's reading to val
+  if(val==HIGH) // anything detected by touch sensor, LED starts
   {
     digitalWrite(Led,HIGH);
   }

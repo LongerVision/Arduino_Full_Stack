@@ -16,8 +16,8 @@ void setup()
 }
 void loop()
 {
-  val=digitalRead(buttonpin);//将数字接口3的值读取赋给val
-  if(val==HIGH)//当声音检测模块检测有信号时，LED 闪烁
+  val=digitalRead(buttonpin); // Assign digital pin 3's value to val
+  if(val==HIGH)   // if anything detected by D0 sensor, LED starts flashing
   {
     digitalWrite(Led,HIGH);
   }

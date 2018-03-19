@@ -18,7 +18,7 @@ void loop()
 {
   val=digitalRead(buttonpin); // Assign digital pin 3 to val
   Serial.println(val);
-  if(val==HIGH)   //当避障传感器检测有信号时，LED 闪烁
+  if(val==HIGH)   // if anything detected by obstacle avoidance sensor, LED starts flashing
   {
     digitalWrite(Led,HIGH);
   }

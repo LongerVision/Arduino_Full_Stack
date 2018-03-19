@@ -1416,13 +1416,13 @@ int buttonpin=3;  // Define Flame Sensor Pin
 int val;          // Define Variable val
 void setup()
 {
-  pinMode(Led,OUTPUT);//&#x5B9A;&#x4E49;LED &#x4E3A;&#x8F93;&#x51FA;&#x63A5;&#x53E3;
-  pinMode(buttonpin,INPUT);//&#x5B9A;&#x4E49;&#x706B;&#x7130;&#x4F20;&#x611F;&#x5668;&#x4E3A;&#x8F93;&#x51FA;&#x63A5;&#x53E3;
+  pinMode(Led,OUTPUT); // Define LED as output
+  pinMode(buttonpin,INPUT); // Define flame detector as input
 }
 void loop()
 {
-  val=digitalRead(buttonpin);//&#x5C06;&#x6570;&#x5B57;&#x63A5;&#x53E3;3&#x7684;&#x503C;&#x8BFB;&#x53D6;&#x8D4B;&#x7ED9;val
-  if(val==HIGH)//&#x5F53;&#x706B;&#x7130;&#x4F20;&#x611F;&#x5668;&#x68C0;&#x6D4B;&#x6709;&#x4FE1;&#x53F7;&#x65F6;&#xFF0C;LED &#x95EA;&#x70C1;
+  val=digitalRead(buttonpin);// Assign digitl pin&apos;s reading to val
+  if(val==HIGH)   // If flame detected, LED starts flashing
   {
     digitalWrite(Led,HIGH);
   }
@@ -1474,7 +1474,7 @@ void loop()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10.2 Flame","level":"2.12.2","depth":2,"next":{"title":"10.3 Pulse Monitor","level":"2.12.3","depth":2,"path":"Part2_Sensors/10_Other_Sensors/035_pulsemonitor.md","ref":"Part2_Sensors/10_Other_Sensors/035_pulsemonitor.md","articles":[]},"previous":{"title":"10.1 Joystick","level":"2.12.1","depth":2,"path":"Part2_Sensors/10_Other_Sensors/020_joystick.md","ref":"Part2_Sensors/10_Other_Sensors/020_joystick.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part2_Sensors/10_Other_Sensors/023_flame.md","mtime":"2018-03-17T23:42:35.952Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-17T23:56:00.248Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10.2 Flame","level":"2.12.2","depth":2,"next":{"title":"10.3 Pulse Monitor","level":"2.12.3","depth":2,"path":"Part2_Sensors/10_Other_Sensors/035_pulsemonitor.md","ref":"Part2_Sensors/10_Other_Sensors/035_pulsemonitor.md","articles":[]},"previous":{"title":"10.1 Joystick","level":"2.12.1","depth":2,"path":"Part2_Sensors/10_Other_Sensors/020_joystick.md","ref":"Part2_Sensors/10_Other_Sensors/020_joystick.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part2_Sensors/10_Other_Sensors/023_flame.md","mtime":"2018-03-19T00:17:02.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-19T00:31:58.757Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1485,10 +1485,6 @@ void loop()
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
