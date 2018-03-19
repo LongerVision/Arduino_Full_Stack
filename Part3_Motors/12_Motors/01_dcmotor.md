@@ -11,7 +11,7 @@ Clearly, two welding spots come with the DC motor, which we need to weld out the
 
 
 ## Hardware Wiring
-![Image](../../Examples/geek-workshop/essence/01_dcmotor.jpg)
+![Image](../../Examples/adafruit/01_dcmotor.jpg)
 
 ## Sketch
 Please refer to [https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors/overview](http://www.geek-workshop.com/thread-4360-1-1.html).
