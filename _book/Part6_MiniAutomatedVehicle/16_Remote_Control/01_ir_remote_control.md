@@ -1,1 +1,0 @@
-# 16.1 Remote Control via IR

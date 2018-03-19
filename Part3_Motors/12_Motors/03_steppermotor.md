@@ -1,7 +1,7 @@
 # 12.3 Stepper Motor
 
 We do **NOT** provide any stepper motor in our race car kit. Here, we are using a 5V 28BYJ-48 step motor (in the following image) for testing.
-![Image](./motor-step.jpg)
+![Image](../../Examples/geek-workshop/essence/motor-step.jpg)
 
 ## Hardware Wiring
 ![Image](../../Examples/geek-workshop/essence/03_stepper.jpg)
