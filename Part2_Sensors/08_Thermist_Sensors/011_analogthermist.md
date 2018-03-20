@@ -4,7 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/011_analogthermist.jpg)
 
 ## Sketch
-Please refer to [Examples_Arduino - sensor-kit-for-arduino - _011_AnalogThermister - _011_AnalogThermister.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_011_AnalogThermister/_011_AnalogThermister.ino).
+The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _011_AnalogThermister - _011_AnalogThermister.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_011_AnalogThermister/_011_AnalogThermister.ino).
 ```
 #include <math.h>
 double Thermister(int RawADC) {

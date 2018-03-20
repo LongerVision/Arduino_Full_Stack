@@ -4,7 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/030_led_7colors.jpg)
 
 ## Sketch
-Please refer to [Examples_Arduino - sensor-kit-for-arduino - _030_LED_7Colors - _030_LED_7Colors.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_030_LED_7Colors/_030_LED_7Colors.ino).
+The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _030_LED_7Colors - _030_LED_7Colors.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_030_LED_7Colors/_030_LED_7Colors.ino).
 ```
 /*
   Blink

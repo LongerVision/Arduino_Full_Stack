@@ -4,7 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/028_ir_obstacleavoidance.jpg)
 
 ## Sketch
-Please refer to [Examples_Arduino - sensor-kit-for-arduino - _028_IR_ObstacleAvoidance - _028_IR_ObstacleAvoidance.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_028_IR_ObstacleAvoidance/_028_IR_ObstacleAvoidance.ino).
+The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _028_IR_ObstacleAvoidance - _028_IR_ObstacleAvoidance.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_028_IR_ObstacleAvoidance/_028_IR_ObstacleAvoidance.ino).
 ```
 int Led=13;       // Define LED Pin
 int buttonpin=3;  // Define the obstacle avoidance sensor's pin

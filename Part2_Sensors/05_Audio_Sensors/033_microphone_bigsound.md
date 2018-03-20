@@ -4,7 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/033_microphone_bigsound.jpg)
 
 ## Sketch
-Please refer to [Examples_Arduino - sensor-kit-for-arduino - _033_Microphone_BigSound - _033_Microphone_BigSound.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_033_Microphone_BigSound/_033_Microphone_BigSound.ino).
+The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _033_Microphone_BigSound - _033_Microphone_BigSound.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_033_Microphone_BigSound/_033_Microphone_BigSound.ino).
 ```
 int sensorPin = A5;   // select the input pin for the potentiometer
 int ledPin = 13;      // select the pin for the LED

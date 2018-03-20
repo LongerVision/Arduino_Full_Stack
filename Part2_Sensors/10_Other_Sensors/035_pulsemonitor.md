@@ -4,7 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/035_pulsemonitor.jpg)
 
 ## Sketch
-Please refer to [Examples_Arduino - sensor-kit-for-arduino - _035_PulseMonitor - _035_PulseMonitor.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_035_PulseMonitor/_035_PulseMonitor.ino).
+The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _035_PulseMonitor - _035_PulseMonitor.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_035_PulseMonitor/_035_PulseMonitor.ino).
 ```
 int ledPin=13;
 int sensorPin=0;

@@ -4,7 +4,7 @@
 ![Image](../../Examples/geek-workshop/studynotes/00_ledblinking.jpg)
 
 ## Sketch
-Please refer to [Examples_Arduino - geek-workshop - studynotes - _02_LED_Blinking - _02_LED_Blinking.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/studynotes/_02_LED_Blinking/_02_LED_Blinking.ino).
+The code can be found at [Examples_Arduino - geek-workshop - studynotes - _02_LED_Blinking - _02_LED_Blinking.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/studynotes/_02_LED_Blinking/_02_LED_Blinking.ino).
 ```
 /*
   Blink
