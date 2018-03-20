@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/032_touch.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _032_Touch - _032_Touch.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_032_Touch/_032_Touch.ino).
 ```
 int Led=13;       // Define LDE Pin
 int buttonpin=3;  // Define pin for touch sensor

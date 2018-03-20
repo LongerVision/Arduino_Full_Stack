@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/004_button.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _004_Button - _004_Button.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_004_Button/_004_Button.ino).
 ```
 int Led=13;       // Define LDE Pin
 int buttonpin=3;  // Define the button/switch's pin

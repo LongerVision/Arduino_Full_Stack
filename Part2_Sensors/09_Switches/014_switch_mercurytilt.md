@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/014_switch_mercurytilt.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _014_Switch_MercuryTilt - _014_Switch_MercuryTilt.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_014_Switch_MercuryTilt/_014_Switch_MercuryTilt.ino).
 ```
 /*
   Button

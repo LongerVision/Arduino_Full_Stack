@@ -7,6 +7,7 @@ We do **NOT** provide any stepper motor in our race car kit. Here, we are using 
 ![Image](../../Examples/geek-workshop/essence/03_stepper.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - geek-workshop - essence - Stepper - Stepper.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/Stepper/Stepper.ino).
 ```
 // http://blog.sina.com.cn/s/blog_8043e91a0102wiar.html
 // Use the default Stepper.h in the Stepper library coming with Arduino IDE.

@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/020_joystick.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _020_Joystick - _020_Joystick.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_020_Joystick/_020_Joystick.ino).
 ```
 int sensorPin = 5;
 int value = 0;

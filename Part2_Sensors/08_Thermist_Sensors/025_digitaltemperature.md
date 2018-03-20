@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/025_digitaltemperature.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _025_DigitalTemperature - _025_DigitalTemperature.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_025_DigitalTemperature/_025_DigitalTemperature.ino).
 ```
 int Led=13;       // Define LDE Pin
 int buttonpin=3;  // Define pin for digital tempature sensor

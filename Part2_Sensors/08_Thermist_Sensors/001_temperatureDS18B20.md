@@ -4,6 +4,7 @@
 ![Image](../../Examples/sensor-kit-for-arduino/001_DS18B20.jpg)
 
 ## Sketch
+Please refer to [Examples_Arduino - sensor-kit-for-arduino - _001_Temperature_DS18B20 - _001_Temperature_DS18B20.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_001_Temperature_DS18B20/_001_Temperature_DS18B20.ino).
 ```
 // Include the libraries we need
 #include <OneWire.h>
