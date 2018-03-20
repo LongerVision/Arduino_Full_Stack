@@ -7,10 +7,10 @@ We provide a Micro Servo SG90 in our race car kit, which looks like:
 Directly referenced from [Official Arduino Tutorial - Knob](https://www.arduino.cc/en/Tutorial/Knob).
 
 ### Hardware Wiring
-![Image](../../Examples/geek-workshop/essence/04_servo_knob.jpg)
+![Image](../../Examples/geek-workshop/essence/001_servo_knob.jpg)
 
 ### Sketch
-Please refer to [Examples_Arduino - geek-workshop - essence - Servo_Knob - Servo_Knob.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/Servo_Knob/Servo_Knob.ino).
+Please refer to [Examples_Arduino - geek-workshop - essence - _001_Servo - _001_Servo_Knob.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_001_Servo/_001_Servo_Knob.ino).
 ```
 /*
  Controlling a servo position using a potentiometer (variable resistor)
@@ -44,10 +44,10 @@ void loop() {
 Directly referenced from [Official Arduino Tutorial - Sweep](https://www.arduino.cc/en/Tutorial/Sweep).
 
 ### Hardware Wiring
-![Image](../../Examples/geek-workshop/essence/04_servo_sweep.jpg)
+![Image](../../Examples/geek-workshop/essence/_001_Servo_Sweep.jpg)
 
 ### Sketch
-Please refer to [Examples_Arduino - geek-workshop - essence - Servo_Sweep - Servo_Sweep.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/Servo_Sweep/Servo_Sweep.ino).
+Please refer to [Examples_Arduino - geek-workshop - essence - _001_Servo - _001_Servo_Sweep.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_001_Servo/_001_Servo_Sweep.ino).
 ```
 /* Sweep
  by BARRAGAN <http://barraganstudio.com>
@@ -88,7 +88,7 @@ The hardware wiring is left for students to finish as an in-class assignment. Th
 [**Chapter 13.2 - Pan Tilt Control by 2 Servo Motors**](../../Part5_MiniAutomatedVehicle/14_Assembling/02_pantilt_servomotor.md). 
 
 ### Sketch
-Please refer to [Examples_Arduino - geek-workshop - essence - Servo_PanTilt - Servo_PanTilt.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/Servo_PanTilt/Servo_PanTilt.ino).
+Please refer to [Examples_Arduino - geek-workshop - essence - _001_Servo - _001_Servo_PanTilt.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_001_Servo/_001_Servo_PanTilt.ino).
 ```
 // http://www.robotoid.com/appnotes/arduino-operating-two-servos.html
 
