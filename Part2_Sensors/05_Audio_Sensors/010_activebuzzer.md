@@ -19,5 +19,4 @@ void loop() {
   digitalWrite(speakerPin, LOW);
   delay(value); // adjust the NOT buzzing time
 }
-
 ```
