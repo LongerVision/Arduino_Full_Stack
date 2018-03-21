@@ -14,7 +14,6 @@ The **ONLY** difference is that the provided bluetooth module has 4 pins but **N
 ## Sketch
 The code can be found at [Examples_Arduino - adafruit - _001_Bluetooth - _001_Bluetooth.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_001_Bluetooth/_001_Bluetooth.ino)
 You can also refer to Adafruit's official website at [https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/](https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/).
-
 ```
 #define ledPin 7
 int state = 0;
@@ -41,6 +40,7 @@ void loop() {
 ```
 
 <span style="color:red">**Note: Please remove your bluetooth module before flashing your code onto Arduino board. Otherwise, you'll obtain the following ERROR messages:**</span>
+
 ![Image](../../Examples/howtomechatronics/avr_bluetooth_error.jpg)
 
 
@@ -48,6 +48,14 @@ void loop() {
 Arduino Bluetooth Tutorial Example Android App can be downloaded from [https://howtomechatronics.com/download/arduino-bluetooth-tutorial-example-android-app/?wpdmdl=2833](https://howtomechatronics.com/download/arduino-bluetooth-tutorial-example-android-app/?wpdmdl=2833)
 
 ![Image](../../Examples/howtomechatronics/ArduinoBluetoothTutorialExampleApp.jpg)
+
+
+After the installation, by click on **Connect** on the **FIRST** page of this APP, you'll see all detected bluetooth devices as:
+![Image](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_DevicesFound.jpg)
+
+By selecting one of the devices, you'll see the device is NOW **connected**.
+![Image](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_FrontPage.jpg)
+
 
 
 
