@@ -1,12 +1,20 @@
 # 14.1 Bluetooth
 
-## Example 1:
+A **ZS-040** bluetooth module is provided in our class, which looks like:
+
+![Image](../../Examples/howtomechatronics/HC-05-Bluetooth-Module.jpg) 
+
+The **ONLY** difference is that the provided bluetooth module has 4 pins but **NOT** 6 pins, without pin **STATE** and pin **EN**.
+
 
 ## Hardware Wiring
-![Image](../../Examples/geek-workshop/studynotes/006_nixielightLG5011BSR.jpg)
+
+![Image](../../Examples/howtomechatronics/001_bluetooth.jpg)
 
 ## Sketch
-Please refer to [https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/](https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/).
+The code can be found at [Examples_Arduino - adafruit - _001_Bluetooth - _001_Bluetooth.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_001_Bluetooth/_001_Bluetooth.ino)
+You can also refer to Adafruit's official website at [https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/](https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/).
+
 ```
 #define ledPin 7
 int state = 0;
@@ -26,17 +34,29 @@ void loop() {
  }
  else if (state == '1') {
   digitalWrite(ledPin, HIGH);
-  Serial.println("LED: ON");;
+  Serial.println("LED: ON");
   state = 0;
  } 
 }
 ```
 
+<span style="color:red">**Note: Please remove your bluetooth module before flashing your code onto Arduino board. Otherwise, you'll obtain the following ERROR messages:**</span>
+![Image](../../Examples/howtomechatronics/avr_bluetooth_error.jpg)
 
-## Example 2:
 
-## Hardware Wiring
-![Image](../../Examples/geek-workshop/studynotes/006_nixielightLG5011BSR.jpg)
+## Mobile APPs
+Arduino Bluetooth Tutorial Example Android App can be downloaded from [https://howtomechatronics.com/download/arduino-bluetooth-tutorial-example-android-app/?wpdmdl=2833](https://howtomechatronics.com/download/arduino-bluetooth-tutorial-example-android-app/?wpdmdl=2833)
 
-## Sketch
-Please refer to [https://create.arduino.cc/projecthub/user206876468/arduino-bluetooth-basic-tutorial-d8b737](https://create.arduino.cc/projecthub/user206876468/arduino-bluetooth-basic-tutorial-d8b737).
+![Image](../../Examples/howtomechatronics/ArduinoBluetoothTutorialExampleApp.jpg)
+
+
+
+## Assignment:
+
+Two other very similar reference examples can be found at:
+* [https://create.arduino.cc/projecthub/user206876468/arduino-bluetooth-basic-tutorial-d8b737](https://create.arduino.cc/projecthub/user206876468/arduino-bluetooth-basic-tutorial-d8b737)
+* [http://www.martyncurrey.com/arduino-with-hc-05-bluetooth-module-at-mode/](http://www.martyncurrey.com/arduino-with-hc-05-bluetooth-module-at-mode/)
+
+， which are left for students as their assignments.
+
+In fact, the **Hardware Wiring** and **Sketch** are both already provided on the above two websites.

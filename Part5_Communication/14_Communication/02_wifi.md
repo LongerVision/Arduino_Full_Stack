@@ -11,7 +11,11 @@ Please refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-exa
 
 
 ## Example 2: Arduino Wifi Shield
-
+Please refer to 
+* [https://store.arduino.cc/usa/arduino-wifi-shield](https://store.arduino.cc/usa/arduino-wifi-shield)
+* [https://www.arduino.cc/en/Guide/ArduinoWiFiShield](https://www.arduino.cc/en/Guide/ArduinoWiFiShield)
+* [https://www.arduino.cc/en/Tutorial/WiFiWebServer](https://www.arduino.cc/en/Tutorial/WiFiWebServer)
+* [https://www.arduino.cc/en/Reference/WiFi](https://www.arduino.cc/en/Reference/WiFi)
 
 ## Hardware Wiring
 

@@ -1408,11 +1408,14 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="141-bluetooth">14.1 Bluetooth</h1>
-<h2 id="example-1">Example 1:</h2>
+<p>A <strong>ZS-040</strong> bluetooth module is provided in our class, which looks like:</p>
+<p><img src="../../Examples/howtomechatronics/HC-05-Bluetooth-Module.jpg" alt="Image"> </p>
+<p>The <strong>ONLY</strong> difference is that the provided bluetooth module has 4 pins but <strong>NOT</strong> 6 pins, without pin <strong>STATE</strong> and pin <strong>EN</strong>.</p>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
-<p><img src="../../Examples/geek-workshop/studynotes/006_nixielightLG5011BSR.jpg" alt="Image"></p>
+<p><img src="../../Examples/howtomechatronics/001_bluetooth.jpg" alt="Image"></p>
 <h2 id="sketch">Sketch</h2>
-<p>Please refer to <a href="https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/" target="_blank">https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/</a>.</p>
+<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_001_Bluetooth/_001_Bluetooth.ino" target="_blank">Examples_Arduino - adafruit - _001_Bluetooth - _001_Bluetooth.ino</a>
+You can also refer to Adafruit&apos;s official website at <a href="https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/" target="_blank">https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/</a>.</p>
 <pre><code>#define ledPin 7
 int state = 0;
 void setup() {
@@ -1431,15 +1434,23 @@ void loop() {
  }
  else if (state == &apos;1&apos;) {
   digitalWrite(ledPin, HIGH);
-  Serial.println(&quot;LED: ON&quot;);;
+  Serial.println(&quot;LED: ON&quot;);
   state = 0;
  } 
 }
-</code></pre><h2 id="example-2">Example 2:</h2>
-<h2 id="hardware-wiring">Hardware Wiring</h2>
-<p><img src="../../Examples/geek-workshop/studynotes/006_nixielightLG5011BSR.jpg" alt="Image"></p>
-<h2 id="sketch">Sketch</h2>
-<p>Please refer to <a href="https://create.arduino.cc/projecthub/user206876468/arduino-bluetooth-basic-tutorial-d8b737" target="_blank">https://create.arduino.cc/projecthub/user206876468/arduino-bluetooth-basic-tutorial-d8b737</a>.</p>
+</code></pre><p><span style="color:red"><strong>Note: Please remove your bluetooth module before flashing your code onto Arduino board. Otherwise, you&apos;ll obtain the following ERROR messages:</strong></span>
+<img src="../../Examples/howtomechatronics/avr_bluetooth_error.jpg" alt="Image"></p>
+<h2 id="mobile-apps">Mobile APPs</h2>
+<p>Arduino Bluetooth Tutorial Example Android App can be downloaded from <a href="https://howtomechatronics.com/download/arduino-bluetooth-tutorial-example-android-app/?wpdmdl=2833" target="_blank">https://howtomechatronics.com/download/arduino-bluetooth-tutorial-example-android-app/?wpdmdl=2833</a></p>
+<p><img src="../../Examples/howtomechatronics/ArduinoBluetoothTutorialExampleApp.jpg" alt="Image"></p>
+<h2 id="assignment">Assignment:</h2>
+<p>Two other very similar reference examples can be found at:</p>
+<ul>
+<li><a href="https://create.arduino.cc/projecthub/user206876468/arduino-bluetooth-basic-tutorial-d8b737" target="_blank">https://create.arduino.cc/projecthub/user206876468/arduino-bluetooth-basic-tutorial-d8b737</a></li>
+<li><a href="http://www.martyncurrey.com/arduino-with-hc-05-bluetooth-module-at-mode/" target="_blank">http://www.martyncurrey.com/arduino-with-hc-05-bluetooth-module-at-mode/</a></li>
+</ul>
+<p>&#xFF0C; which are left for students as their assignments.</p>
+<p>In fact, the <strong>Hardware Wiring</strong> and <strong>Sketch</strong> are both already provided on the above two websites.</p>
 
                                 
                                 </section>
@@ -1483,7 +1494,7 @@ void loop() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"next":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_wifi.md","ref":"Part5_Communication/14_Communication/02_wifi.md","articles":[]},"previous":{"title":"Chapter 14. Communication","level":"2.19","depth":1,"path":"Part5_Communication/14_Communication/README.md","ref":"Part5_Communication/14_Communication/README.md","articles":[{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},{"title":"14.2 Wifi","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_wifi.md","ref":"Part5_Communication/14_Communication/02_wifi.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/01_bluetooth.md","mtime":"2018-03-21T03:35:26.480Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-21T03:41:01.818Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"next":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_wifi.md","ref":"Part5_Communication/14_Communication/02_wifi.md","articles":[]},"previous":{"title":"Chapter 14. Communication","level":"2.19","depth":1,"path":"Part5_Communication/14_Communication/README.md","ref":"Part5_Communication/14_Communication/README.md","articles":[{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},{"title":"14.2 Wifi","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_wifi.md","ref":"Part5_Communication/14_Communication/02_wifi.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/01_bluetooth.md","mtime":"2018-03-21T06:50:36.524Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-21T06:52:20.955Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
