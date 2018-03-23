@@ -1,6 +1,6 @@
 # 14.1 Bluetooth
 
-A **ZS-040** bluetooth module is provided in our class, which looks like:
+A **ZS-040** bluetooth module is provided in our Arduino course on-site, which looks like:
 
 ![Image](../../Examples/howtomechatronics/HC-05-Bluetooth-Module.jpg) 
 
