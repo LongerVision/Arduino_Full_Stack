@@ -5,7 +5,7 @@
 
 An **ESP8266** wifi module is provided in our Arduino course on-site, which looks like:
 
-![Image](../../Examples/arduinesp/espressif_esp8266.jpg)
+![Image](../../Examples/geekstips/espressif_esp8266.jpg)
 
 
 ## Preparation
@@ -36,11 +36,13 @@ Renaming mkspiffs-0.1.2-linux64 to mkspiffs
 
 
 ### STEP 2 - Board Manager
-Start **Arduino IDE**, then click **File->Preferences**, fill [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json) into **Additional Boards Manager URLs**.
+Start **Arduino IDE**, then click **File->Preferences**, fill [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json) into **Additional Boards Manager URLs**, as:
+
+![Image](../../Examples/geekstips/AdditionalBoardsManagerURLs.jpg)
 
 Then, restart **Arduino IDE**. Click **Tools->Board->Board Manager**, then we search **esp**, make sure **Arduino AVR Boards** and **esp8266** are installed. Please refer to the following image:
 
-![Image](../../Examples/arduinesp/ArduinoESP8266.jpg)
+![Image](../../Examples/geekstips/ArduinoESP8266.jpg)
 
 Without the installed Arduino AVR Boards, you will possibly meet the following **ERROR** message:
 
@@ -60,7 +62,7 @@ SPIFFS Upload failed!
 
 
 ## Hardware Wiring
-![Image](../../Examples/arduinesp/002_wifi_esp8266.jpg)
+![Image](../../Examples/geekstips/002_wifi_esp8266.jpg)
 
 The way how we wire the circuit is just as in [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg).
 
