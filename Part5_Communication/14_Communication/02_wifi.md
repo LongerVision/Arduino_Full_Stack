@@ -7,13 +7,6 @@ An **ESP8266** wifi module is provided in our Arduino course on-site, which look
 
 ![Image](../../Examples/arduinesp/espressif_esp8266.jpg)
 
-The website [http://www.arduinesp.com/](http://www.arduinesp.com/) is just particularly for this **ESP8266** Wifi module.
-
-## Hardware Wiring
-![Image](../../Examples/arduinesp/002_wifi_esp8266.jpg)
-
-The way how we wire the circuit is just as in [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg).
-
 
 ## Preparation
 
@@ -66,6 +59,11 @@ SPIFFS Upload failed!
 ```
 
 
+## Hardware Wiring
+![Image](../../Examples/arduinesp/002_wifi_esp8266.jpg)
+
+The way how we wire the circuit is just as in [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg).
+
 ## Sketch
 The code can be found at [Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino).
 You can also refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/](https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/).
@@ -73,8 +71,13 @@ You can also refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-co
 
 
 
+## Using ESP8266 without Arduino Board
 
-
+It is also possible run the sketch on the **ESP8266** program without using an **Arduino UNO board**, which has been detailedly explained on this website [http://www.arduinesp.com/](http://www.arduinesp.com/). Three cannonical examples are given on [http://www.arduinesp.com/examples](http://www.arduinesp.com/examples):
+* [Blink](http://www.arduinesp.com/blink)
+* [Wifiwebserver](http://www.arduinesp.com/wifiwebserver)
+* [Thingspeak Temperature Sensor](http://www.arduinesp.com/thingspeak)
+Students are encouraged to finish all examples after class.
 
 
 
