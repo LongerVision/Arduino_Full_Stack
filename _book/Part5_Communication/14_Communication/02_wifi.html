@@ -1428,7 +1428,7 @@
 <p>In order to make <strong>ESP8266</strong> module runnable on an Arduino board, we need to follow the steps on 
 <a href="https://github.com/esp8266/Arduino" target="_blank">https://github.com/esp8266/Arduino</a>.</p>
 <h3 id="step-1---install-arduino-core-for-esp8266">STEP 1 - Install Arduino Core for ESP8266</h3>
-<p><strong>Note</strong>: Make sure you enabled <strong>python2</strong>, instead of <strong>python3</strong>.</p>
+<p><strong><span style="color:red">Note</span></strong>: Make sure you enabled <strong>python2</strong>, instead of <strong>python3</strong>.</p>
 <pre><code>$ cd /opt/arduino/hardware
 $ mkdir esp8266com
 $ cd esp8266com
@@ -1444,21 +1444,41 @@ Extracting dist/linux64-xtensa-lx106-elf-gb404fb9.tar.gz
 Tool mkspiffs-0.1.2-linux64.tar.gz already downloaded
 Extracting dist/mkspiffs-0.1.2-linux64.tar.gz
 Renaming mkspiffs-0.1.2-linux64 to mkspiffs
-</code></pre><h3 id="step-2---board-manager">STEP 2 - Board Manager</h3>
-<p>Start <strong>Arduino IDE</strong>, then click <strong>File-&gt;Preferences</strong>, fill <a href="http://arduino.esp8266.com/stable/package_esp8266com_index.json" target="_blank">http://arduino.esp8266.com/stable/package_esp8266com_index.json</a> into <strong>Additional Boards Manager URLs</strong>, as:</p>
+</code></pre><h3 id="step-2---add-additional-boards-manager-urls">STEP 2 - Add Additional Boards Manager URLs</h3>
+<p>Start <strong>Arduino IDE</strong>, then click <strong>File-&gt;Preferences-&gt;Settings</strong>, fill <a href="http://arduino.esp8266.com/stable/package_esp8266com_index.json" target="_blank">http://arduino.esp8266.com/stable/package_esp8266com_index.json</a> into <strong>Additional Boards Manager URLs</strong>, as:</p>
 <p><img src="../../Examples/geekstips/AdditionalBoardsManagerURLs.jpg" alt="Image"></p>
+<h3 id="step-3---board-manager">STEP 3 - Board Manager</h3>
 <p>Then, restart <strong>Arduino IDE</strong>. Click <strong>Tools-&gt;Board-&gt;Board Manager</strong>, then we search <strong>esp</strong>, make sure <strong>Arduino AVR Boards</strong> and <strong>esp8266</strong> are installed. Please refer to the following image:</p>
 <p><img src="../../Examples/geekstips/ArduinoESP8266.jpg" alt="Image"></p>
 <p>Without the installed Arduino AVR Boards, you will possibly meet the following <strong>ERROR</strong> message:</p>
 <p><strong><span style="color:red">SPIFFS Not Supported on avr</span></strong></p>
 <p>Afterwards, make sure <strong>Tools-&gt;Board-&gt;Generic ESP8266 Module</strong> is selected. </p>
-<h3 id="step-3---sketch-upload-error">STEP 3 - Sketch Upload ERROR</h3>
-<p>After we make sure <strong>Board: &quot;Generic ESP8266 Module&quot;</strong> is selected, we are now trying to upload a sketch to Arduino board with <strong>ESP8266</strong> </p>
+<h3 id="step-4---sketch-upload-error">STEP 4 - Sketch Upload ERROR</h3>
+<p>After we make sure <strong>Board: &quot;Generic ESP8266 Module&quot;</strong> is selected, we are now trying to upload (after verify/compile) any sketch (here, the default sketch for testing <strong>FIRST</strong>) to <strong>Arduino board</strong> with <strong>ESP8266</strong> <strong><span style="color:blue">connected</span></strong>. You will see the following <strong>ERROR</strong> messages:</p>
 <pre><code>warning: espcomm_sync failed
 error: espcomm_open failed
 error: espcomm_upload_mem failed
 SPIFFS Upload failed!
-</code></pre><h2 id="hardware-wiring">Hardware Wiring</h2>
+</code></pre><p><img src="../../Examples/geekstips/espcomm_error.jpg" alt="Image"></p>
+<p>By clicking <strong>Tools-&gt;ESP8266 Sketch Data Upload</strong>, you will see the following dialog:</p>
+<p><img src="../../Examples/geekstips/spiffs_dialog.jpg" alt="Image"></p>
+<p>By clicking <strong>Yes</strong>, the same <strong>ERROR</strong> messages will be given as:</p>
+<pre><code>[SPIFFS] data   : /tmp/untitled321754874.tmp/sketch_mar24a/data
+[SPIFFS] size   : 64
+[SPIFFS] page   : 256
+[SPIFFS] block  : 4096
+[SPIFFS] upload : /tmp/arduino_build_782393/sketch_mar24a.spiffs.bin
+[SPIFFS] address: 0x6B000
+[SPIFFS] reset  : ck
+[SPIFFS] port   : /dev/ttyACM0
+[SPIFFS] speed  : 115200
+
+warning: espcomm_sync failed
+error: espcomm_open failed
+error: espcomm_upload_mem failed
+SPIFFS Upload failed!
+</code></pre><p><img src="../../Examples/geekstips/espcomm_error1.jpg" alt="Image"></p>
+<h2 id="hardware-wiring">Hardware Wiring</h2>
 <p><img src="../../Examples/geekstips/002_wifi_esp8266.jpg" alt="Image"></p>
 <p>The way how we wire the circuit is just as in <a href="https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg" target="_blank">geekstips</a>.</p>
 <h2 id="sketch">Sketch</h2>
@@ -1523,7 +1543,7 @@ Students are encouraged to finish all examples after class.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Integrate Wifi & Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-03-24T23:25:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T23:26:25.426Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Integrate Wifi & Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-03-24T23:45:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T23:45:30.742Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1534,10 +1554,6 @@ Students are encouraged to finish all examples after class.</li>
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

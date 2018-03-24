@@ -15,7 +15,7 @@ In order to make **ESP8266** module runnable on an Arduino board, we need to fol
 
 
 ### STEP 1 - Install Arduino Core for ESP8266
-**Note**: Make sure you enabled **python2**, instead of **python3**.
+**<span style="color:red">Note</span>**: Make sure you enabled **python2**, instead of **python3**.
 ```
 $ cd /opt/arduino/hardware
 $ mkdir esp8266com
@@ -35,11 +35,13 @@ Renaming mkspiffs-0.1.2-linux64 to mkspiffs
 ```
 
 
-### STEP 2 - Board Manager
-Start **Arduino IDE**, then click **File->Preferences**, fill [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json) into **Additional Boards Manager URLs**, as:
+### STEP 2 - Add Additional Boards Manager URLs
+Start **Arduino IDE**, then click **File->Preferences->Settings**, fill [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json) into **Additional Boards Manager URLs**, as:
 
 ![Image](../../Examples/geekstips/AdditionalBoardsManagerURLs.jpg)
 
+
+### STEP 3 - Board Manager
 Then, restart **Arduino IDE**. Click **Tools->Board->Board Manager**, then we search **esp**, make sure **Arduino AVR Boards** and **esp8266** are installed. Please refer to the following image:
 
 ![Image](../../Examples/geekstips/ArduinoESP8266.jpg)
@@ -51,14 +53,41 @@ Without the installed Arduino AVR Boards, you will possibly meet the following *
 Afterwards, make sure **Tools->Board->Generic ESP8266 Module** is selected. 
 
 
-### STEP 3 - Sketch Upload ERROR
-After we make sure **Board: "Generic ESP8266 Module"** is selected, we are now trying to upload a sketch to Arduino board with **ESP8266** 
+### STEP 4 - Sketch Upload ERROR
+After we make sure **Board: "Generic ESP8266 Module"** is selected, we are now trying to upload (after verify/compile) any sketch (here, the default sketch for testing **FIRST**) to **Arduino board** with **ESP8266** **<span style="color:blue">connected</span>**. You will see the following **ERROR** messages:
 ```
 warning: espcomm_sync failed
 error: espcomm_open failed
 error: espcomm_upload_mem failed
 SPIFFS Upload failed!
 ```
+![Image](../../Examples/geekstips/espcomm_error.jpg)
+
+
+
+By clicking **Tools->ESP8266 Sketch Data Upload**, you will see the following dialog:
+
+![Image](../../Examples/geekstips/spiffs_dialog.jpg)
+
+By clicking **Yes**, the same **ERROR** messages will be given as:
+```
+[SPIFFS] data   : /tmp/untitled321754874.tmp/sketch_mar24a/data
+[SPIFFS] size   : 64
+[SPIFFS] page   : 256
+[SPIFFS] block  : 4096
+[SPIFFS] upload : /tmp/arduino_build_782393/sketch_mar24a.spiffs.bin
+[SPIFFS] address: 0x6B000
+[SPIFFS] reset  : ck
+[SPIFFS] port   : /dev/ttyACM0
+[SPIFFS] speed  : 115200
+
+warning: espcomm_sync failed
+error: espcomm_open failed
+error: espcomm_upload_mem failed
+SPIFFS Upload failed!
+```
+![Image](../../Examples/geekstips/espcomm_error1.jpg)
+
 
 
 ## Hardware Wiring
