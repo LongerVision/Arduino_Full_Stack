@@ -1,7 +1,7 @@
 # 14.2 Wifi - ESP8266
 
 
-## Option 1 - ESP8255
+## Option 1: ESP8266
 
 An **ESP8266** wifi module is provided in our Arduino course on-site, which looks like:
 
@@ -38,7 +38,7 @@ error: espcomm_upload_mem failed
 
 
 
-## Option 2 - Official Arduino Wifi Shield
+## Option 2: Official Arduino Wifi Shield
 
 You can also purchase an **Arduino Wifi Shield** recommended by official Arduino website(s), and accomplish Wifi communication. Please refer to the following official Arduino webpages:
 * [https://store.arduino.cc/usa/arduino-wifi-shield](https://store.arduino.cc/usa/arduino-wifi-shield)
