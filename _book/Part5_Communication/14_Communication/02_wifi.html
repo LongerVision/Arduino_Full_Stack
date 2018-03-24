@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../Part6_MiniAutomatedVehicle/" />
+    <link rel="next" href="03_wifi_bluetooth.html" />
     
     
     <link rel="prev" href="01_bluetooth.html" />
@@ -1241,6 +1241,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.19.3" data-path="03_wifi_bluetooth.html">
+            
+                <a href="03_wifi_bluetooth.html">
+            
+                    
+                    14.3 Integrate Wifi & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1407,22 +1420,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="142-wifi">14.2 Wifi</h1>
-<h2 id="example-1-esp8266">Example 1: ESP8266</h2>
-<p>Please refer to <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</p>
+                                <h1 id="142-wifi---esp8266">14.2 Wifi - ESP8266</h1>
+<h2 id="option-1---esp8255">Option 1 - ESP8255</h2>
+<p>An <strong>ESP8266</strong> wifi module is provided in our Arduino course on-site, which looks like:</p>
+<p><img src="../../Examples/geekstips/espressif_esp8266.jpg" alt="Image"> </p>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
-<p><img src="../../Examples/geek-workshop/studynotes/006_nixielightLG5011BSR.jpg" alt="Image"></p>
+<p><img src="../../Examples/geekstips/002_wifi_esp8266.jpg" alt="Image"></p>
+<p>The way how we wire the circuit is just as in <a href="https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg" target="_blank">geekstips</a>.</p>
+<h2 id="preparation">Preparation</h2>
+<p>In order to make <strong>ESP8266</strong> module runnable on an Arduino board, we need to follow the steps on 
+<a href="https://github.com/esp8266/Arduino" target="_blank">https://github.com/esp8266/Arduino</a>.</p>
 <h2 id="sketch">Sketch</h2>
-<h2 id="example-2-arduino-wifi-shield">Example 2: Arduino Wifi Shield</h2>
-<p>Please refer to </p>
+<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino" target="_blank">Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino</a>.
+You can also refer to <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</p>
+<pre><code>SPIFFS Not Supported on avr
+</code></pre><pre><code>warning: espcomm_sync failed
+error: espcomm_open failed
+error: espcomm_upload_mem failed
+</code></pre><h2 id="option-2---official-arduino-wifi-shield">Option 2 - Official Arduino Wifi Shield</h2>
+<p>You can also purchase an <strong>Arduino Wifi Shield</strong> recommended by official Arduino website(s), and accomplish Wifi communication. Please refer to the following official Arduino webpages:</p>
 <ul>
 <li><a href="https://store.arduino.cc/usa/arduino-wifi-shield" target="_blank">https://store.arduino.cc/usa/arduino-wifi-shield</a></li>
 <li><a href="https://www.arduino.cc/en/Guide/ArduinoWiFiShield" target="_blank">https://www.arduino.cc/en/Guide/ArduinoWiFiShield</a></li>
 <li><a href="https://www.arduino.cc/en/Tutorial/WiFiWebServer" target="_blank">https://www.arduino.cc/en/Tutorial/WiFiWebServer</a></li>
 <li><a href="https://www.arduino.cc/en/Reference/WiFi" target="_blank">https://www.arduino.cc/en/Reference/WiFi</a></li>
 </ul>
-<h2 id="hardware-wiring">Hardware Wiring</h2>
-<h2 id="sketch">Sketch</h2>
 
                                 
                                 </section>
@@ -1455,7 +1477,7 @@
                 </a>
                 
                 
-                <a href="../../Part6_MiniAutomatedVehicle/" class="navigation navigation-next " aria-label="Next page: Part 6 - Arduino Based Mini Automated Vehicle">
+                <a href="03_wifi_bluetooth.html" class="navigation navigation-next " aria-label="Next page: 14.3 Integrate Wifi & Bluetooth">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1466,7 +1488,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"Part 6 - Arduino Based Mini Automated Vehicle","level":"2.20","depth":1,"path":"Part6_MiniAutomatedVehicle/README.md","ref":"Part6_MiniAutomatedVehicle/README.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-03-21T03:51:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-21T07:31:32.769Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Integrate Wifi & Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-03-24T20:56:38.501Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-24T20:58:23.435Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1477,6 +1499,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
