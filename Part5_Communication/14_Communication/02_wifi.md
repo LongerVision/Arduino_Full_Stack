@@ -18,6 +18,29 @@ The way how we wire the circuit is just as in [geekstips](https://www.geekstips.
 In order to make **ESP8266** module runnable on an Arduino board, we need to follow the steps on 
 [https://github.com/esp8266/Arduino](https://github.com/esp8266/Arduino).
 
+### STEP 1 - Install Arduino Core for ESP8266
+**Note**: Make sure you enabled **python2**, instead of **python3**.
+```
+$ cd /opt/arduino/hardware
+$ mkdir esp8266com
+$ cd esp8266com
+$ git clone https://github.com/esp8266/Arduino.git esp8266
+$ cd esp8266/tool6s
+$ python get.py
+Platform: x86_64-pc-linux-gnu
+Tool esptool-0.4.9-linux64.tar.gz already downloaded
+Extracting dist/esptool-0.4.9-linux64.tar.gz
+Renaming esptool-0.4.9-linux64 to esptool
+Tool linux64-xtensa-lx106-elf-gb404fb9.tar.gz already downloaded
+Extracting dist/linux64-xtensa-lx106-elf-gb404fb9.tar.gz
+Tool mkspiffs-0.1.2-linux64.tar.gz already downloaded
+Extracting dist/mkspiffs-0.1.2-linux64.tar.gz
+Renaming mkspiffs-0.1.2-linux64 to mkspiffs
+```
+Then, restart **Arduino IDE**. Click **Tools->Board->Board Manager**, then we need to install Arduino AVR Boards, please refer to 
+
+![Image](../../Examples/geekstips/ArduinoAVRBoards.jpg)
+
 
 
 ## Sketch
