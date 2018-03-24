@@ -5,10 +5,12 @@
 
 An **ESP8266** wifi module is provided in our Arduino course on-site, which looks like:
 
-![Image](../../Examples/geekstips/espressif_esp8266.jpg) 
+![Image](../../Examples/arduinesp/espressif_esp8266.jpg)
+
+The website [http://www.arduinesp.com/](http://www.arduinesp.com/) is just particularly for this **ESP8266** Wifi module.
 
 ## Hardware Wiring
-![Image](../../Examples/geekstips/002_wifi_esp8266.jpg)
+![Image](../../Examples/arduinesp/002_wifi_esp8266.jpg)
 
 The way how we wire the circuit is just as in [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg).
 
@@ -17,6 +19,7 @@ The way how we wire the circuit is just as in [geekstips](https://www.geekstips.
 
 In order to make **ESP8266** module runnable on an Arduino board, we need to follow the steps on 
 [https://github.com/esp8266/Arduino](https://github.com/esp8266/Arduino).
+
 
 ### STEP 1 - Install Arduino Core for ESP8266
 **Note**: Make sure you enabled **python2**, instead of **python3**.
@@ -37,15 +40,30 @@ Tool mkspiffs-0.1.2-linux64.tar.gz already downloaded
 Extracting dist/mkspiffs-0.1.2-linux64.tar.gz
 Renaming mkspiffs-0.1.2-linux64 to mkspiffs
 ```
+
+
+### STEP 2 - Board Manager
+Start **Arduino IDE**, then click **File->Preferences**, fill [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json) into **Additional Boards Manager URLs**.
+
 Then, restart **Arduino IDE**. Click **Tools->Board->Board Manager**, then we search **esp**, make sure **Arduino AVR Boards** and **esp8266** are installed. Please refer to the following image:
 
-![Image](../../Examples/geekstips/ArduinoESP8266.jpg)
+![Image](../../Examples/arduinesp/ArduinoESP8266.jpg)
 
-Without the installed Arduino AVR Boards, you will possibly meet the following **ERROR** message
-```
-SPIFFS Not Supported on avr
-```
+Without the installed Arduino AVR Boards, you will possibly meet the following **ERROR** message:
 
+**<span style="color:red">SPIFFS Not Supported on avr</span>**
+
+Afterwards, make sure **Tools->Board->Generic ESP8266 Module** is selected. 
+
+
+### STEP 3 - Sketch Upload ERROR
+After we make sure **Board: "Generic ESP8266 Module"** is selected, we are now trying to upload a sketch to Arduino board with **ESP8266** 
+```
+warning: espcomm_sync failed
+error: espcomm_open failed
+error: espcomm_upload_mem failed
+SPIFFS Upload failed!
+```
 
 
 ## Sketch
@@ -56,11 +74,7 @@ You can also refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-co
 
 
 
-```
-warning: espcomm_sync failed
-error: espcomm_open failed
-error: espcomm_upload_mem failed
-```
+
 
 
 
