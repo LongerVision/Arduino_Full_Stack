@@ -1,4 +1,4 @@
-# 14.1 Bluetooth
+# 14.1 Bluetooth - HC-06
 
 A **ZS-040** bluetooth module is provided in our Arduino course on-site, which looks like:
 
