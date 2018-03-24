@@ -37,9 +37,14 @@ Tool mkspiffs-0.1.2-linux64.tar.gz already downloaded
 Extracting dist/mkspiffs-0.1.2-linux64.tar.gz
 Renaming mkspiffs-0.1.2-linux64 to mkspiffs
 ```
-Then, restart **Arduino IDE**. Click **Tools->Board->Board Manager**, then we need to install Arduino AVR Boards, please refer to 
+Then, restart **Arduino IDE**. Click **Tools->Board->Board Manager**, then we search **esp**, make sure **Arduino AVR Boards** and **esp8266** are installed. Please refer to the following image:
 
-![Image](../../Examples/geekstips/ArduinoAVRBoards.jpg)
+![Image](../../Examples/geekstips/ArduinoESP8266.jpg)
+
+Without the installed Arduino AVR Boards, you will possibly meet the following **ERROR** message
+```
+SPIFFS Not Supported on avr
+```
 
 
 
@@ -49,9 +54,7 @@ You can also refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-co
 
 
 
-```
-SPIFFS Not Supported on avr
-```
+
 
 ```
 warning: espcomm_sync failed
