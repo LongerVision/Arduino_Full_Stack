@@ -5,6 +5,6 @@ The course content for this entire chapter is **NOT** to be disclosed. Students 
 * 4 wheels
 * 4 engines
 
-![Image](./roboticvehicle.jpg)
+![Image](../../Examples/longervisionrobot/roboticvehicle.jpg)
 
 Students are also welcome to puchase the kit from our website at [http://www.longervisionrobot.com/en/products/robotics-vehicles.html](http://www.longervisionrobot.com/en/products/robotics-vehicles.html).
