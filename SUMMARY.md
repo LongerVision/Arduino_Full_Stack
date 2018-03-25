@@ -80,7 +80,7 @@
 * [Chapter 13. Display](Part4_Display/13_Display/README.md)
     * [13.1 Nixie Light](Part4_Display/13_Display/01_nixie_light_LG5011B.md)
     * [13.2 Crystal Display](Part4_Display/13_Display/02_crystal_1602A.md)
-    * [13.3 Crystal Display More](Part4_Display/13_Display/03_crystal_12964.md)
+    * [13.3 Crystal Display More](Part4_Display/13_Display/03_crystal_12864.md)
 * [Part 5 - Communication](Part5_Communication/README.md)
 * [Chapter 14. Communication](Part5_Communication/14_Communication/README.md)
     * [14.1 Bluetooth](Part5_Communication/14_Communication/01_bluetooth.md)
