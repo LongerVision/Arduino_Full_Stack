@@ -3,9 +3,15 @@
 
 ## Option 1: ESP8266
 
+**<span style="color:red">Note</span>**: A lot of pictures in this section are directly cited from [https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/](https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/).
+
 An **ESP8266** wifi module is provided in our Arduino course on-site, which looks like:
 
 ![Image](../../Examples/geekstips/espressif_esp8266.jpg)
+
+And its pins are defined as:
+
+![Image](../../Examples/geekstips/ESP8266-Pinout-GeeksTips-300x124.jpg)
 
 
 ## Preparation
@@ -50,6 +56,8 @@ Without the installed Arduino AVR Boards, you will possibly meet the following *
 
 **<span style="color:red">SPIFFS Not Supported on avr</span>**
 
+What is **SPIFFS**? For short, it is **SPI Flash Filing System**. For details, please refer to [http://www.instructables.com/id/Using-ESP8266-SPIFFS/](http://www.instructables.com/id/Using-ESP8266-SPIFFS/).
+
 Afterwards, make sure **Tools->Board->Generic ESP8266 Module** is selected. 
 
 
@@ -88,6 +96,23 @@ SPIFFS Upload failed!
 ```
 ![Image](../../Examples/geekstips/espcomm_error1.jpg)
 
+
+So, it seems we failed to flash our **ESP8266** Wifi module. But, we have to do something. This website [https://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html](https://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html) is just to solve this problem.
+
+
+### STEP 5 - Flash ESP8266
+
+In fact, 4 different methods have been summarized in [https://www.diyhobi.com/flash-program-esp-01-using-usb-serial-adapter/](https://www.diyhobi.com/flash-program-esp-01-using-usb-serial-adapter/) to fulfill the task how to flash **ESP8266**.
+
+
+* Flash Mode: “DIO”
+* Flash Frequency: “40MHz”
+* CPU Frequency: “80 MHz”
+* Flash Size: “1M (64K SPIFFS)”
+* Debug Port: “Disabled”
+* Debug Level: “None”
+* Reset Method: “ck”
+* Upload Speed: “115200”
 
 
 ## Hardware Wiring
