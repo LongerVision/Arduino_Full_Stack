@@ -14,7 +14,7 @@ int Enable = 2;
 void LcdCommandWrite(int value) {
 // define for all pins
 int i = 0;
-for (i=DB[0]; i <= DI; i++) //总线赋值
+for (i=DB[0]; i <= DI; i++) //assign all data bus
 {
    digitalWrite(i,value & 01);//因为1602液晶信号识别是D7-D0(不是D0-D7)，这里是用来反转信号。
    value >>= 1;

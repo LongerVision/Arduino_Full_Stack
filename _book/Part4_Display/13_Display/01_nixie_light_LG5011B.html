@@ -1183,6 +1183,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.17.3" data-path="03_crystal_12964.md">
+            
+                <span>
+            
+                    
+                    13.3 Crystal Display More
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1424,6 +1437,132 @@
 <h2 id="hardware-wiring">Hardware Wiring</h2>
 <p><img src="../../Examples/geek-workshop/studynotes/006_nixielightLG5011BSR.jpg" alt="Image"></p>
 <h2 id="sketch">Sketch</h2>
+<pre><code>//set IO to control each piece. Please refer to the official definition of LG5011B.
+int a=7;
+int b=6;
+int c=5;
+int d=11;
+int e=10;
+int f=8;
+int g=9;
+int dp=4;
+
+//Display digit 1
+void digital_1(void)
+{
+  unsigned char j;
+  digitalWrite(c,LOW);  //light up c
+  digitalWrite(b,LOW);  //light up b
+  for(j=7;j&lt;=11;j++)    //turn down others
+    digitalWrite(j,HIGH);
+  digitalWrite(dp,HIGH);//turn down dot point
+}
+//Display digit 2
+void digital_2(void)
+{
+  unsigned char j;
+  digitalWrite(b,LOW);
+  digitalWrite(a,LOW);
+  for(j=9;j&lt;=11;j++)
+    digitalWrite(j,LOW);
+  digitalWrite(dp,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(f,HIGH);
+}
+//Display digit 3
+void digital_3(void)
+{
+  unsigned char j;
+  digitalWrite(g,LOW);
+  digitalWrite(d,LOW);
+  for(j=5;j&lt;=7;j++)
+    digitalWrite(j,LOW);
+  digitalWrite(dp,HIGH);
+  digitalWrite(f,HIGH);
+  digitalWrite(e,HIGH);
+}
+//Display digit 4
+void digital_4(void)
+{
+  digitalWrite(c,LOW);
+  digitalWrite(b,LOW);
+  digitalWrite(f,LOW);
+  digitalWrite(g,LOW);
+  digitalWrite(dp,HIGH);
+  digitalWrite(a,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(d,HIGH);   
+}
+//Display digit 5
+void digital_5(void)
+{
+  unsigned char j;
+  for(j=7;j&lt;=9;j++)
+    digitalWrite(j,LOW);
+  digitalWrite(c,LOW);
+  digitalWrite(d,LOW);
+  digitalWrite(dp,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(e,HIGH); 
+}
+//Display digit 6
+void digital_6(void)
+{
+  unsigned char j;
+  for(j=7;j&lt;=11;j++)
+    digitalWrite(j,LOW);
+  digitalWrite(c,LOW);
+  digitalWrite(dp,HIGH);
+  digitalWrite(b,HIGH);   
+}
+//Display digit 7
+void digital_7(void)
+{
+  unsigned char j;
+  for(j=5;j&lt;=7;j++)
+    digitalWrite(j,LOW);
+  digitalWrite(dp,HIGH);
+  for(j=8;j&lt;=11;j++)
+    digitalWrite(j,HIGH);
+}
+//Display digit 8
+void digital_8(void)
+{
+  unsigned char j;
+  for(j=5;j&lt;=11;j++)
+    digitalWrite(j,LOW);
+  digitalWrite(dp,HIGH);
+}
+void setup()
+{
+  int i;    //Define variable i
+  for(i=4;i&lt;=11;i++)
+    pinMode(i,OUTPUT);  //set pins 4~11 as output
+}
+void loop()
+{  
+  while(1)
+  {
+    digital_1();    //digit 1
+    delay(2000);    //delay 2 seconds
+    digital_2();
+    delay(2000);
+    digital_3();
+    delay(2000);
+    digital_4();
+    delay(2000);
+    digital_5();
+    delay(2000);
+    digital_6();
+    delay(2000);
+    digital_7();
+    delay(2000);
+    digital_8();
+    delay(2000);   
+  }
+}
+</code></pre><h2 id="assignments">Assignments</h2>
+<p>How to display digits <strong>9</strong> and <strong>0</strong> on <strong>LG5011B</strong>?</p>
 
                                 
                                 </section>
@@ -1467,7 +1606,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"next":{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"path":"Part4_Display/13_Display/02_crystal_1602A.md","ref":"Part4_Display/13_Display/02_crystal_1602A.md","articles":[]},"previous":{"title":"Chapter 13. Display","level":"2.17","depth":1,"path":"Part4_Display/13_Display/README.md","ref":"Part4_Display/13_Display/README.md","articles":[{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","ref":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","articles":[]},{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"path":"Part4_Display/13_Display/02_crystal_1602A.md","ref":"Part4_Display/13_Display/02_crystal_1602A.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","mtime":"2018-03-20T23:17:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-25T20:14:51.445Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"next":{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"path":"Part4_Display/13_Display/02_crystal_1602A.md","ref":"Part4_Display/13_Display/02_crystal_1602A.md","articles":[]},"previous":{"title":"Chapter 13. Display","level":"2.17","depth":1,"path":"Part4_Display/13_Display/README.md","ref":"Part4_Display/13_Display/README.md","articles":[{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","ref":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","articles":[]},{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"path":"Part4_Display/13_Display/02_crystal_1602A.md","ref":"Part4_Display/13_Display/02_crystal_1602A.md","articles":[]},{"title":"13.3 Crystal Display More","level":"2.17.3","depth":2,"path":"Part4_Display/13_Display/03_crystal_12964.md","ref":"Part4_Display/13_Display/03_crystal_12964.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","mtime":"2018-03-25T20:29:38.752Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-25T20:38:15.514Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1478,10 +1617,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

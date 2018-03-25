@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../Part5_Communication/" />
+    <link rel="next" href="03_crystal_12964.md" />
     
     
     <link rel="prev" href="01_nixie_light_LG5011B.html" />
@@ -1183,6 +1183,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.17.3" data-path="03_crystal_12964.md">
+            
+                <span>
+            
+                    
+                    13.3 Crystal Display More
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1432,7 +1445,7 @@ int Enable = 2;
 void LcdCommandWrite(int value) {
 // define for all pins
 int i = 0;
-for (i=DB[0]; i &lt;= DI; i++) //&#x603B;&#x7EBF;&#x8D4B;&#x503C;
+for (i=DB[0]; i &lt;= DI; i++) //assign all data bus
 {
    digitalWrite(i,value &amp; 01);//&#x56E0;&#x4E3A;1602&#x6DB2;&#x6676;&#x4FE1;&#x53F7;&#x8BC6;&#x522B;&#x662F;D7-D0(&#x4E0D;&#x662F;D0-D7)&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x7528;&#x6765;&#x53CD;&#x8F6C;&#x4FE1;&#x53F7;&#x3002;
    value &gt;&gt;= 1;
@@ -1583,7 +1596,7 @@ void loop (void) {
                 </a>
                 
                 
-                <a href="../../Part5_Communication/" class="navigation navigation-next " aria-label="Next page: Part 5 - Communication">
+                <a href="03_crystal_12964.md" class="navigation navigation-next " aria-label="Next page: 13.3 Crystal Display More">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1594,7 +1607,7 @@ void loop (void) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"next":{"title":"Part 5 - Communication","level":"2.18","depth":1,"path":"Part5_Communication/README.md","ref":"Part5_Communication/README.md","articles":[]},"previous":{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","ref":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part4_Display/13_Display/02_crystal_1602A.md","mtime":"2018-03-20T23:16:54.794Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-25T20:14:51.445Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"next":{"title":"13.3 Crystal Display More","level":"2.17.3","depth":2,"path":"Part4_Display/13_Display/03_crystal_12964.md","ref":"Part4_Display/13_Display/03_crystal_12964.md","articles":[]},"previous":{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","ref":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part4_Display/13_Display/02_crystal_1602A.md","mtime":"2018-03-25T20:38:03.150Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-25T20:38:15.514Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1605,10 +1618,6 @@ void loop (void) {
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
