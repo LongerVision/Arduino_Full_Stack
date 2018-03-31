@@ -1,10 +1,9 @@
 # Chapter 15 - Assmebling
 
-The course content for this entire chapter is **NOT** to be disclosed. Students are encouraged to take our course on-site and learn to build up their own automated vehicles. Students who take our courses about robotic vehicles on-site will be given a **FREE** set of robotic vehicle. Standard Robotic vehicle from Longer Vision Robot contains the following components:
-* 1 chase with 2 pieces of PMMA
-* 4 wheels
-* 4 engines
+In this chapter, we are going to assemble a robotic vehicle step by step.
 
-![Image](../../Examples/longervisionrobot/roboticvehicle.jpg)
+All components to be used for building the robotic vehicle have been listed in 
+[**Chapter 1.4 - Race Car Chassis Model**](../../Part1_Introduction/01_Getting_Started_with_Arduino/04_race_car_chassis.md).
 
-Students are also welcome to puchase the kit from our website at [http://www.longervisionrobot.com/en/products/robotics-vehicles.html](http://www.longervisionrobot.com/en/products/robotics-vehicles.html).
+
+
