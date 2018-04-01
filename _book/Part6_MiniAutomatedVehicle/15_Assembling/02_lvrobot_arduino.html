@@ -1460,10 +1460,53 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="152-arduino-uno-and-longer-vision-robot-arduino-extension-board">15.2 Arduino UNO and Longer Vision Robot Arduino Extension Board</h1>
+<h2 id="step-1-arduino-uno-r3">Step 1: Arduino UNO R3</h2>
+<p>Find a suitable place and fix Arduino UNO R3 onto the top Acrylic plate:</p>
 <p><img src="../../Examples/longervisionrobot/assemble_lvrarduino_01.jpg" alt="Image"></p>
+<h2 id="step-2--arduino-extension-board">Step 2:  Arduino Extension Board</h2>
+<p>Just directly plugin Longer Vision Robot Arduino Extension Board onto the Arduino UNO R3:</p>
 <p><img src="../../Examples/longervisionrobot/assemble_lvrarduino_02.jpg" alt="Image"></p>
+<h2 id="step-3-batteries">Step 3: Batteries</h2>
+<p>And then, find a suitable place on the top Acrylic plate and fix the given black battery box, and put two batteries into the box. And it&apos;s NOT hard to connect two battery cables onto Arduino Extension Board&apos;s power:</p>
+<ul>
+<li><strong><span style="color:red">red cable</span></strong>: power +</li>
+<li><strong><span style="color:black">black cable</span></strong>: power -, namely, ground.</li>
+</ul>
+<p>You now can simply test if the battery and power button on Arduino Extension Board is properly first:</p>
 <p><img src="../../Examples/longervisionrobot/assemble_lvrarduino_03.jpg" alt="Image"></p>
+<p>As we can see, the battery and the power switch on Arduino Extension Board works fine.</p>
+<h2 id="step-4-test-4-wheels">Step 4: Test 4 Wheels</h2>
+<p>We now connect Arduino UNO R3 on the vehicle to our laptop, and download the following sketch onto Arduino UNO. </p>
+<h3 id="sketch">Sketch</h3>
+<pre><code>int rightMotor1 = 14;
+int rightMotor2 = 15;
+int leftMotor1 = 16;
+int leftMotor2 = 17;
 
+int leftPWM = 5;
+int rightPWM = 6;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(leftMotor1, OUTPUT);
+  pinMode(leftMotor2, OUTPUT);
+  pinMode(rightMotor1, OUTPUT);
+  pinMode(rightMotor2, OUTPUT);
+  pinMode(leftPWM, OUTPUT);
+  pinMode(rightPWM, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  analogWrite(leftPWM, 250);  //&#x8BBE;&#x7F6E;PWM&#x8F93;&#x51FA;&#xFF0C;&#x5373;&#x8BBE;&#x7F6E;&#x901F;&#x5EA6;
+  analogWrite(rightPWM, 250);
+
+  digitalWrite(leftMotor1, LOW);
+  digitalWrite(leftMotor2, HIGH);
+  digitalWrite(rightMotor1, LOW);
+  digitalWrite(rightMotor2, HIGH);
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -1506,7 +1549,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"15.2 Arduino UNO and Longer Vision Robot Arduino Extension Board","level":"2.21.2","depth":2,"next":{"title":"15.3 Multiple Sensors","level":"2.21.3","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.md","articles":[]},"previous":{"title":"15.1 4-Wheel DC-Motor Driven","level":"2.21.1","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part6_MiniAutomatedVehicle/15_Assembling/02_lvrobot_arduino.md","mtime":"2018-03-31T11:11:23.604Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-31T11:19:35.132Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"15.2 Arduino UNO and Longer Vision Robot Arduino Extension Board","level":"2.21.2","depth":2,"next":{"title":"15.3 Multiple Sensors","level":"2.21.3","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.md","articles":[]},"previous":{"title":"15.1 4-Wheel DC-Motor Driven","level":"2.21.1","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part6_MiniAutomatedVehicle/15_Assembling/02_lvrobot_arduino.md","mtime":"2018-04-01T08:40:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-01T08:45:23.608Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
