@@ -14,10 +14,56 @@ And its pins are defined as:
 ![Image](../../Examples/geekstips/ESP8266-Pinout-GeeksTips-300x124.jpg)
 
 
+
+## Hardware Wiring
+![Image](../../Examples/geekstips/002_wifi_esp8266.jpg)
+
+The way how we wire the circuit is just as on [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg).
+
+
+
+## Sketch
+The code can be found at [Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino).
+```
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(0,1);	// RX=0, TX=1
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(115200);
+  while(!Serial) {
+    ;	// wait for serial port to connect. Needed for Leonardo only
+  }
+
+  // set the data rate for the SoftwareSerial port
+  mySerial.begin(115200);
+}
+
+void loop() {
+  if(mySerial.available())
+    Serial.write(mySerial.read());
+  if(Serial.available())
+    mySerial.write(Serial.read());
+}
+```
+
+
+## Using ESP8266 without Arduino Board
+
+It is also possible run the sketch on the **ESP8266** program without using an **Arduino UNO board**, which has been detailedly explained on this website [http://www.arduinesp.com/](http://www.arduinesp.com/). Three cannonical examples are given on [http://www.arduinesp.com/examples](http://www.arduinesp.com/examples):
+* [Blink](http://www.arduinesp.com/blink)
+* [Wifiwebserver](http://www.arduinesp.com/wifiwebserver)
+* [Thingspeak Temperature Sensor](http://www.arduinesp.com/thingspeak)
+Students are encouraged to finish all examples after class.
+You can also refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/](https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/).
+
+
 ## Preparation
 
 In order to make **ESP8266** module runnable on an Arduino board, we need to follow the steps on 
 [https://github.com/esp8266/Arduino](https://github.com/esp8266/Arduino).
+
 
 
 ### STEP 1 - Install Arduino Core for ESP8266
@@ -58,11 +104,11 @@ Without the installed Arduino AVR Boards, you will possibly meet the following *
 
 What is **SPIFFS**? For short, it is **SPI Flash Filing System**. For details, please refer to [http://www.instructables.com/id/Using-ESP8266-SPIFFS/](http://www.instructables.com/id/Using-ESP8266-SPIFFS/).
 
-Afterwards, make sure **Tools->Board->Generic ESP8266 Module** is selected. 
+Afterwards, we select **Tools->Board->Generic ESP8266 Module**. 
 
 
 ### STEP 4 - Sketch Upload ERROR
-After we make sure **Board: "Generic ESP8266 Module"** is selected, we are now trying to upload (after verify/compile) any sketch (here, the default sketch for testing **FIRST**) to **Arduino board** with **ESP8266** **<span style="color:blue">connected</span>**. You will see the following **ERROR** messages:
+After we selected **Board: "Generic ESP8266 Module"**, we are now trying to upload (after verify/compile) any sketch (here, the default sketch for testing **FIRST**) to **Arduino board** with **ESP8266** **<span style="color:blue">connected</span>**. You will see the following **ERROR** messages:
 ```
 warning: espcomm_sync failed
 error: espcomm_open failed
@@ -113,27 +159,6 @@ In fact, 4 different methods have been summarized in [https://www.diyhobi.com/fl
 * Debug Level: “None”
 * Reset Method: “ck”
 * Upload Speed: “115200”
-
-
-## Hardware Wiring
-![Image](../../Examples/geekstips/002_wifi_esp8266.jpg)
-
-The way how we wire the circuit is just as in [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg).
-
-## Sketch
-The code can be found at [Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino).
-You can also refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/](https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/).
-
-
-
-
-## Using ESP8266 without Arduino Board
-
-It is also possible run the sketch on the **ESP8266** program without using an **Arduino UNO board**, which has been detailedly explained on this website [http://www.arduinesp.com/](http://www.arduinesp.com/). Three cannonical examples are given on [http://www.arduinesp.com/examples](http://www.arduinesp.com/examples):
-* [Blink](http://www.arduinesp.com/blink)
-* [Wifiwebserver](http://www.arduinesp.com/wifiwebserver)
-* [Thingspeak Temperature Sensor](http://www.arduinesp.com/thingspeak)
-Students are encouraged to finish all examples after class.
 
 
 

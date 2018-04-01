@@ -1466,6 +1466,41 @@
 <p><img src="../../Examples/geekstips/espressif_esp8266.jpg" alt="Image"></p>
 <p>And its pins are defined as:</p>
 <p><img src="../../Examples/geekstips/ESP8266-Pinout-GeeksTips-300x124.jpg" alt="Image"></p>
+<h2 id="hardware-wiring">Hardware Wiring</h2>
+<p><img src="../../Examples/geekstips/002_wifi_esp8266.jpg" alt="Image"></p>
+<p>The way how we wire the circuit is just as on <a href="https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg" target="_blank">geekstips</a>.</p>
+<h2 id="sketch">Sketch</h2>
+<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino" target="_blank">Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino</a>.</p>
+<pre><code>#include &lt;SoftwareSerial.h&gt;
+
+SoftwareSerial mySerial(0,1);    // RX=0, TX=1
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(115200);
+  while(!Serial) {
+    ;    // wait for serial port to connect. Needed for Leonardo only
+  }
+
+  // set the data rate for the SoftwareSerial port
+  mySerial.begin(115200);
+}
+
+void loop() {
+  if(mySerial.available())
+    Serial.write(mySerial.read());
+  if(Serial.available())
+    mySerial.write(Serial.read());
+}
+</code></pre><h2 id="using-esp8266-without-arduino-board">Using ESP8266 without Arduino Board</h2>
+<p>It is also possible run the sketch on the <strong>ESP8266</strong> program without using an <strong>Arduino UNO board</strong>, which has been detailedly explained on this website <a href="http://www.arduinesp.com/" target="_blank">http://www.arduinesp.com/</a>. Three cannonical examples are given on <a href="http://www.arduinesp.com/examples" target="_blank">http://www.arduinesp.com/examples</a>:</p>
+<ul>
+<li><a href="http://www.arduinesp.com/blink" target="_blank">Blink</a></li>
+<li><a href="http://www.arduinesp.com/wifiwebserver" target="_blank">Wifiwebserver</a></li>
+<li><a href="http://www.arduinesp.com/thingspeak" target="_blank">Thingspeak Temperature Sensor</a>
+Students are encouraged to finish all examples after class.
+You can also refer to <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</li>
+</ul>
 <h2 id="preparation">Preparation</h2>
 <p>In order to make <strong>ESP8266</strong> module runnable on an Arduino board, we need to follow the steps on 
 <a href="https://github.com/esp8266/Arduino" target="_blank">https://github.com/esp8266/Arduino</a>.</p>
@@ -1495,9 +1530,9 @@ Renaming mkspiffs-0.1.2-linux64 to mkspiffs
 <p>Without the installed Arduino AVR Boards, you will possibly meet the following <strong>ERROR</strong> message:</p>
 <p><strong><span style="color:red">SPIFFS Not Supported on avr</span></strong></p>
 <p>What is <strong>SPIFFS</strong>? For short, it is <strong>SPI Flash Filing System</strong>. For details, please refer to <a href="http://www.instructables.com/id/Using-ESP8266-SPIFFS/" target="_blank">http://www.instructables.com/id/Using-ESP8266-SPIFFS/</a>.</p>
-<p>Afterwards, make sure <strong>Tools-&gt;Board-&gt;Generic ESP8266 Module</strong> is selected. </p>
+<p>Afterwards, we select <strong>Tools-&gt;Board-&gt;Generic ESP8266 Module</strong>. </p>
 <h3 id="step-4---sketch-upload-error">STEP 4 - Sketch Upload ERROR</h3>
-<p>After we make sure <strong>Board: &quot;Generic ESP8266 Module&quot;</strong> is selected, we are now trying to upload (after verify/compile) any sketch (here, the default sketch for testing <strong>FIRST</strong>) to <strong>Arduino board</strong> with <strong>ESP8266</strong> <strong><span style="color:blue">connected</span></strong>. You will see the following <strong>ERROR</strong> messages:</p>
+<p>After we selected <strong>Board: &quot;Generic ESP8266 Module&quot;</strong>, we are now trying to upload (after verify/compile) any sketch (here, the default sketch for testing <strong>FIRST</strong>) to <strong>Arduino board</strong> with <strong>ESP8266</strong> <strong><span style="color:blue">connected</span></strong>. You will see the following <strong>ERROR</strong> messages:</p>
 <pre><code>warning: espcomm_sync failed
 error: espcomm_open failed
 error: espcomm_upload_mem failed
@@ -1533,20 +1568,6 @@ SPIFFS Upload failed!
 <li>Debug Level: &#x201C;None&#x201D;</li>
 <li>Reset Method: &#x201C;ck&#x201D;</li>
 <li>Upload Speed: &#x201C;115200&#x201D;</li>
-</ul>
-<h2 id="hardware-wiring">Hardware Wiring</h2>
-<p><img src="../../Examples/geekstips/002_wifi_esp8266.jpg" alt="Image"></p>
-<p>The way how we wire the circuit is just as in <a href="https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg" target="_blank">geekstips</a>.</p>
-<h2 id="sketch">Sketch</h2>
-<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino" target="_blank">Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino</a>.
-You can also refer to <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</p>
-<h2 id="using-esp8266-without-arduino-board">Using ESP8266 without Arduino Board</h2>
-<p>It is also possible run the sketch on the <strong>ESP8266</strong> program without using an <strong>Arduino UNO board</strong>, which has been detailedly explained on this website <a href="http://www.arduinesp.com/" target="_blank">http://www.arduinesp.com/</a>. Three cannonical examples are given on <a href="http://www.arduinesp.com/examples" target="_blank">http://www.arduinesp.com/examples</a>:</p>
-<ul>
-<li><a href="http://www.arduinesp.com/blink" target="_blank">Blink</a></li>
-<li><a href="http://www.arduinesp.com/wifiwebserver" target="_blank">Wifiwebserver</a></li>
-<li><a href="http://www.arduinesp.com/thingspeak" target="_blank">Thingspeak Temperature Sensor</a>
-Students are encouraged to finish all examples after class.</li>
 </ul>
 <h2 id="option-2-official-arduino-wifi-shield">Option 2: Official Arduino Wifi Shield</h2>
 <p>You can also purchase an <strong>Arduino Wifi Shield</strong> recommended by official Arduino website(s), and accomplish Wifi communication. Please refer to the following official Arduino webpages:</p>
@@ -1599,7 +1620,7 @@ Students are encouraged to finish all examples after class.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Integrate Wifi & Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-03-25T07:22:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-01T10:30:51.792Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Integrate Wifi & Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-04-01T22:00:48.129Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-01T22:01:21.245Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1610,6 +1631,10 @@ Students are encouraged to finish all examples after class.</li>
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
