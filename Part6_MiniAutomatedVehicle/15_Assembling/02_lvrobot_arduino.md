@@ -33,12 +33,13 @@ As we can see, the battery and the power switch on Arduino Extension Board works
 We now connect Arduino UNO R3 on the vehicle to our laptop, and download the following sketch onto Arduino UNO. 
 
 ### Sketch
+The code can be found at [Examples_Arduino - lvrobot - vehicle - racecar - _001_Drive4Wheels - _001_Drive4Wheels.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/lvrobot/vehicle/racecar/_001_Drive4Wheels/_001_Drive4Wheels.ino)
 
 ```
-int rightMotor1 = 14;
-int rightMotor2 = 15;
-int leftMotor1 = 16;
-int leftMotor2 = 17;
+int rightMotor1 = 17;
+int rightMotor2 = 18;
+int leftMotor1 = 13;
+int leftMotor2 = 14;
 
 int leftPWM = 5;
 int rightPWM = 6;
@@ -55,12 +56,15 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  analogWrite(leftPWM, 250);  //设置PWM输出，即设置速度
+  analogWrite(leftPWM, 250);  // Set PWM output, namely, setup speed
   analogWrite(rightPWM, 250);
 
-  digitalWrite(leftMotor1, LOW);
+  digitalWrite(leftMotor1, HIGH);
   digitalWrite(leftMotor2, HIGH);
-  digitalWrite(rightMotor1, LOW);
+  digitalWrite(rightMotor1, HIGH);
   digitalWrite(rightMotor2, HIGH);
+
 }
 ```
+
+Make sure the motor pins are correctly designated, and make sure when the motors are set to **LOW**, all 4 wheels are slowed down, and when the motors are set to **HIGH**, all 4 wheels will turn to the **SAME** direction.

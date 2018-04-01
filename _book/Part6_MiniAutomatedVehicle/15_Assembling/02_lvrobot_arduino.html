@@ -1478,10 +1478,11 @@
 <h2 id="step-4-test-4-wheels">Step 4: Test 4 Wheels</h2>
 <p>We now connect Arduino UNO R3 on the vehicle to our laptop, and download the following sketch onto Arduino UNO. </p>
 <h3 id="sketch">Sketch</h3>
-<pre><code>int rightMotor1 = 14;
-int rightMotor2 = 15;
-int leftMotor1 = 16;
-int leftMotor2 = 17;
+<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/lvrobot/vehicle/racecar/_001_Drive4Wheels/_001_Drive4Wheels.ino" target="_blank">Examples_Arduino - lvrobot - vehicle - racecar - _001_Drive4Wheels - _001_Drive4Wheels.ino</a></p>
+<pre><code>int rightMotor1 = 17;
+int rightMotor2 = 18;
+int leftMotor1 = 13;
+int leftMotor2 = 14;
 
 int leftPWM = 5;
 int rightPWM = 6;
@@ -1498,15 +1499,17 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  analogWrite(leftPWM, 250);  //&#x8BBE;&#x7F6E;PWM&#x8F93;&#x51FA;&#xFF0C;&#x5373;&#x8BBE;&#x7F6E;&#x901F;&#x5EA6;
+  analogWrite(leftPWM, 250);  // Set PWM output, namely, setup speed
   analogWrite(rightPWM, 250);
 
-  digitalWrite(leftMotor1, LOW);
+  digitalWrite(leftMotor1, HIGH);
   digitalWrite(leftMotor2, HIGH);
-  digitalWrite(rightMotor1, LOW);
+  digitalWrite(rightMotor1, HIGH);
   digitalWrite(rightMotor2, HIGH);
+
 }
-</code></pre>
+</code></pre><p>Make sure the motor pins are correctly designated, and make sure when the motors are set to <strong>LOW</strong>, all 4 wheels are slowed down, and when the motors are set to <strong>HIGH</strong>, all 4 wheels will turn to the <strong>SAME</strong> direction.</p>
+
                                 
                                 </section>
                             
@@ -1549,7 +1552,7 @@ void loop() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"15.2 Arduino UNO and Longer Vision Robot Arduino Extension Board","level":"2.21.2","depth":2,"next":{"title":"15.3 Multiple Sensors","level":"2.21.3","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.md","articles":[]},"previous":{"title":"15.1 4-Wheel DC-Motor Driven","level":"2.21.1","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part6_MiniAutomatedVehicle/15_Assembling/02_lvrobot_arduino.md","mtime":"2018-04-01T08:40:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-01T08:45:23.608Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"15.2 Arduino UNO and Longer Vision Robot Arduino Extension Board","level":"2.21.2","depth":2,"next":{"title":"15.3 Multiple Sensors","level":"2.21.3","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.md","articles":[]},"previous":{"title":"15.1 4-Wheel DC-Motor Driven","level":"2.21.1","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/01_4wheel_dcmotor_driven.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part6_MiniAutomatedVehicle/15_Assembling/02_lvrobot_arduino.md","mtime":"2018-04-01T10:07:11.802Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-01T10:09:28.416Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
