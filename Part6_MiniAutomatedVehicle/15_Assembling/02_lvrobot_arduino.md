@@ -68,3 +68,5 @@ void loop() {
 ```
 
 Make sure the motor pins are correctly designated, and make sure when the motors are set to **LOW**, all 4 wheels are slowed down, and when the motors are set to **HIGH**, all 4 wheels will turn to the **SAME** direction.
+
+![Image](../../Examples/longervisionrobot/assemble_lvrarduino_04.jpg)
