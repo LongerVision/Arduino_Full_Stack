@@ -1501,28 +1501,60 @@
                                 <h1 id="141-serial">14.1 Serial</h1>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
 <h2 id="sketch">Sketch</h2>
-<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/arduinocc/_001_Serial/_001_Serial.ino" target="_blank">Examples_Arduino - arduinocc - _001_Serial - _001_Serial.ino</a>.
-You can also refer to <a href="https://www.arduino.cc/en/Tutorial/SoftwareSerialExample" target="_blank">https://www.arduino.cc/en/Tutorial/SoftwareSerialExample</a>.</p>
-<pre><code>#include &lt;SoftwareSerial.h&gt;
+<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/arduinocc/_001_Serial/_001_Serial.ino" target="_blank">Examples_Arduino - arduinocc - _001_Serial - _001_Serial.ino</a>, which is directly copied from <a href="https://www.arduino.cc/en/Tutorial/SoftwareSerialExample" target="_blank">https://www.arduino.cc/en/Tutorial/SoftwareSerialExample</a>.</p>
+<pre><code>/*
+  Software serial multple serial test
 
-SoftwareSerial mySerial(0,1);    // RX=0, TX=1
+ Receives from the hardware serial, sends to software serial.
+ Receives from software serial, sends to hardware serial.
+
+ The circuit:
+ * RX is digital pin 10 (connect to TX of other device)
+ * TX is digital pin 11 (connect to RX of other device)
+
+ Note:
+ Not all pins on the Mega and Mega 2560 support change interrupts,
+ so only the following can be used for RX:
+ 10, 11, 12, 13, 50, 51, 52, 53, 62, 63, 64, 65, 66, 67, 68, 69
+
+ Not all pins on the Leonardo and Micro support change interrupts,
+ so only the following can be used for RX:
+ 8, 9, 10, 11, 14 (MISO), 15 (SCK), 16 (MOSI).
+
+ created back in the mists of time
+ modified 25 May 2012
+ by Tom Igoe
+ based on Mikal Hart&apos;s example
+
+ This example code is in the public domain.
+
+ */
+#include &lt;SoftwareSerial.h&gt;
+
+SoftwareSerial mySerial(10, 11); // RX, TX
 
 void setup() {
   // Open serial communications and wait for port to open:
-  Serial.begin(115200);
-  while(!Serial) {
-    ;    // wait for serial port to connect. Needed for Leonardo only
+  Serial.begin(57600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
   }
 
+
+  Serial.println(&quot;Goodnight moon!&quot;);
+
   // set the data rate for the SoftwareSerial port
-  mySerial.begin(115200);
+  mySerial.begin(4800);
+  mySerial.println(&quot;Hello, world?&quot;);
 }
 
-void loop() {
-  if(mySerial.available())
+void loop() { // run over and over
+  if (mySerial.available()) {
     Serial.write(mySerial.read());
-  if(Serial.available())
+  }
+  if (Serial.available()) {
     mySerial.write(Serial.read());
+  }
 }
 </code></pre>
                                 
@@ -1567,7 +1599,7 @@ void loop() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.1 Serial","level":"2.19.1","depth":2,"next":{"title":"14.2 Bluetooth","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_bluetooth.md","ref":"Part5_Communication/14_Communication/02_bluetooth.md","articles":[]},"previous":{"title":"Chapter 14. Communication","level":"2.19","depth":1,"path":"Part5_Communication/14_Communication/README.md","ref":"Part5_Communication/14_Communication/README.md","articles":[{"title":"14.1 Serial","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_serial.md","ref":"Part5_Communication/14_Communication/01_serial.md","articles":[]},{"title":"14.2 Bluetooth","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_bluetooth.md","ref":"Part5_Communication/14_Communication/02_bluetooth.md","articles":[]},{"title":"14.3 Wifi","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi.md","ref":"Part5_Communication/14_Communication/03_wifi.md","articles":[]},{"title":"14.4 Integrate Wifi & Bluetooth","level":"2.19.4","depth":2,"path":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/01_serial.md","mtime":"2018-04-02T10:19:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T10:40:29.993Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.1 Serial","level":"2.19.1","depth":2,"next":{"title":"14.2 Bluetooth","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_bluetooth.md","ref":"Part5_Communication/14_Communication/02_bluetooth.md","articles":[]},"previous":{"title":"Chapter 14. Communication","level":"2.19","depth":1,"path":"Part5_Communication/14_Communication/README.md","ref":"Part5_Communication/14_Communication/README.md","articles":[{"title":"14.1 Serial","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_serial.md","ref":"Part5_Communication/14_Communication/01_serial.md","articles":[]},{"title":"14.2 Bluetooth","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_bluetooth.md","ref":"Part5_Communication/14_Communication/02_bluetooth.md","articles":[]},{"title":"14.3 Wifi","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi.md","ref":"Part5_Communication/14_Communication/03_wifi.md","articles":[]},{"title":"14.4 Integrate Wifi & Bluetooth","level":"2.19.4","depth":2,"path":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/01_serial.md","mtime":"2018-04-02T10:47:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T22:41:36.177Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1578,6 +1610,10 @@ void loop() {
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
