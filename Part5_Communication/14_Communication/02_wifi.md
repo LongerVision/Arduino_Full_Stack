@@ -1,7 +1,7 @@
 # 14.2 Wifi - ESP8266
 
 
-## Option 1: ESP8266
+## Option 1: Use ESP8266 With Arduino UNO R3
 
 **<span style="color:red">Note</span>**: A lot of pictures in this section are directly cited from [https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/](https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/).
 
@@ -18,12 +18,24 @@ And its pins are defined as:
 ## Hardware Wiring
 ![Image](../../Examples/geekstips/002_wifi_esp8266.jpg)
 
-The way how we wire the circuit is just as on [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg).
+The way how we wire the circuit is just as on [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.
+jpg).
+
+The pin connections are
+
+ESP8266 | Arduino UNO R3  
+--------- | ------- 
+<center>GND</center> | <center>GND</center>
+<center>VCC</center> | <center>3.3V</center>
+<center>CH_PD</center> | <center>3.3V</center>
+<center>TX</center> | <center>TX -> 1</center>
+<center>RX</center> | <center>RX -> 0</center>
 
 
 
 ## Sketch
-The code can be found at [Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino).
+The code can be found at [Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/arduinocc/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino).
+You can also refer to [https://www.arduino.cc/en/Tutorial/SoftwareSerialExample](https://www.arduino.cc/en/Tutorial/SoftwareSerialExample).
 ```
 #include <SoftwareSerial.h>
 
@@ -49,19 +61,33 @@ void loop() {
 ```
 
 
-## Using ESP8266 without Arduino Board
+## Outcome
 
-It is also possible run the sketch on the **ESP8266** program without using an **Arduino UNO board**, which has been detailedly explained on this website [http://www.arduinesp.com/](http://www.arduinesp.com/). Three cannonical examples are given on [http://www.arduinesp.com/examples](http://www.arduinesp.com/examples):
-* [Blink](http://www.arduinesp.com/blink)
-* [Wifiwebserver](http://www.arduinesp.com/wifiwebserver)
-* [Thingspeak Temperature Sensor](http://www.arduinesp.com/thingspeak)
+If you run the above sketch successfully, you will be able to see the following image. After popping up **Serial Monitor** dialog, by inputing **AT** into the dialog and press **Send**, you should be able to see **OK** is printed on the screen.
+
+![Image](../../Examples/geekstips/esp8266_AT_success.jpg)
+
+
+
+## Option 2: Use ESP8266 without Arduino Board
+
+It is also possible to run the sketch on the **ESP8266** program without using an **Arduino UNO board**.
+
+* [http://www.arduinesp.com/](http://www.arduinesp.com/) detailedly explained how to do that step by step. Three cannonical examples are given on [http://www.arduinesp.com/examples](http://www.arduinesp.com/examples):
+- [Blink](http://www.arduinesp.com/blink)
+- [Wifiwebserver](http://www.arduinesp.com/wifiwebserver)
+- [Thingspeak Temperature Sensor](http://www.arduinesp.com/thingspeak)
 Students are encouraged to finish all examples after class.
-You can also refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/](https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/).
+* You can also refer to [https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/](https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/).
+
+Both websites adopt Arduino IDE to implement/verify/compile the sketch, and flash/download the binary code onto an ESP8266 via Arduino UNO R3 board. Let's just see how it goes. 
+
+**<span style="color:red">Note</span>**: <span style="color:red">You do need a FD232RS as a proxy/bridge</span>.
 
 
-## Preparation
+### Preparation
 
-In order to make **ESP8266** module runnable on an Arduino board, we need to follow the steps on 
+In order to flash sketch onto **ESP8266** via an Arduino board, we need to follow the steps on 
 [https://github.com/esp8266/Arduino](https://github.com/esp8266/Arduino).
 
 
@@ -162,7 +188,7 @@ In fact, 4 different methods have been summarized in [https://www.diyhobi.com/fl
 
 
 
-## Option 2: Official Arduino Wifi Shield
+## Option 3: Official Arduino Wifi Shield
 
 You can also purchase an **Arduino Wifi Shield** recommended by official Arduino website(s), and accomplish Wifi communication. Please refer to the following official Arduino webpages:
 * [https://store.arduino.cc/usa/arduino-wifi-shield](https://store.arduino.cc/usa/arduino-wifi-shield)

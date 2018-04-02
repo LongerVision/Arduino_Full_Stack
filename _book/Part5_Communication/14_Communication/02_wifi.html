@@ -1325,9 +1325,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.21.3" data-path="../../Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.html">
+        <li class="chapter " data-level="2.21.3" data-path="../../Part6_MiniAutomatedVehicle/15_Assembling/03_speed_sensors.html">
             
-                <a href="../../Part6_MiniAutomatedVehicle/15_Assembling/03_sensors.html">
+                <a href="../../Part6_MiniAutomatedVehicle/15_Assembling/03_speed_sensors.html">
             
                     
                     15.3 Multiple Sensors
@@ -1338,12 +1338,25 @@
             
         </li>
     
-        <li class="chapter " data-level="2.21.4" data-path="../../Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomotor.html">
+        <li class="chapter " data-level="2.21.4" data-path="../../Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomoto_ultrasoundr.html">
             
-                <a href="../../Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomotor.html">
+                <a href="../../Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomoto_ultrasoundr.html">
             
                     
-                    15.4 2 Servo Motor for Pan Tilt Control
+                    15.4 Servo Motor for Pan Tilt Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21.5" data-path="../../Part6_MiniAutomatedVehicle/15_Assembling/05_tracking_sensor.html">
+            
+                <a href="../../Part6_MiniAutomatedVehicle/15_Assembling/05_tracking_sensor.html">
+            
+                    
+                    15.5 Tracking Sensor
             
                 </a>
             
@@ -1409,6 +1422,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.22.4" data-path="../../Part6_MiniAutomatedVehicle/16_Remote_Control/04_automatic_control.html">
+            
+                <a href="../../Part6_MiniAutomatedVehicle/16_Remote_Control/04_automatic_control.html">
+            
+                    
+                    16.4 Automatic Control
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1460,7 +1486,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="142-wifi---esp8266">14.2 Wifi - ESP8266</h1>
-<h2 id="option-1-esp8266">Option 1: ESP8266</h2>
+<h2 id="option-1-use-esp8266-with-arduino-uno-r3">Option 1: Use ESP8266 With Arduino UNO R3</h2>
 <p><strong><span style="color:red">Note</span></strong>: A lot of pictures in this section are directly cited from <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</p>
 <p>An <strong>ESP8266</strong> wifi module is provided in our Arduino course on-site, which looks like:</p>
 <p><img src="../../Examples/geekstips/espressif_esp8266.jpg" alt="Image"></p>
@@ -1468,9 +1494,42 @@
 <p><img src="../../Examples/geekstips/ESP8266-Pinout-GeeksTips-300x124.jpg" alt="Image"></p>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
 <p><img src="../../Examples/geekstips/002_wifi_esp8266.jpg" alt="Image"></p>
-<p>The way how we wire the circuit is just as on <a href="https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg" target="_blank">geekstips</a>.</p>
+<p>The way how we wire the circuit is just as on <a href="https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.
+jpg" target="_blank">geekstips</a>.</p>
+<p>The pin connections are</p>
+<table>
+<thead>
+<tr>
+<th>ESP8266</th>
+<th>Arduino UNO R3  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center>GND</center></td>
+<td><center>GND</center></td>
+</tr>
+<tr>
+<td><center>VCC</center></td>
+<td><center>3.3V</center></td>
+</tr>
+<tr>
+<td><center>CH_PD</center></td>
+<td><center>3.3V</center></td>
+</tr>
+<tr>
+<td><center>TX</center></td>
+<td><center>TX -&gt; 1</center></td>
+</tr>
+<tr>
+<td><center>RX</center></td>
+<td><center>RX -&gt; 0</center></td>
+</tr>
+</tbody>
+</table>
 <h2 id="sketch">Sketch</h2>
-<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino" target="_blank">Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino</a>.</p>
+<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/arduinocc/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino" target="_blank">Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino</a>.
+You can also refer to <a href="https://www.arduino.cc/en/Tutorial/SoftwareSerialExample" target="_blank">https://www.arduino.cc/en/Tutorial/SoftwareSerialExample</a>.</p>
 <pre><code>#include &lt;SoftwareSerial.h&gt;
 
 SoftwareSerial mySerial(0,1);    // RX=0, TX=1
@@ -1492,17 +1551,23 @@ void loop() {
   if(Serial.available())
     mySerial.write(Serial.read());
 }
-</code></pre><h2 id="using-esp8266-without-arduino-board">Using ESP8266 without Arduino Board</h2>
-<p>It is also possible run the sketch on the <strong>ESP8266</strong> program without using an <strong>Arduino UNO board</strong>, which has been detailedly explained on this website <a href="http://www.arduinesp.com/" target="_blank">http://www.arduinesp.com/</a>. Three cannonical examples are given on <a href="http://www.arduinesp.com/examples" target="_blank">http://www.arduinesp.com/examples</a>:</p>
+</code></pre><h2 id="outcome">Outcome</h2>
+<p>If you run the above sketch successfully, you will be able to see the following image. After popping up <strong>Serial Monitor</strong> dialog, by inputing <strong>AT</strong> into the dialog and press <strong>Send</strong>, you should be able to see <strong>OK</strong> is printed on the screen.</p>
+<p><img src="../../Examples/geekstips/esp8266_AT_success.jpg" alt="Image"></p>
+<h2 id="option-2-use-esp8266-without-arduino-board">Option 2: Use ESP8266 without Arduino Board</h2>
+<p>It is also possible to run the sketch on the <strong>ESP8266</strong> program without using an <strong>Arduino UNO board</strong>.</p>
 <ul>
+<li><a href="http://www.arduinesp.com/" target="_blank">http://www.arduinesp.com/</a> detailedly explained how to do that step by step. Three cannonical examples are given on <a href="http://www.arduinesp.com/examples" target="_blank">http://www.arduinesp.com/examples</a>:</li>
 <li><a href="http://www.arduinesp.com/blink" target="_blank">Blink</a></li>
 <li><a href="http://www.arduinesp.com/wifiwebserver" target="_blank">Wifiwebserver</a></li>
 <li><a href="http://www.arduinesp.com/thingspeak" target="_blank">Thingspeak Temperature Sensor</a>
-Students are encouraged to finish all examples after class.
-You can also refer to <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</li>
+Students are encouraged to finish all examples after class.</li>
+<li>You can also refer to <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</li>
 </ul>
-<h2 id="preparation">Preparation</h2>
-<p>In order to make <strong>ESP8266</strong> module runnable on an Arduino board, we need to follow the steps on 
+<p>Both websites adopt Arduino IDE to implement/verify/compile the sketch, and flash/download the binary code onto an ESP8266 via Arduino UNO R3 board. Let&apos;s just see how it goes. </p>
+<p><strong><span style="color:red">Note</span></strong>: <span style="color:red">You do need a FD232RS as a proxy/bridge</span>.</p>
+<h3 id="preparation">Preparation</h3>
+<p>In order to flash sketch onto <strong>ESP8266</strong> via an Arduino board, we need to follow the steps on 
 <a href="https://github.com/esp8266/Arduino" target="_blank">https://github.com/esp8266/Arduino</a>.</p>
 <h3 id="step-1---install-arduino-core-for-esp8266">STEP 1 - Install Arduino Core for ESP8266</h3>
 <p><strong><span style="color:red">Note</span></strong>: Make sure you enabled <strong>python2</strong>, instead of <strong>python3</strong>.</p>
@@ -1569,7 +1634,7 @@ SPIFFS Upload failed!
 <li>Reset Method: &#x201C;ck&#x201D;</li>
 <li>Upload Speed: &#x201C;115200&#x201D;</li>
 </ul>
-<h2 id="option-2-official-arduino-wifi-shield">Option 2: Official Arduino Wifi Shield</h2>
+<h2 id="option-3-official-arduino-wifi-shield">Option 3: Official Arduino Wifi Shield</h2>
 <p>You can also purchase an <strong>Arduino Wifi Shield</strong> recommended by official Arduino website(s), and accomplish Wifi communication. Please refer to the following official Arduino webpages:</p>
 <ul>
 <li><a href="https://store.arduino.cc/usa/arduino-wifi-shield" target="_blank">https://store.arduino.cc/usa/arduino-wifi-shield</a></li>
@@ -1620,7 +1685,7 @@ SPIFFS Upload failed!
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Integrate Wifi & Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-04-01T22:00:48.129Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-01T22:01:21.245Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Integrate Wifi & Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-04-02T00:33:15.580Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T00:39:47.411Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1631,10 +1696,6 @@ SPIFFS Upload failed!
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
