@@ -27,8 +27,8 @@ ESP8266 | Arduino UNO R3
 <center>GND</center> | <center>GND</center>
 <center>VCC</center> | <center>3.3V</center>
 <center>CH_PD</center> | <center>3.3V</center>
-<center>TX</center> | <center>TX -> 1</center>
-<center>RX</center> | <center>RX -> 0</center>
+<center>TX</center> | <center>pin 11</center>
+<center>RX</center> | <center>pin 10</center>
 
 
 
