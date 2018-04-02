@@ -1228,12 +1228,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.19.1" data-path="../../Part5_Communication/14_Communication/01_bluetooth.html">
+        <li class="chapter " data-level="2.19.1" data-path="../../Part5_Communication/14_Communication/01_serial.html">
             
-                <a href="../../Part5_Communication/14_Communication/01_bluetooth.html">
+                <a href="../../Part5_Communication/14_Communication/01_serial.html">
             
                     
-                    14.1 Bluetooth
+                    14.1 Serial
             
                 </a>
             
@@ -1241,12 +1241,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.19.2" data-path="../../Part5_Communication/14_Communication/02_wifi.html">
+        <li class="chapter " data-level="2.19.2" data-path="../../Part5_Communication/14_Communication/02_bluetooth.html">
             
-                <a href="../../Part5_Communication/14_Communication/02_wifi.html">
+                <a href="../../Part5_Communication/14_Communication/02_bluetooth.html">
             
                     
-                    14.2 Wifi
+                    14.2 Bluetooth
             
                 </a>
             
@@ -1254,12 +1254,25 @@
             
         </li>
     
-        <li class="chapter " data-level="2.19.3" data-path="../../Part5_Communication/14_Communication/03_wifi_bluetooth.html">
+        <li class="chapter " data-level="2.19.3" data-path="../../Part5_Communication/14_Communication/03_wifi.html">
             
-                <a href="../../Part5_Communication/14_Communication/03_wifi_bluetooth.html">
+                <a href="../../Part5_Communication/14_Communication/03_wifi.html">
             
                     
-                    14.3 Integrate Wifi & Bluetooth
+                    14.3 Wifi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19.4" data-path="../../Part5_Communication/14_Communication/04_wifi_bluetooth.html">
+            
+                <a href="../../Part5_Communication/14_Communication/04_wifi_bluetooth.html">
+            
+                    
+                    14.4 Integrate Wifi & Bluetooth
             
                 </a>
             
@@ -1486,7 +1499,140 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="153-speed-sensors">15.3 Speed Sensors</h1>
+<h2 id="assemble-2-speed-sensors">Assemble 2 Speed Sensors</h2>
+<p>We <strong>FIRST</strong> assemble 2 speed sensors onto the rear wheels as follows:</p>
+<p><img src="../../Examples/longervisionrobot/assemble_lvrarduino_speedsensor_1.jpg" alt="Image"></p>
+<p>We may have to un-assemble the top Acrylic plate to install these 2 speed sensors, as follows: </p>
+<p><img src="../../Examples/longervisionrobot/assemble_lvrarduino_speedsensor_2.jpg" alt="Image"></p>
+<h2 id="sketch">Sketch</h2>
+<p>The code reference can be found at <a href="https://blog.csdn.net/qq_16775293/article/details/77688784" target="_blank">https://blog.csdn.net/qq_16775293/article/details/77688784</a>.</p>
+<pre><code>int leftCounter=0,  rightCounter=0;
+unsigned long time = 0, old_time = 0; // for time stamp
+unsigned long time1 = 0;  // for time stamp
+float lv,rv ; // left wheel speed, right wheel speed
 
+#define STOP      0
+#define FORWARD   1
+#define BACKWARD  2
+#define TURNLEFT  3
+#define TURNRIGHT 4
+
+int leftMotor1 = 4;
+int leftMotor2 = 5;
+int rightMotor1 = 6;
+int rightMotor2 = 7;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  attachInterrupt(0,RightCount_CallBack, FALLING);
+  attachInterrupt(1,LeftCount_CallBack, FALLING);
+
+  pinMode(leftMotor1, OUTPUT);
+  pinMode(leftMotor2, OUTPUT);
+  pinMode(rightMotor1, OUTPUT);
+  pinMode(rightMotor2, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  SpeedEstimation();
+  if(Serial.available()&gt;0)
+  {
+    char cmd = Serial.read();
+
+    Serial.print(cmd);
+    motorRun(cmd);
+  }  
+}
+/*
+ ** Compute wheel speed
+ */
+bool SpeedEstimation()
+{
+  time = millis();  // record the timestamp for computing the running speed. unit in milliseconds.
+  if(abs(time - old_time) &gt;= 1000)  // if it&apos;s already 1 second
+  {  
+    detachInterrupt(0); // detach external interrupt 0
+    detachInterrupt(1); // detach external interrupt 1
+    // Compute wheel speed from the counters (frequencies)
+    // if we present the speed in &quot;how many wheel rounds per minute
+    // For this specific wheel, there are 20 0/1s, the speed is easily estimated as:
+    // counter*60/20
+    lv =(float)leftCounter*60/20; // motor speed calculation
+    rv =(float)rightCounter*60/20;// motor speed calculation
+    Serial.print(&quot;left:&quot;);
+    Serial.print(lv); // send left wheel speed to upper-level computer
+    Serial.print(&quot;     right:&quot;);
+    Serial.println(rv);// send right wheel speed to upper-level computer
+    // return to the initial status of the speed encoder
+    leftCounter = 0;  // for every 1 second, reset counters to 0.
+    rightCounter = 0; // for every 1 second, reset counters to 0.
+    old_time=  millis();  // record the timestamp for computing the running speed 
+    attachInterrupt(0, RightCount_CallBack,FALLING);  // re-attach external interrupt 0
+    attachInterrupt(1, LeftCount_CallBack,FALLING);   // re-attach external interrupt 1
+    return 1;
+  }
+  else
+    return 0;
+}
+/*
+ ** Right wheel speed encoder callback() function
+ */
+void RightCount_CallBack()
+{
+  rightCounter++;
+}
+/*
+ ** Left wheel speed encoder callback() function
+ */
+void LeftCount_CallBack()
+{
+  leftCounter++;
+}
+/*
+ ** Motor Control for vehicle running
+ */
+void motorRun(int cmd)
+{
+  switch(cmd){
+    case FORWARD:
+      Serial.println(&quot;FORWARD&quot;);  // print out vehicle status
+      digitalWrite(leftMotor1, HIGH);
+      digitalWrite(leftMotor2, LOW);
+      digitalWrite(rightMotor1, HIGH);
+      digitalWrite(rightMotor2, LOW);
+      break;
+     case BACKWARD:
+      Serial.println(&quot;BACKWARD&quot;); // print out vehicle status
+      digitalWrite(leftMotor1, LOW);
+      digitalWrite(leftMotor2, HIGH);
+      digitalWrite(rightMotor1, LOW);
+      digitalWrite(rightMotor2, HIGH);
+      break;
+     case TURNLEFT:
+      Serial.println(&quot;TURN  LEFT&quot;); // print out vehicle status
+      digitalWrite(leftMotor1, HIGH);
+      digitalWrite(leftMotor2, LOW);
+      digitalWrite(rightMotor1, LOW);
+      digitalWrite(rightMotor2, HIGH);
+      break;
+     case TURNRIGHT:
+      Serial.println(&quot;TURN  RIGHT&quot;); // print out vehicle status
+      digitalWrite(leftMotor1, LOW);
+      digitalWrite(leftMotor2, HIGH);
+      digitalWrite(rightMotor1, HIGH);
+      digitalWrite(rightMotor2, LOW);
+      break;
+     default:
+      Serial.println(&quot;STOP&quot;); // print out vehicle status
+      digitalWrite(leftMotor1, LOW);
+      digitalWrite(leftMotor2, LOW);
+      digitalWrite(rightMotor1, LOW);
+      digitalWrite(rightMotor2, LOW);
+  }
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -1529,7 +1675,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"15.3 Multiple Sensors","level":"2.21.3","depth":2,"next":{"title":"15.4 Servo Motor for Pan Tilt Control","level":"2.21.4","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomoto_ultrasoundr.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomoto_ultrasoundr.md","articles":[]},"previous":{"title":"15.2 Arduino UNO and Longer Vision Robot Arduino Extension Board","level":"2.21.2","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/02_lvrobot_arduino.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/02_lvrobot_arduino.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part6_MiniAutomatedVehicle/15_Assembling/03_speed_sensors.md","mtime":"2018-04-01T22:58:03.089Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T03:29:59.017Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"15.3 Multiple Sensors","level":"2.21.3","depth":2,"next":{"title":"15.4 Servo Motor for Pan Tilt Control","level":"2.21.4","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomoto_ultrasoundr.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomoto_ultrasoundr.md","articles":[]},"previous":{"title":"15.2 Arduino UNO and Longer Vision Robot Arduino Extension Board","level":"2.21.2","depth":2,"path":"Part6_MiniAutomatedVehicle/15_Assembling/02_lvrobot_arduino.md","ref":"Part6_MiniAutomatedVehicle/15_Assembling/02_lvrobot_arduino.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part6_MiniAutomatedVehicle/15_Assembling/03_speed_sensors.md","mtime":"2018-04-02T05:51:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T09:41:46.096Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

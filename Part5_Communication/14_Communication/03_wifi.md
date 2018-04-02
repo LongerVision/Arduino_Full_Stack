@@ -1,4 +1,4 @@
-# 14.2 Wifi - ESP8266
+# 14.3 Wifi - ESP8266
 
 
 ## Option 1: Use ESP8266 With Arduino UNO R3
@@ -18,8 +18,7 @@ And its pins are defined as:
 ## Hardware Wiring
 ![Image](../../Examples/geekstips/002_wifi_esp8266.jpg)
 
-The way how we wire the circuit is just as on [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.
-jpg).
+The way how we wire the circuit is just as on [geekstips](https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.jpg).
 
 The pin connections are
 
@@ -34,7 +33,7 @@ ESP8266 | Arduino UNO R3
 
 
 ## Sketch
-The code can be found at [Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/arduinocc/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino).
+<!-- The code can be found at [Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/arduinocc/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino).
 You can also refer to [https://www.arduino.cc/en/Tutorial/SoftwareSerialExample](https://www.arduino.cc/en/Tutorial/SoftwareSerialExample).
 ```
 #include <SoftwareSerial.h>
@@ -58,7 +57,7 @@ void loop() {
   if(Serial.available())
     mySerial.write(Serial.read());
 }
-```
+``` -->
 
 
 ## Outcome

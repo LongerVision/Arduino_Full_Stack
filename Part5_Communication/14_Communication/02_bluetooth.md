@@ -1,4 +1,4 @@
-# 14.1 Bluetooth
+# 14.2 Bluetooth
 
 A **ZS-040** (detected as **HC-0X**)  bluetooth module is provided in our Arduino course on-site, which looks like:
 
@@ -12,7 +12,7 @@ The **ONLY** difference is that the provided bluetooth module has 4 pins but **N
 ![Image](../../Examples/howtomechatronics/001_bluetooth.jpg)
 
 ## Sketch
-The code can be found at [Examples_Arduino - adafruit - _001_Bluetooth - _001_Bluetooth.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_001_Bluetooth/_001_Bluetooth.ino)
+The code can be found at [Examples_Arduino - arduinocc - _002_Bluetooth - _002_Bluetooth.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Bluetooth/_002_Bluetooth.ino)
 You can also refer to Adafruit's official website at [https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/](https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/).
 ```
 #define ledPin 7

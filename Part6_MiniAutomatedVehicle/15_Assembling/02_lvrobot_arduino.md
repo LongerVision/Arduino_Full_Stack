@@ -1,21 +1,21 @@
 # 15.2 Arduino UNO and Longer Vision Robot Arduino Extension Board
 
 
-## Step 1: Arduino UNO R3
+## Step 1: Assemble Arduino UNO R3
 
 Find a suitable place and fix Arduino UNO R3 onto the top Acrylic plate:
 
 ![Image](../../Examples/longervisionrobot/assemble_lvrarduino_01.jpg)
 
 
-## Step 2:  Arduino Extension Board
+## Step 2:  Plugin Arduino Extension Board
 
 Just directly plugin Longer Vision Robot Arduino Extension Board onto the Arduino UNO R3:
 
 ![Image](../../Examples/longervisionrobot/assemble_lvrarduino_02.jpg)
 
 
-## Step 3: Batteries
+## Step 3: Fix Batteries
 
 And then, find a suitable place on the top Acrylic plate and fix the given black battery box, and put two batteries into the box. And it's NOT hard to connect two battery cables onto Arduino Extension Board's power:
 * **<span style="color:red">red cable</span>**: power +
