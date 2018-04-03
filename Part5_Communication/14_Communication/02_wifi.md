@@ -33,7 +33,7 @@ The same sketch in [**14.1 Serial**](../../Part5_Communication/14_Communication/
 
 ## Option 2: Use ESP8266 without Arduino Board
 
-It is also possible to run the sketch on the **ESP8266** program without using an **Arduino UNO board**.
+It is also possible to run the sketch on the **ESP8266** program without using an **Arduino UNO board**, for **ESP8266** comes with a MCU inside the module itself.
 
 * [http://www.arduinesp.com/](http://www.arduinesp.com/) detailedly explained how to do that step by step. Three cannonical examples are given on [http://www.arduinesp.com/examples](http://www.arduinesp.com/examples):
 - [Blink](http://www.arduinesp.com/blink)
