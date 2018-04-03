@@ -96,7 +96,7 @@ Afterwards, we select **Tools->Board->Generic ESP8266 Module**.
 
 
 ### STEP 4 - Sketch Upload ERROR
-After we selected **Board: "Generic ESP8266 Module"**, we are now trying to upload (after verify/compile) any sketch (here, the default sketch for testing **FIRST**) to **Arduino board** with **ESP8266** **<span style="color:blue">connected</span>**. You will see the following **ERROR** messages:
+After we selected **Board: "Generic ESP8266 Module"**, we are now trying to upload (after verify/compile) any sketch (here, the default **EMPTY** sketch for testing) to **Arduino board** with **ESP8266** **<span style="color:blue">connected</span>**. You will see the following **ERROR** messages:
 ```
 warning: espcomm_sync failed
 error: espcomm_open failed

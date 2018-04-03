@@ -28,6 +28,7 @@
 * [http://www.arduino.org/forums](http://www.arduino.org/forums)
 
 ## 1.3.7 Popular Ecosystem Forums
+* [circuito.io](https://www.circuito.io/)
 * [Adafruit](https://forums.adafruit.com/viewforum.php?f=37)
 * [Sparkfun](https://forum.sparkfun.com/viewforum.php?f=32)
 * [AVRfreaks](http://www.avrfreaks.net/)
