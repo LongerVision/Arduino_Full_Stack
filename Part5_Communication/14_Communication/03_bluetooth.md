@@ -60,7 +60,7 @@ By selecting one of the devices, you'll see the device is NOW **connected**.
 ![Image](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_FrontPage.jpg)
 
 
-### Longer Vision Robot LVControl
+### <span style="color:blue">Longer Vision Robot LVControl</span>
 
 [Longer Vision Robot](http://www.longervisionrobot.com) provides its own APP **LVContrl**, which can be downloaded from ...
 
