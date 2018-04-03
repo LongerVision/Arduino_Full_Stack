@@ -9,7 +9,7 @@ The **ONLY** difference is that the provided bluetooth module has 4 pins but **N
 
 ## Hardware Wiring
 
-![Image](../../Examples/howtomechatronics/001_bluetooth.jpg)
+![Image](../../Examples/howtomechatronics/002_bluetooth.jpg)
 
 ## Sketch
 The code can be found at [Examples_Arduino - arduinocc - _002_Bluetooth - _002_Bluetooth.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_002_Bluetooth/_002_Bluetooth.ino)

@@ -1500,6 +1500,51 @@
                                 
                                 <h1 id="141-serial">14.1 Serial</h1>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
+<p>Cited directly from <a href="https://www.arduino.cc/en/Tutorial/SoftwareSerialExample" target="_blank">https://www.arduino.cc/en/Tutorial/SoftwareSerialExample</a>:</p>
+<blockquote>
+<p>&quot;There is no circuit for this example. Make sure that your Arduino or Genuino board is attached to your computer via USB to enable serial communication through the serial monitor window of the Arduino Software (IDE).&quot;.</p>
+</blockquote>
+<p>Due to the comments inside the sketch code,</p>
+<blockquote>
+<p>&quot;The circuit:</p>
+<ul>
+<li>RX is digital pin 10 (connect to TX of other device)</li>
+<li>TX is digital pin 11 (connect to RX of other device)&quot;</li>
+</ul>
+</blockquote>
+<p>So, to test the serial communication, it&apos;s better we found some device/module, which comes with an <strong>RX</strong> and <strong>TX</strong> pins. Therefore, we carry out the test with a Wifi ESP8266 module, which will be detailedly discussed again in <a href="03_wifi.html"><strong>14.3 Wifi - ESP8266</strong></a>.</p>
+<p>We then connect the pins as:</p>
+<table>
+<thead>
+<tr>
+<th>ESP8266</th>
+<th>Arduino UNO R3  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center>GND</center></td>
+<td><center>GND</center></td>
+</tr>
+<tr>
+<td><center>VCC</center></td>
+<td><center>3.3V</center></td>
+</tr>
+<tr>
+<td><center>CH_PD</center></td>
+<td><center>3.3V</center></td>
+</tr>
+<tr>
+<td><center>TX</center></td>
+<td><center>Virtual RX, namely, pin 11</center></td>
+</tr>
+<tr>
+<td><center>RX</center></td>
+<td><center>Virtual TX, namely, pin 10</center></td>
+</tr>
+</tbody>
+</table>
+<p><img src="../../Examples/arduinocc/001_serial.jpg" alt="Image"></p>
 <h2 id="sketch">Sketch</h2>
 <p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/arduinocc/_001_Serial/_001_Serial.ino" target="_blank">Examples_Arduino - arduinocc - _001_Serial - _001_Serial.ino</a>, which is directly copied from <a href="https://www.arduino.cc/en/Tutorial/SoftwareSerialExample" target="_blank">https://www.arduino.cc/en/Tutorial/SoftwareSerialExample</a>.</p>
 <pre><code>/*
@@ -1599,7 +1644,7 @@ void loop() { // run over and over
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.1 Serial","level":"2.19.1","depth":2,"next":{"title":"14.2 Bluetooth","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_bluetooth.md","ref":"Part5_Communication/14_Communication/02_bluetooth.md","articles":[]},"previous":{"title":"Chapter 14. Communication","level":"2.19","depth":1,"path":"Part5_Communication/14_Communication/README.md","ref":"Part5_Communication/14_Communication/README.md","articles":[{"title":"14.1 Serial","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_serial.md","ref":"Part5_Communication/14_Communication/01_serial.md","articles":[]},{"title":"14.2 Bluetooth","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_bluetooth.md","ref":"Part5_Communication/14_Communication/02_bluetooth.md","articles":[]},{"title":"14.3 Wifi","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi.md","ref":"Part5_Communication/14_Communication/03_wifi.md","articles":[]},{"title":"14.4 Integrate Wifi & Bluetooth","level":"2.19.4","depth":2,"path":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/01_serial.md","mtime":"2018-04-02T10:47:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T22:41:36.177Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.1 Serial","level":"2.19.1","depth":2,"next":{"title":"14.2 Bluetooth","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_bluetooth.md","ref":"Part5_Communication/14_Communication/02_bluetooth.md","articles":[]},"previous":{"title":"Chapter 14. Communication","level":"2.19","depth":1,"path":"Part5_Communication/14_Communication/README.md","ref":"Part5_Communication/14_Communication/README.md","articles":[{"title":"14.1 Serial","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_serial.md","ref":"Part5_Communication/14_Communication/01_serial.md","articles":[]},{"title":"14.2 Bluetooth","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_bluetooth.md","ref":"Part5_Communication/14_Communication/02_bluetooth.md","articles":[]},{"title":"14.3 Wifi","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi.md","ref":"Part5_Communication/14_Communication/03_wifi.md","articles":[]},{"title":"14.4 Integrate Wifi & Bluetooth","level":"2.19.4","depth":2,"path":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/01_serial.md","mtime":"2018-04-03T02:05:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-03T02:18:02.915Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1610,10 +1655,6 @@ void loop() { // run over and over
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

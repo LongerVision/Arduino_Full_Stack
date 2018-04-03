@@ -2,7 +2,27 @@
 
 
 ## Hardware Wiring
+Cited directly from [https://www.arduino.cc/en/Tutorial/SoftwareSerialExample](https://www.arduino.cc/en/Tutorial/SoftwareSerialExample):
+> "There is no circuit for this example. Make sure that your Arduino or Genuino board is attached to your computer via USB to enable serial communication through the serial monitor window of the Arduino Software (IDE).".
 
+Due to the comments inside the sketch code,
+> "The circuit:
+> * RX is digital pin 10 (connect to TX of other device)
+> * TX is digital pin 11 (connect to RX of other device)"
+
+So, to test the serial communication, it's better we found some device/module, which comes with an **RX** and **TX** pins. Therefore, we carry out the test with a Wifi ESP8266 module, which will be detailedly discussed again in [**14.3 Wifi - ESP8266**](../../Part5_Communication/14_Communication/03_wifi.md).
+
+We then connect the pins as:
+
+ESP8266 | Arduino UNO R3  
+--------- | ------- 
+<center>GND</center> | <center>GND</center>
+<center>VCC</center> | <center>3.3V</center>
+<center>CH_PD</center> | <center>3.3V</center>
+<center>TX</center> | <center>Virtual RX, namely, pin 11</center>
+<center>RX</center> | <center>Virtual TX, namely, pin 10</center>
+
+![Image](../../Examples/arduinocc/001_serial.jpg)
 
 
 ## Sketch
