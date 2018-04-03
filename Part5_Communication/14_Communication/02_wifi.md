@@ -27,11 +27,7 @@ We still use the same hardware wiring way as in [**14.1 Serial**](../../Part5_Co
 The same sketch in [**14.1 Serial**](../../Part5_Communication/14_Communication/01_serial.md) is also adopted here.
 
 
-## Outcome
-
-If you run the above sketch successfully, you will be able to see the following image. After popping up **Serial Monitor** dialog, by inputing **AT** into the dialog and press **Send**, you should be able to see **OK** is printed on the screen.
-
-![Image](../../Examples/geekstips/esp8266_AT_success.jpg)
+## Mobile APPs
 
 
 

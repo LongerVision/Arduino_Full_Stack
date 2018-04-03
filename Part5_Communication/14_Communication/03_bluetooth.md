@@ -12,7 +12,7 @@ The **ONLY** difference is that the provided bluetooth module has 4 pins but **N
 ![Image](../../Examples/howtomechatronics/003_bluetooth.jpg)
 
 ## Sketch
-The code can be found at [Examples_Arduino - arduinocc - _003_bluetooth - _003_bluetooth.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_003_bluetooth/_003_bluetooth.ino)
+The code can be found at [Examples_Arduino - arduinocc - _003_Bluetooth - _003_Bluetooth.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_003_Bluetooth/_003_Bluetooth.ino)
 You can also refer to Adafruit's official website at [https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/](https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/).
 ```
 #define ledPin 7
@@ -59,6 +59,8 @@ By selecting one of the devices, you'll see the device is NOW **connected**.
 
 
 
+
+
 ## Assignment:
 
 Two other very similar reference examples can be found at:
@@ -67,4 +69,3 @@ Two other very similar reference examples can be found at:
 
 ， which are left for students as their assignments.
 
-In fact, the **Hardware Wiring** and **Sketch** are both already provided on the above two websites.
