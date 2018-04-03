@@ -6,7 +6,7 @@ Generally speaking, there are lots of options for wireless communication, such a
 
 In this chapter, some other widely used communication methods are to be discussed in detail, including:
 * **Serial** port communication
-* **Bluetooth** module - **HC-0X**
 * **Wifi** module - **ESP8266** and **Official Arduino Wifi Shield**
+* **Bluetooth** module - **HC-0X**
 * integrated **Wifi** and dual-mode **Bluetooth** module - **ESP32**
 

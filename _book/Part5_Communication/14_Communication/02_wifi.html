@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="03_wifi_bluetooth.html" />
+    <link rel="next" href="03_bluetooth.html" />
     
     
-    <link rel="prev" href="01_bluetooth.html" />
+    <link rel="prev" href="01_serial.html" />
     
 
     </head>
@@ -1228,12 +1228,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.19.1" data-path="01_bluetooth.html">
+        <li class="chapter " data-level="2.19.1" data-path="01_serial.html">
             
-                <a href="01_bluetooth.html">
+                <a href="01_serial.html">
             
                     
-                    14.1 Bluetooth
+                    14.1 Serial
             
                 </a>
             
@@ -1254,12 +1254,25 @@
             
         </li>
     
-        <li class="chapter " data-level="2.19.3" data-path="03_wifi_bluetooth.html">
+        <li class="chapter " data-level="2.19.3" data-path="03_bluetooth.html">
             
-                <a href="03_wifi_bluetooth.html">
+                <a href="03_bluetooth.html">
             
                     
-                    14.3 Integrate Wifi & Bluetooth
+                    14.3 Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19.4" data-path="04_wifi_bluetooth.html">
+            
+                <a href="04_wifi_bluetooth.html">
+            
+                    
+                    14.4 Integrate Wifi & Bluetooth
             
                 </a>
             
@@ -1487,71 +1500,17 @@
                                 
                                 <h1 id="142-wifi---esp8266">14.2 Wifi - ESP8266</h1>
 <h2 id="option-1-use-esp8266-with-arduino-uno-r3">Option 1: Use ESP8266 With Arduino UNO R3</h2>
+<p>As in <a href="01_serial.html"><strong>14.1 Serial</strong></a>, an <strong>ESP8266</strong> Wifi module has been connected to the virtual serial pin 10 and pin 11 on Arduino UNO. In this section, we&apos;ll talk about how to use this <strong>ESP8266</strong> Wifi module a bit more.</p>
 <p><strong><span style="color:red">Note</span></strong>: A lot of pictures in this section are directly cited from <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</p>
 <p>An <strong>ESP8266</strong> wifi module is provided in our Arduino course on-site, which looks like:</p>
 <p><img src="../../Examples/geekstips/espressif_esp8266.jpg" alt="Image"></p>
 <p>And its pins are defined as:</p>
 <p><img src="../../Examples/geekstips/ESP8266-Pinout-GeeksTips-300x124.jpg" alt="Image"></p>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
-<p><img src="../../Examples/geekstips/002_wifi_esp8266.jpg" alt="Image"></p>
-<p>The way how we wire the circuit is just as on <a href="https://www.geekstips.com/wp-content/uploads/2016/12/ESP8266-WiFi-ESP-01-aansluiten-via-Arduino.
-jpg" target="_blank">geekstips</a>.</p>
-<p>The pin connections are</p>
-<table>
-<thead>
-<tr>
-<th>ESP8266</th>
-<th>Arduino UNO R3  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><center>GND</center></td>
-<td><center>GND</center></td>
-</tr>
-<tr>
-<td><center>VCC</center></td>
-<td><center>3.3V</center></td>
-</tr>
-<tr>
-<td><center>CH_PD</center></td>
-<td><center>3.3V</center></td>
-</tr>
-<tr>
-<td><center>TX</center></td>
-<td><center>TX -&gt; 1</center></td>
-</tr>
-<tr>
-<td><center>RX</center></td>
-<td><center>RX -&gt; 0</center></td>
-</tr>
-</tbody>
-</table>
+<p>We still use the same hardware wiring way as in <a href="01_serial.html"><strong>14.1 Serial</strong></a> to wire the Arduino UNO and ESP8266.</p>
 <h2 id="sketch">Sketch</h2>
-<p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/arduinocc/_002_Wifi_ESP8266/_002_Wifi_ESP8266.ino" target="_blank">Examples_Arduino - adafruit - _002_Wifi_ESP8266 - _002_Wifi_ESP8266.ino</a>.
-You can also refer to <a href="https://www.arduino.cc/en/Tutorial/SoftwareSerialExample" target="_blank">https://www.arduino.cc/en/Tutorial/SoftwareSerialExample</a>.</p>
-<pre><code>#include &lt;SoftwareSerial.h&gt;
-
-SoftwareSerial mySerial(0,1);    // RX=0, TX=1
-
-void setup() {
-  // Open serial communications and wait for port to open:
-  Serial.begin(115200);
-  while(!Serial) {
-    ;    // wait for serial port to connect. Needed for Leonardo only
-  }
-
-  // set the data rate for the SoftwareSerial port
-  mySerial.begin(115200);
-}
-
-void loop() {
-  if(mySerial.available())
-    Serial.write(mySerial.read());
-  if(Serial.available())
-    mySerial.write(Serial.read());
-}
-</code></pre><h2 id="outcome">Outcome</h2>
+<p>The same sketch in <a href="01_serial.html"><strong>14.1 Serial</strong></a> is also adopted here.</p>
+<h2 id="outcome">Outcome</h2>
 <p>If you run the above sketch successfully, you will be able to see the following image. After popping up <strong>Serial Monitor</strong> dialog, by inputing <strong>AT</strong> into the dialog and press <strong>Send</strong>, you should be able to see <strong>OK</strong> is printed on the screen.</p>
 <p><img src="../../Examples/geekstips/esp8266_AT_success.jpg" alt="Image"></p>
 <h2 id="option-2-use-esp8266-without-arduino-board">Option 2: Use ESP8266 without Arduino Board</h2>
@@ -1669,12 +1628,12 @@ SPIFFS Upload failed!
 
             
                 
-                <a href="01_bluetooth.html" class="navigation navigation-prev " aria-label="Previous page: 14.1 Bluetooth">
+                <a href="01_serial.html" class="navigation navigation-prev " aria-label="Previous page: 14.1 Serial">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="03_wifi_bluetooth.html" class="navigation navigation-next " aria-label="Next page: 14.3 Integrate Wifi & Bluetooth">
+                <a href="03_bluetooth.html" class="navigation navigation-next " aria-label="Next page: 14.3 Bluetooth">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1685,7 +1644,7 @@ SPIFFS Upload failed!
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Integrate Wifi & Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/03_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.1 Bluetooth","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_bluetooth.md","ref":"Part5_Communication/14_Communication/01_bluetooth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-04-02T00:33:15.580Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-02T03:29:59.017Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_bluetooth.md","ref":"Part5_Communication/14_Communication/03_bluetooth.md","articles":[]},"previous":{"title":"14.1 Serial","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_serial.md","ref":"Part5_Communication/14_Communication/01_serial.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-04-03T03:42:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-03T03:44:31.619Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1696,10 +1655,6 @@ SPIFFS Upload failed!
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

@@ -2,6 +2,5 @@
 
 In this Part, we are going to test two wireless communication modules:
 * **Serial**
-* **Wifi**
 * **Bluetooth**
-
+* **Wifi**

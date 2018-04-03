@@ -10,7 +10,7 @@ Due to the comments inside the sketch code,
 > * RX is digital pin 10 (connect to TX of other device)
 > * TX is digital pin 11 (connect to RX of other device)"
 
-So, to test the serial communication, it's better we found some device/module, which comes with an **RX** and **TX** pins. Therefore, we carry out the test with a Wifi ESP8266 module, which will be detailedly discussed again in [**14.3 Wifi - ESP8266**](../../Part5_Communication/14_Communication/03_wifi.md).
+So, to test the serial communication, it's better we found some device/module, which comes with an **RX** and **TX** pins. Therefore, we carry out the test with a Wifi ESP8266 module, which will be detailedly discussed again in [**14.2 Wifi - ESP8266**](../../Part5_Communication/14_Communication/02_wifi.md).
 
 We then connect the pins as:
 
@@ -84,3 +84,12 @@ void loop() { // run over and over
 }
 ```
 
+
+## Outcome
+
+![Image](../../Examples/arduinocc/001_serial_communication_arduinoside.jpg)
+
+
+## However?
+
+So far, we can clearly see **Goodnight moon!** has been successfully output to the **Monitor Serial** dialog. However, in our sketch, it's quite clear that **Hello, world?** should also be output somewhere. But, where? Clearly, **mySerial** defines the virtual serial port using pin 10 and pin 11. So, there must be a 2nd serial port on the [**Wifi Module ESP8266**](../../Part5_Communication/14_Communication/02_wifi.md).
