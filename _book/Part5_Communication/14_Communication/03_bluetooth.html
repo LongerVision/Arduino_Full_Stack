@@ -1507,17 +1507,33 @@
 <h2 id="sketch">Sketch</h2>
 <p>The code can be found at <a href="https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_003_Bluetooth/_003_Bluetooth.ino" target="_blank">Examples_Arduino - arduinocc - _003_Bluetooth - _003_Bluetooth.ino</a>
 You can also refer to Adafruit&apos;s official website at <a href="https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/" target="_blank">https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-05-bluetooth-module-tutorial/</a>.</p>
-<pre><code>#define ledPin 7
+<pre><code>#include &lt;SoftwareSerial.h&gt;
+#define ledPin 7
+
+SoftwareSerial mySerial(10, 11); // RX, TX
 int state = 0;
+
 void setup() {
   pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, LOW);
+  digitalWrite(ledPin, HIGH);
   Serial.begin(38400); // Default communication rate of the Bluetooth module
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+
+  Serial.println(&quot;Goodnight moon!&quot;);
+
+  // set the data rate for the SoftwareSerial port
+  mySerial.begin(9600);
+  //mySerial.println(&quot;Hello, world?&quot;);
 }
-void loop() {
-  if(Serial.available() &gt; 0){ // Checks whether data is comming from the serial port
-    state = Serial.read(); // Reads the data from the serial port
+
+void loop() {   
+  if(mySerial.available() &gt; 0){ // Checks whether data is coming from the serial port
+    state = mySerial.read(); // Reads the data from the serial port
+    Serial.print(&quot;mySerial available!\n&quot;);
  }
+
  if (state == &apos;0&apos;) {
   digitalWrite(ledPin, LOW); // Turn LED OFF
   Serial.println(&quot;LED: OFF&quot;); // Send back, to the phone, the String &quot;LED: ON&quot;
@@ -1525,7 +1541,7 @@ void loop() {
  }
  else if (state == &apos;1&apos;) {
   digitalWrite(ledPin, HIGH);
-  Serial.println(&quot;LED: ON&quot;);
+  Serial.println(&quot;LED: ON&quot;);;
   state = 0;
  } 
 }
@@ -1539,10 +1555,18 @@ void loop() {
 <img src="../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_DevicesFound.jpg" alt="Image"></p>
 <p>By selecting one of the devices, you&apos;ll see the device is NOW <strong>connected</strong>.
 <img src="../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_FrontPage.jpg" alt="Image"></p>
+<p>By clicking <strong>Turn ON</strong> and <strong>Turn OFF</strong>, you will see the led can be light on and off accordingly.</p>
+<p><img src="../../Examples/howtomechatronics/led_on.jpg" alt="Image"></p>
+<p><img src="../../Examples/howtomechatronics/led_off.jpg" alt="Image"></p>
+<p>And, some serial message will be printed on the <strong>Monitor Serial</strong> dialog as:</p>
+<p><img src="../../Examples/howtomechatronics/bluetooth_led_serial.jpg" alt="Image"></p>
 <h3 id="longer-vision-robot-lvcontrol"><span style="color:blue">Longer Vision Robot LVControl</span></h3>
 <p><a href="http://www.longervisionrobot.com" target="_blank">Longer Vision Robot</a> provides its own APP <strong>LVContrl</strong>, which can be downloaded from ...</p>
+<p>The first page of <strong>LVContrl</strong> looks like:</p>
 <p><img src="../../Examples/howtomechatronics/LVControl_V0.2.jpg" alt="Image"></p>
+<p>By selecting page <strong>BTSet</strong>, we can easily <strong>SEARCH FOR VISIBLE DEVICES</strong>:</p>
 <p><img src="../../Examples/howtomechatronics/LVControl_Bluetooth_Set.jpg" alt="Image"></p>
+<p>After simply pair the device by just clicking on the listed device name, you will be able to see that our bluetooth device is now listed in <strong>LIST PAIRED DEVICES</strong>.</p>
 <p><img src="../../Examples/howtomechatronics/LVControl_Bluetooth_Connected.jpg" alt="Image"></p>
 <h2 id="assignment">Assignment:</h2>
 <p>Two other very similar reference examples can be found at:</p>
@@ -1594,7 +1618,7 @@ void loop() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.3 Bluetooth","level":"2.19.3","depth":2,"next":{"title":"14.4 Integrate Wifi & Bluetooth","level":"2.19.4","depth":2,"path":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_wifi.md","ref":"Part5_Communication/14_Communication/02_wifi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/03_bluetooth.md","mtime":"2018-04-03T04:23:32.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-03T20:46:42.547Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.3 Bluetooth","level":"2.19.3","depth":2,"next":{"title":"14.4 Integrate Wifi & Bluetooth","level":"2.19.4","depth":2,"path":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","ref":"Part5_Communication/14_Communication/04_wifi_bluetooth.md","articles":[]},"previous":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"path":"Part5_Communication/14_Communication/02_wifi.md","ref":"Part5_Communication/14_Communication/02_wifi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/03_bluetooth.md","mtime":"2018-04-04T02:14:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-04T02:14:17.018Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

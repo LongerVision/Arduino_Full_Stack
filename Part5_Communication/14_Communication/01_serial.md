@@ -19,8 +19,8 @@ ESP8266 | Arduino UNO R3
 <center>GND</center> | <center>GND</center>
 <center>VCC</center> | <center>3.3V</center>
 <center>CH_PD</center> | <center>3.3V</center>
-<center>TX</center> | <center>Virtual RX, namely, pin 11</center>
-<center>RX</center> | <center>Virtual TX, namely, pin 10</center>
+<center>TX</center> | <center>Virtual RX, namely, pin 10</center>
+<center>RX</center> | <center>Virtual TX, namely, pin 11</center>
 
 ![Image](../../Examples/arduinocc/001_serial.jpg)
 
