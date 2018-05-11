@@ -44,7 +44,7 @@ void loop() {
 Directly referenced from [Official Arduino Tutorial - Sweep](https://www.arduino.cc/en/Tutorial/Sweep).
 
 ### Hardware Wiring
-![Image](../../Examples/geek-workshop/essence/_001_Servo_Sweep.jpg)
+![Image](../../Examples/geek-workshop/essence/001_servo_sweep.jpg)
 
 ### Sketch
 Please refer to [Examples_Arduino - geek-workshop - essence - _001_Servo - _001_Servo_Sweep.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_001_Servo/_001_Servo_Sweep.ino).

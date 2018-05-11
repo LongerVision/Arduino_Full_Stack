@@ -9,7 +9,7 @@
 * Some communication sensors, including bluetooth and wifi, etc.
 * And our target of this book is to finally build an Arduino based race car, namely, an Mini-size Autonomous Vehicle with selected sensors.
 
-The book is put on gitbook at: [https://longer-vision-robot.gitbooks.io/arduino-full-stack/](https://longer-vision-robot.gitbooks.io/arduino-full-stack/), and all source code is tested and put on github at: [https://github.com/LongerVisionRobot/Arduino](https://github.com/LongerVisionRobot/Arduino) .
+The book is published on gitbook at: [https://longer-vision-robot.gitbooks.io/arduino-full-stack/](https://longer-vision-robot.gitbooks.io/arduino-full-stack/), and all source code is tested and released on github at: [https://github.com/LongerVisionRobot/Examples_Arduino](https://github.com/LongerVisionRobot/Examples_Arduino) .
 
 
 All the existing online resource is licensed as it is. And all the content designed by [Longer Vision Robot](http://www.longervisionrobot.com) are reserved to [Longer Vision Robot](http://www.longervisionrobot.com). The customers/students are allowed to learn from the content, to download the code and book, to modify the code, and even release the code without changing the license.
