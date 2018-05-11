@@ -51,7 +51,7 @@
 * [Chapter 7. Touch Sensors](Part2_Sensors/07_Touch_Sensors/README.md)
     * [7.1 Tap Sensor](Part2_Sensors/07_Touch_Sensors/002_tap.md)
     * [7.2 Shock Sensor](Part2_Sensors/07_Touch_Sensors/027_shock.md)
-    * [7.3 Touch](Part2_Sensors/07_Touch_Sensors/032_touch.md)
+    * [7.3 Touch Sensor](Part2_Sensors/07_Touch_Sensors/032_touch.md)
 * [Chapter 8. Thermist Sensors](Part2_Sensors/08_Thermist_Sensors/README.md)
     * [8.1 Temperature Sensor - DS18B20](Part2_Sensors/08_Thermist_Sensors/001_temperatureDS18B20.md)
     * [8.2 Analog Thermister](Part2_Sensors/08_Thermist_Sensors/011_analogthermist.md)
