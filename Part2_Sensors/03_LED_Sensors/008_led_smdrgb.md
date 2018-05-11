@@ -1,5 +1,9 @@
 # 3.2 LED SMD RGB
 
+* LED: light-emitting diode
+* SMD: surface-mount device
+* [SMD LED](https://en.wikipedia.org/wiki/SMD_LED_Module): An SMD LED Module (surface-mount device light-emitting diode module) is a type of LED module that uses surface-mount technology ([SMT](https://en.wikipedia.org/wiki/Surface-mount_technology)) to mount LED chips on printed circuit boards ([PCB](https://en.wikipedia.org/wiki/Printed_circuit_boards)).
+
 ## Hardware Wiring
 ![Image](../../Examples/sensor-kit-for-arduino/008_led_smdrgb.jpg)
 

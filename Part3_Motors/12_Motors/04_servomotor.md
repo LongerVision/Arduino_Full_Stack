@@ -85,7 +85,7 @@ void loop() {
 ## Assignment: Pan Tilt
 ### Hardware Wiring
 The hardware wiring is left for students to finish as an in-class assignment. The expected result can be referred to
-[**Chapter 15.2 - Pan Tilt Control by 2 Servo Motors**](../../Part6_MiniAutomatedVehicle/15_Assembling/02_pantilt_servomotor.md). 
+[**Chapter 15.2 - Pan Tilt Control by 2 Servo Motors**](../../Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomoto_ultrasoundr.md). 
 
 ### Sketch
 Please refer to [Examples_Arduino - geek-workshop - essence - _001_Servo - _001_Servo_PanTilt.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_001_Servo/_001_Servo_PanTilt.ino).
