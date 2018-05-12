@@ -1,9 +1,12 @@
 # 6.1 Hall Magnetic Sensor
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/003_Hall.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _003_Hall_Magnetic - _003_Hall_Magnetic.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_003_Hall_Magnetic/_003_Hall_Magnetic.ino).
 ```
 int Led=13;   // Define LDE Pin

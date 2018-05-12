@@ -1,9 +1,12 @@
 # 6.5 Analog Hall
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/031_analoghall.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _031_Analog_Hall - _031_Analog_Hall.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_031_Analog_Hall/_031_Analog_Hall.ino).
 ```
 int sensorPin = A5;   // select the input pin for the potentiometer

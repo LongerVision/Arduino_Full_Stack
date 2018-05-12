@@ -1,9 +1,12 @@
 # 5.3 Microphone Big Sound
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/033_microphone_bigsound.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _033_Microphone_BigSound - _033_Microphone_BigSound.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_033_Microphone_BigSound/_033_Microphone_BigSound.ino).
 ```
 int sensorPin = A5;   // select the input pin for the potentiometer

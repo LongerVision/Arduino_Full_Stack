@@ -3,9 +3,12 @@
 ## Example 1: 
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/015_photoresistor.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _015_PhotoResistor - _015_PhotoResistor.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_015_PhotoResistor/_015_PhotoResistor.ino).
 ```
 int sensorPin = 2;
@@ -25,9 +28,12 @@ void loop() {
 ## Example 2: 
 
 ## Hardware Wiring
+
 ![Image](../../Examples/geek-workshop/studynotes/005_photoresistor.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - geek-workshop - studynotes - _005_Photoresistor - _005_Photoresistor.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/studynotes/_005_Photoresistor/_005_Photoresistor.ino).
 ```
 int photocellPin = 2; //define variable photocellsh=2, where we read the voltage

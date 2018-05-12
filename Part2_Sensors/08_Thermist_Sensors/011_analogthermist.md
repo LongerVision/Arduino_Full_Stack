@@ -1,9 +1,12 @@
 # 8.2 Analog Thermist
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/011_analogthermist.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _011_AnalogThermister - _011_AnalogThermister.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_011_AnalogThermister/_011_AnalogThermister.ino).
 ```
 #include <math.h>

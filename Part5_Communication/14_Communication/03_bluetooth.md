@@ -70,9 +70,11 @@ This APP can be downloaded from [https://howtomechatronics.com/download/arduino-
 
 
 After the installation, by click on **Connect** on the **FIRST** page of this APP, you'll see all detected bluetooth devices as:
+
 ![Image](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_DevicesFound.jpg)
 
 By selecting one of the devices, you'll see the device is NOW **connected**.
+
 ![Image](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_FrontPage.jpg)
 
 By clicking **Turn ON** and **Turn OFF**, you will see the led can be light on and off accordingly.

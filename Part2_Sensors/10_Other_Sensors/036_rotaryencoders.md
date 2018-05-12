@@ -1,9 +1,12 @@
 # 10.4 Rotary Encoders
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/036_rotaryencoders.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _036_RotaryEncoders - _036_RotaryEncoders.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_036_RotaryEncoders/_036_RotaryEncoders.ino).
 ```
 const int interruptA = 0;       // Interrupt 0 - pin 2

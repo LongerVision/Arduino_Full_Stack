@@ -1,9 +1,12 @@
 # 5.2 Active Buzzer
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/010_activebuzzer.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _010_ActiveBuzzer - _010_ActiveBuzzer.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_010_ActiveBuzzer/_010_ActiveBuzzer.ino).
 ```
 int speakerPin = 8; // Define speaker's pin, here 8

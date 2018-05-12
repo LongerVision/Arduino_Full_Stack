@@ -1,9 +1,12 @@
 # 4.2 Laser Emitter
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/007_laseremitter.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _007_LaserEmit - _007_LaserEmit.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_007_LaserEmit/_007_LaserEmit.ino).
 ```
 void setup()

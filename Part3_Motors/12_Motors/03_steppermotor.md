@@ -1,10 +1,13 @@
 # 12.3 Stepper Motor
 
 We do **NOT** provide any stepper motor in our race car kit. Here, we are using a 5V 28BYJ-48 step motor (in the following image) for testing.
+
 ![Image](../../Examples/geek-workshop/essence/motor-step.jpg)
 
 ## Hardware Wiring
+
 ![Image](../../Examples/geek-workshop/essence/002_stepper.jpg)
+
 
 ## Sketch
 The code can be found at [Examples_Arduino - geek-workshop - essence - _002_Stepper - _002_Stepper.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_002_Stepper/_002_Stepper.ino).

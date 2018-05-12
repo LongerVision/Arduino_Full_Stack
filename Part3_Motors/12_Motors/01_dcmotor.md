@@ -1,16 +1,20 @@
 # 12.1 DC Motor
 
 The DC gear motor to be used is of 3~5V, which looks as:
+
 ![Image](../../Examples/adafruit/motor-DC.jpg)
 
 In order to estimate the race car's speed, we also provide a speed encoder for each DC motor.
+
 ![Image](../../Examples/adafruit/motor-DC+speed-encoder.jpg)
 
 Clearly, two welding spots come with the DC motor, which we need to weld out the electrical wires manually.
+
 ![Image](../../Examples/adafruit/motor-DC+soldered.jpg)
 
 
 ## Hardware Wiring
+
 ![Image](../../Examples/adafruit/001_dcmotor.jpg)
 
 ## Sketch

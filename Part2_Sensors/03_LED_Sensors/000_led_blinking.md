@@ -1,9 +1,12 @@
 # 3.1 LED Blinking
 
 ## Hardware Wiring
+
 ![Image](../../Examples/geek-workshop/studynotes/002_ledblinking.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - geek-workshop - studynotes - _002_LED_Blinking - _002_LED_Blinking.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/studynotes/_002_LED_Blinking/_002_LED_Blinking.ino).
 ```
 /*

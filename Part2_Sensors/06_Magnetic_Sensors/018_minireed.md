@@ -1,9 +1,12 @@
 # 6.2 Mini Reed
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/018_minireed.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _018_MiniReed - _018_MiniReed.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_018_MiniReed/_018_MiniReed.ino).
 ```
 int Led=13;       // Define LDE Pin

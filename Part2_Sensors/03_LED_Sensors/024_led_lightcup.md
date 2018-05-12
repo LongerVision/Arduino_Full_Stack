@@ -1,9 +1,12 @@
 # 3.6 LED Light Cup
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/024_led_lightcup.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _024_LED_LightCup - _024_LED_LightCup.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_024_LED_LightCup/_024_LED_LightCup.ino).
 ```
 int LedPinA = 5;

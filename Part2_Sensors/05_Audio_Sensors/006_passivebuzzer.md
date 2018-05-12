@@ -1,9 +1,12 @@
 # 5.1 Passive Buzzer
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/006_passivebuzzer.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _006_PassiveBuzzer - _006_PassiveBuzzer.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_006_PassiveBuzzer/_006_PassiveBuzzer.ino).
 ```
 int buzzer=8; // Set buzzer IO pin, here 8

@@ -1,9 +1,12 @@
 # 10.1 Joystick
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/020_joystick.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _020_Joystick - _020_Joystick.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_020_Joystick/_020_Joystick.ino).
 ```
 int sensorPin = 5;

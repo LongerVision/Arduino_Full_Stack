@@ -1,9 +1,12 @@
 # 8.1 Temperature Sensor - DS18B20
 
 ## Hardware Wiring
+
 ![Image](../../Examples/sensor-kit-for-arduino/001_DS18B20.jpg)
 
+
 ## Sketch
+
 The code can be found at [Examples_Arduino - sensor-kit-for-arduino - _001_Temperature_DS18B20 - _001_Temperature_DS18B20.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/sensor-kit-for-arduino/_001_Temperature_DS18B20/_001_Temperature_DS18B20.ino).
 ```
 // Include the libraries we need

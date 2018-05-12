@@ -2,7 +2,9 @@
 
 
 ## Hardware Wiring
+
 ![Image](../../Examples/geek-workshop/studynotes/008_crystaldisplay1602A.jpg)
+
 
 ## Sketch
 ```

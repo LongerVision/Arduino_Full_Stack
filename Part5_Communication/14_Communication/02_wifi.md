@@ -128,6 +128,7 @@ error: espcomm_open failed
 error: espcomm_upload_mem failed
 SPIFFS Upload failed!
 ```
+
 ![Image](../../Examples/geekstips/espcomm_error1.jpg)
 
 
