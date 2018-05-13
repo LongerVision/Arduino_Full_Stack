@@ -1,15 +1,21 @@
 # 12.4 Servo Motor
 
 We provide a Micro Servo SG90 in our race car kit, which looks like:
+
 ![Image](../../Examples/geek-workshop/essence/motor-servo.jpg)
 
+
 ## Example 1: Knob
+
 Directly referenced from [Official Arduino Tutorial - Knob](https://www.arduino.cc/en/Tutorial/Knob).
 
 ### Hardware Wiring
+
 ![Image](../../Examples/geek-workshop/essence/001_servo_knob.jpg)
 
+
 ### Sketch
+
 The code can be found at [Examples_Arduino - geek-workshop - essence - _001_Servo - _001_Servo_Knob.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_001_Servo/_001_Servo_Knob.ino).
 ```
 /*
@@ -40,13 +46,18 @@ void loop() {
 }
 ```
 
+
 ## Example 2: Sweep
+
 Directly referenced from [Official Arduino Tutorial - Sweep](https://www.arduino.cc/en/Tutorial/Sweep).
 
 ### Hardware Wiring
+
 ![Image](../../Examples/geek-workshop/essence/001_servo_sweep.jpg)
 
+
 ### Sketch
+
 Please refer to [Examples_Arduino - geek-workshop - essence - _001_Servo - _001_Servo_Sweep.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_001_Servo/_001_Servo_Sweep.ino).
 ```
 /* Sweep
@@ -82,12 +93,17 @@ void loop() {
 }
 ```
 
+
 ## Assignment: Pan Tilt
+
 ### Hardware Wiring
+
 The hardware wiring is left for students to finish as an in-class assignment. The expected result can be referred to
 [**Chapter 15.2 - Pan Tilt Control by 2 Servo Motors**](../../Part6_MiniAutomatedVehicle/15_Assembling/04_pantilt_servomoto_ultrasoundr.md). 
 
+
 ### Sketch
+
 Please refer to [Examples_Arduino - geek-workshop - essence - _001_Servo - _001_Servo_PanTilt.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/geek-workshop/essence/_001_Servo/_001_Servo_PanTilt.ino).
 ```
 // http://www.robotoid.com/appnotes/arduino-operating-two-servos.html

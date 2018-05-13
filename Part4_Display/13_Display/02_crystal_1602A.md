@@ -16,9 +16,9 @@ int Enable = 2;
 void LcdCommandWrite(int value) {
 // define for all pins
 int i = 0;
-for (i=DB[0]; i <= DI; i++) //assign all data bus
+for (i=DB[0]; i <= DI; i++)   //assign all data bus
 {
-   digitalWrite(i,value & 01);//因为1602液晶信号识别是D7-D0(不是D0-D7)，这里是用来反转信号。
+   digitalWrite(i,value & 01);  // 1602 Crystal Display sequence: D7->D0, instead of D0->D7, this is used to revert the signal sequence.
    value >>= 1;
 }
 digitalWrite(Enable,LOW);
@@ -43,7 +43,7 @@ delayMicroseconds(1);
 digitalWrite(Enable,HIGH);
 delayMicroseconds(1);
 digitalWrite(Enable,LOW);
-delayMicroseconds(1);  // 延时1ms
+delayMicroseconds(1);   // Deplay 1ms
 }
 
 void setup (void) {
@@ -54,27 +54,27 @@ for (i=Enable; i <= DI; i++) {
 delay(100);
 // 短暂的停顿后初始化LCD
 // 用于LCD控制需要
-LcdCommandWrite(0x38);  // 设置为8-bit接口，2行显示，5x7文字大小                     
+LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
 delay(64);                      
-LcdCommandWrite(0x38);  // 设置为8-bit接口，2行显示，5x7文字大小                        
+LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
 delay(50);                      
-LcdCommandWrite(0x38);  // 设置为8-bit接口，2行显示，5x7文字大小                        
+LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
 delay(20);                      
-LcdCommandWrite(0x06);  // 输入方式设定
-                         // 自动增量，没有显示移位
+LcdCommandWrite(0x06);  // Setup input
+                        // Automatic Increasement, no shift
 delay(20);                      
-LcdCommandWrite(0x0E);  // 显示设置
-                         // 开启显示屏，光标显示，无闪烁
+LcdCommandWrite(0x0E);  // Setup display
+                        // Turn on screen, display cursor, no flashing
 delay(20);                      
-LcdCommandWrite(0x01);  // 屏幕清空，光标位置归零  
+LcdCommandWrite(0x01);  // Clear up screen, cursor's position -> 0
 delay(100);                      
-LcdCommandWrite(0x80);  // 显示设置
-                         // 开启显示屏，光标显示，无闪烁
+LcdCommandWrite(0x80);  // Setup display
+                        // Turn on screen, display cursor, no flashing
 delay(20);                      
 }
 
 void loop (void) {
-  LcdCommandWrite(0x01);  // 屏幕清空，光标位置归零  
+  LcdCommandWrite(0x01);  // Clear up screen, cursor's position -> 0
   delay(10); 
   LcdCommandWrite(0x80+3); 
   delay(10);                     
@@ -90,7 +90,7 @@ void loop (void) {
   LcdDataWrite('t');
   LcdDataWrite('o');
   delay(10);
-  LcdCommandWrite(0xc0+1);  // 定义光标位置为第二行第二个位置  
+  LcdCommandWrite(0xc0+1);  // Set the cursor's location: 2nd line, 2nd position
   delay(10); 
   LcdDataWrite('l');
   LcdDataWrite('o');
@@ -106,7 +106,7 @@ void loop (void) {
   LcdDataWrite('o');
   LcdDataWrite('n');
   delay(5000);
-  LcdCommandWrite(0x01);  // 屏幕清空，光标位置归零  
+  LcdCommandWrite(0x01);  // Clear up screen, cursor's position -> 0
   delay(10);
   LcdDataWrite('I');
   LcdDataWrite(' ');
@@ -120,9 +120,9 @@ void loop (void) {
   LcdDataWrite('e');
   LcdDataWrite('i');
   delay(3000);
-  LcdCommandWrite(0x02); //设置模式为新文字替换老文字，无新文字的地方显示不变。
+  LcdCommandWrite(0x02);  // Set the mode to: "New characters are used to replace old characters; No change where there is NO characters." 
   delay(10);
-  LcdCommandWrite(0x80+5); //定义光标位置为第一行第六个位置
+  LcdCommandWrite(0x80+5);  // Set the cursor's location: 1st line, 6th position
   delay(10);  
   LcdDataWrite('t');
   LcdDataWrite('h');

@@ -19,7 +19,7 @@ Clearly, two welding spots come with the DC motor, which we need to weld out the
 
 ## Sketch
 The code can be found at [Examples_Arduino - adafruit - _001_DCMotor - _001_DCMotor.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/adafruit/_001_DCMotor/_001_DCMotor.ino)
-You can also refer to Adafruit's official website at [https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors/overview](http://www.geek-workshop.com/thread-4360-1-1.html).
+You can also refer to Adafruit's official website at [https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors/overview](https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors/overview).
 ```
 /*
 /*

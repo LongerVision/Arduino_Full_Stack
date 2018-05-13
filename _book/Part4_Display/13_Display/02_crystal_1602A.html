@@ -1510,9 +1510,9 @@ int Enable = 2;
 void LcdCommandWrite(int value) {
 // define for all pins
 int i = 0;
-for (i=DB[0]; i &lt;= DI; i++) //assign all data bus
+for (i=DB[0]; i &lt;= DI; i++)   //assign all data bus
 {
-   digitalWrite(i,value &amp; 01);//&#x56E0;&#x4E3A;1602&#x6DB2;&#x6676;&#x4FE1;&#x53F7;&#x8BC6;&#x522B;&#x662F;D7-D0(&#x4E0D;&#x662F;D0-D7)&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x7528;&#x6765;&#x53CD;&#x8F6C;&#x4FE1;&#x53F7;&#x3002;
+   digitalWrite(i,value &amp; 01);  // 1602 Crystal Display sequence: D7-&gt;D0, instead of D0-&gt;D7, this is used to revert the signal sequence.
    value &gt;&gt;= 1;
 }
 digitalWrite(Enable,LOW);
@@ -1537,7 +1537,7 @@ delayMicroseconds(1);
 digitalWrite(Enable,HIGH);
 delayMicroseconds(1);
 digitalWrite(Enable,LOW);
-delayMicroseconds(1);  // &#x5EF6;&#x65F6;1ms
+delayMicroseconds(1);   // Deplay 1ms
 }
 
 void setup (void) {
@@ -1548,27 +1548,27 @@ for (i=Enable; i &lt;= DI; i++) {
 delay(100);
 // &#x77ED;&#x6682;&#x7684;&#x505C;&#x987F;&#x540E;&#x521D;&#x59CB;&#x5316;LCD
 // &#x7528;&#x4E8E;LCD&#x63A7;&#x5236;&#x9700;&#x8981;
-LcdCommandWrite(0x38);  // &#x8BBE;&#x7F6E;&#x4E3A;8-bit&#x63A5;&#x53E3;&#xFF0C;2&#x884C;&#x663E;&#x793A;&#xFF0C;5x7&#x6587;&#x5B57;&#x5927;&#x5C0F;                     
+LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
 delay(64);                      
-LcdCommandWrite(0x38);  // &#x8BBE;&#x7F6E;&#x4E3A;8-bit&#x63A5;&#x53E3;&#xFF0C;2&#x884C;&#x663E;&#x793A;&#xFF0C;5x7&#x6587;&#x5B57;&#x5927;&#x5C0F;                        
+LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
 delay(50);                      
-LcdCommandWrite(0x38);  // &#x8BBE;&#x7F6E;&#x4E3A;8-bit&#x63A5;&#x53E3;&#xFF0C;2&#x884C;&#x663E;&#x793A;&#xFF0C;5x7&#x6587;&#x5B57;&#x5927;&#x5C0F;                        
+LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
 delay(20);                      
-LcdCommandWrite(0x06);  // &#x8F93;&#x5165;&#x65B9;&#x5F0F;&#x8BBE;&#x5B9A;
-                         // &#x81EA;&#x52A8;&#x589E;&#x91CF;&#xFF0C;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x79FB;&#x4F4D;
+LcdCommandWrite(0x06);  // Setup input
+                        // Automatic Increasement, no shift
 delay(20);                      
-LcdCommandWrite(0x0E);  // &#x663E;&#x793A;&#x8BBE;&#x7F6E;
-                         // &#x5F00;&#x542F;&#x663E;&#x793A;&#x5C4F;&#xFF0C;&#x5149;&#x6807;&#x663E;&#x793A;&#xFF0C;&#x65E0;&#x95EA;&#x70C1;
+LcdCommandWrite(0x0E);  // Setup display
+                        // Turn on screen, display cursor, no flashing
 delay(20);                      
-LcdCommandWrite(0x01);  // &#x5C4F;&#x5E55;&#x6E05;&#x7A7A;&#xFF0C;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5F52;&#x96F6;  
+LcdCommandWrite(0x01);  // Clear up screen, cursor&apos;s position -&gt; 0
 delay(100);                      
-LcdCommandWrite(0x80);  // &#x663E;&#x793A;&#x8BBE;&#x7F6E;
-                         // &#x5F00;&#x542F;&#x663E;&#x793A;&#x5C4F;&#xFF0C;&#x5149;&#x6807;&#x663E;&#x793A;&#xFF0C;&#x65E0;&#x95EA;&#x70C1;
+LcdCommandWrite(0x80);  // Setup display
+                        // Turn on screen, display cursor, no flashing
 delay(20);                      
 }
 
 void loop (void) {
-  LcdCommandWrite(0x01);  // &#x5C4F;&#x5E55;&#x6E05;&#x7A7A;&#xFF0C;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5F52;&#x96F6;  
+  LcdCommandWrite(0x01);  // Clear up screen, cursor&apos;s position -&gt; 0
   delay(10); 
   LcdCommandWrite(0x80+3); 
   delay(10);                     
@@ -1584,7 +1584,7 @@ void loop (void) {
   LcdDataWrite(&apos;t&apos;);
   LcdDataWrite(&apos;o&apos;);
   delay(10);
-  LcdCommandWrite(0xc0+1);  // &#x5B9A;&#x4E49;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x4E3A;&#x7B2C;&#x4E8C;&#x884C;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F4D;&#x7F6E;  
+  LcdCommandWrite(0xc0+1);  // Set the cursor&apos;s location: 2nd line, 2nd position
   delay(10); 
   LcdDataWrite(&apos;l&apos;);
   LcdDataWrite(&apos;o&apos;);
@@ -1600,7 +1600,7 @@ void loop (void) {
   LcdDataWrite(&apos;o&apos;);
   LcdDataWrite(&apos;n&apos;);
   delay(5000);
-  LcdCommandWrite(0x01);  // &#x5C4F;&#x5E55;&#x6E05;&#x7A7A;&#xFF0C;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5F52;&#x96F6;  
+  LcdCommandWrite(0x01);  // Clear up screen, cursor&apos;s position -&gt; 0
   delay(10);
   LcdDataWrite(&apos;I&apos;);
   LcdDataWrite(&apos; &apos;);
@@ -1614,9 +1614,9 @@ void loop (void) {
   LcdDataWrite(&apos;e&apos;);
   LcdDataWrite(&apos;i&apos;);
   delay(3000);
-  LcdCommandWrite(0x02); //&#x8BBE;&#x7F6E;&#x6A21;&#x5F0F;&#x4E3A;&#x65B0;&#x6587;&#x5B57;&#x66FF;&#x6362;&#x8001;&#x6587;&#x5B57;&#xFF0C;&#x65E0;&#x65B0;&#x6587;&#x5B57;&#x7684;&#x5730;&#x65B9;&#x663E;&#x793A;&#x4E0D;&#x53D8;&#x3002;
+  LcdCommandWrite(0x02);  // Set the mode to: &quot;New characters are used to replace old characters; No change where there is NO characters.&quot; 
   delay(10);
-  LcdCommandWrite(0x80+5); //&#x5B9A;&#x4E49;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x4E3A;&#x7B2C;&#x4E00;&#x884C;&#x7B2C;&#x516D;&#x4E2A;&#x4F4D;&#x7F6E;
+  LcdCommandWrite(0x80+5);  // Set the cursor&apos;s location: 1st line, 6th position
   delay(10);  
   LcdDataWrite(&apos;t&apos;);
   LcdDataWrite(&apos;h&apos;);
@@ -1672,7 +1672,7 @@ void loop (void) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"next":{"title":"13.3 Crystal Display More","level":"2.17.3","depth":2,"path":"Part4_Display/13_Display/03_crystal_12864.md","ref":"Part4_Display/13_Display/03_crystal_12864.md","articles":[]},"previous":{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","ref":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part4_Display/13_Display/02_crystal_1602A.md","mtime":"2018-05-12T22:01:33.300Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-12T22:03:41.642Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"next":{"title":"13.3 Crystal Display More","level":"2.17.3","depth":2,"path":"Part4_Display/13_Display/03_crystal_12864.md","ref":"Part4_Display/13_Display/03_crystal_12864.md","articles":[]},"previous":{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","ref":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part4_Display/13_Display/02_crystal_1602A.md","mtime":"2018-05-13T05:28:49.078Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-13T05:28:55.895Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
