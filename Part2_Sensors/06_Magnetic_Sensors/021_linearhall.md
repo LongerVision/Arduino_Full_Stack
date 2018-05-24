@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/021_linearhall.jpg)
+![Linear Hall](../../Examples/sensor-kit-for-arduino/021_linearhall.jpg)
 
 
 ## Sketch

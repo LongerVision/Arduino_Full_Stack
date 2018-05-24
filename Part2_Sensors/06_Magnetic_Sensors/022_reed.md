@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/022_reed.jpg)
+![Switch - Reed](../../Examples/sensor-kit-for-arduino/022_reed.jpg)
 
 
 ## Sketch

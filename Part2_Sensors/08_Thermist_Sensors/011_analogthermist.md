@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/011_analogthermist.jpg)
+![Analog Thermist](../../Examples/sensor-kit-for-arduino/011_analogthermist.jpg)
 
 
 ## Sketch

@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/003_Hall.jpg)
+![Hall Magnetic Sensor](../../Examples/sensor-kit-for-arduino/003_Hall.jpg)
 
 
 ## Sketch

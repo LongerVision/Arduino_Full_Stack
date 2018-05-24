@@ -1,8 +1,8 @@
-# 9.3 Switch - Ball
+# 9.3  Ball
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/017_switch_ball.jpg)
+![Ball](../../Examples/sensor-kit-for-arduino/017_switch_ball.jpg)
 
 
 ## Sketch

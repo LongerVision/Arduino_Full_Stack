@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/018_minireed.jpg)
+![Mini Reed](../../Examples/sensor-kit-for-arduino/018_minireed.jpg)
 
 
 ## Sketch

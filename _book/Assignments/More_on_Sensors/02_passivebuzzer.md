@@ -1,9 +1,10 @@
 # Passive Buzzer
 
 
-
 ## Hardware Wiring
-![Image](../Examples/geek-workshop/studynotes/02_passivebuzzer.jpg)
+
+![Passive Buzzer](../Examples/geek-workshop/studynotes/02_passivebuzzer.jpg)
+
 
 ## Sketch
 ```

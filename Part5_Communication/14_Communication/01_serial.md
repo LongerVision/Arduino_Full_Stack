@@ -22,7 +22,7 @@ ESP8266 | Arduino UNO R3
 <center>TX</center> | <center>Virtual RX, namely, pin 10</center>
 <center>RX</center> | <center>Virtual TX, namely, pin 11</center>
 
-![Image](../../Examples/arduinocc/001_serial.jpg)
+![Serial](../../Examples/arduinocc/001_serial.jpg)
 
 
 ## Sketch
@@ -87,7 +87,7 @@ void loop() { // run over and over
 
 ## Outcome
 
-![Image](../../Examples/arduinocc/001_serial_communication_arduinoside.jpg)
+![Serial Port Output from Arduino IDE](../../Examples/arduinocc/001_serial_communication_arduinoside.jpg)
 
 
 ## However?

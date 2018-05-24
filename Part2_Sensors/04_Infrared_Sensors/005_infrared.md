@@ -1,8 +1,8 @@
-# 4.1 Infrared Controller
+# 4.1 Infrared Emitter and Receiver
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/005_infrared.jpg)
+![Infrared Emitter and Receiver](../../Examples/sensor-kit-for-arduino/005_infrared.jpg)
 
 
 ## Sketch

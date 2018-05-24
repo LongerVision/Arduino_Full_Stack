@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/035_pulsemonitor.jpg)
+![Pulse Monitor](../../Examples/sensor-kit-for-arduino/035_pulsemonitor.jpg)
 
 
 ## Sketch

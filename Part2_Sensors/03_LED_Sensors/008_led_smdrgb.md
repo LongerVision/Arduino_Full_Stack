@@ -6,7 +6,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/008_led_smdrgb.jpg)
+![LED SMD RGB](../../Examples/sensor-kit-for-arduino/008_led_smdrgb.jpg)
 
 
 ## Sketch

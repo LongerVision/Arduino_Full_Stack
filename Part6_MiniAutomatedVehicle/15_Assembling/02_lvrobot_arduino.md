@@ -5,14 +5,14 @@
 
 Find a suitable place and fix Arduino UNO R3 onto the top Acrylic plate:
 
-![Image](../../Examples/longervisionrobot/assemble_lvrarduino_01.jpg)
+![Assemble Arduino](../../Examples/longervisionrobot/assemble_01_arduino.jpg)
 
 
 ## Step 2:  Plugin Arduino Extension Board
 
 Just directly plugin Longer Vision Robot Arduino Extension Board onto the Arduino UNO R3:
 
-![Image](../../Examples/longervisionrobot/assemble_lvrarduino_02.jpg)
+![Assemble Arduino Extension Board](../../Examples/longervisionrobot/assemble_02_arduino_extensionboard.jpg)
 
 
 ## Step 3: Fix Batteries
@@ -23,7 +23,7 @@ And then, find a suitable place on the top Acrylic plate and fix the given black
 
 You now can simply test if the battery and power button on Arduino Extension Board is properly first:
 
-![Image](../../Examples/longervisionrobot/assemble_lvrarduino_03.jpg)
+![Assemble Batteries](../../Examples/longervisionrobot/assemble_03_batteries.jpg)
 
 As we can see, the battery and the power switch on Arduino Extension Board works fine.
 
@@ -69,4 +69,4 @@ void loop() {
 
 Make sure the motor pins are correctly designated, and make sure when the motors are set to **LOW**, all 4 wheels are slowed down, and when the motors are set to **HIGH**, all 4 wheels will turn to the **SAME** direction.
 
-![Image](../../Examples/longervisionrobot/assemble_lvrarduino_04.jpg)
+![Assemble Wired](../../Examples/longervisionrobot/assemble_04_wired.jpg)

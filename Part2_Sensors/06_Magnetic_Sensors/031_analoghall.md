@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/031_analoghall.jpg)
+![Analog Hall](../../Examples/sensor-kit-for-arduino/031_analoghall.jpg)
 
 
 ## Sketch

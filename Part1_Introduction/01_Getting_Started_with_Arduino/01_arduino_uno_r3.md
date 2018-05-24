@@ -4,7 +4,7 @@ Students who take our Arduino course on-site will be given a **FREE** kit of Ard
 
 Cannonical Arduino UNO R3 looks like the following image:
 
-![Image](./arduino-uno-r3.jpg)
+![Arduino UNO R3](./arduino-uno-r3.jpg)
 
 Two Arduino official websites about Arduino UNO R3 are recommended: 
 * [https://www.arduino.cc/en/Reference/Board](https://www.arduino.cc/en/Reference/Board)

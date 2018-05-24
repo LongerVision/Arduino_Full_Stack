@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/026_led_rg.jpg)
+![LED Red Green](../../Examples/sensor-kit-for-arduino/026_led_rg.jpg)
 
 
 ## Sketch

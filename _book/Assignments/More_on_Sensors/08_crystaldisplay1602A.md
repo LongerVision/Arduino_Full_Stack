@@ -1,7 +1,10 @@
 # Crystal Display 1602A
 
+
 ## Hardware Wiring
-![Image](../Examples/geek-workshop/studynotes/08_crystaldisplay1602A.jpg)
+
+![Crystal Display 1602A](../Examples/geek-workshop/studynotes/08_crystaldisplay1602A.jpg)
+
 
 ## Sketch
 ```

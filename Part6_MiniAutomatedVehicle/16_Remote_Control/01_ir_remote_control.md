@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/geek-workshop/entrylevelcourses/001_IRRemote.jpg)
+![IR Remote Sensor](../../Examples/geek-workshop/entrylevelcourses/001_IRRemote.jpg)
 
 
 ## Sketch

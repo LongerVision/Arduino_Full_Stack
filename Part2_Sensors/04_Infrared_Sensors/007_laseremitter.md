@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/007_laseremitter.jpg)
+![Laser Emitter](../../Examples/sensor-kit-for-arduino/007_laseremitter.jpg)
 
 
 ## Sketch

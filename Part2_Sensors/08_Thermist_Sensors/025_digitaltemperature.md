@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/025_digitaltemperature.jpg)
+![Digital Temperature](../../Examples/sensor-kit-for-arduino/025_digitaltemperature.jpg)
 
 
 ## Sketch

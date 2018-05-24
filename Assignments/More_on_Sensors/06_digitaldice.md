@@ -1,7 +1,10 @@
 # Digital Dice
 
+
 ## Hardware Wiring
-![Image](../Examples/geek-workshop/studynotes/06_buttondice.jpg)
+
+![Button Dice](../Examples/geek-workshop/studynotes/06_buttondice.jpg)
+
 
 ## Sketch
 ```

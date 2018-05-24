@@ -1,7 +1,7 @@
 # Liquid Crystal Thermometer LM35
 
 ## Hardware Wiring
-![Image](../Examples/geek-workshop/studynotes/09_liquidcrystalthermometerLM35.jpg)
+![Liquid Crystal Thermometer LM35](../Examples/geek-workshop/studynotes/09_liquidcrystalthermometerLM35.jpg)
 
 ## Sketch
 ```

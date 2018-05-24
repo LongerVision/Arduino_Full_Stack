@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/029_ir_linetracking.jpg)
+![IR Line Tracking](../../Examples/sensor-kit-for-arduino/029_ir_linetracking.jpg)
 
 
 ## Sketch

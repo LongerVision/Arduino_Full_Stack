@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/024_led_lightcup.jpg)
+![LED Light Cup](../../Examples/sensor-kit-for-arduino/024_led_lightcup.jpg)
 
 
 ## Sketch

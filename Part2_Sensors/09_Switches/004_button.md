@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/004_button.jpg)
+![Button](../../Examples/sensor-kit-for-arduino/004_button.jpg)
 
 
 ## Sketch

@@ -1,7 +1,10 @@
 # Nixie Light LG5011BSR
 
+
 ## Hardware Wiring
-![Image](../Examples/geek-workshop/studynotes/03_nixielightLG5011BSR.jpg)
+
+![Nixie Light LG5011BSR](../Examples/geek-workshop/studynotes/03_nixielightLG5011BSR.jpg)
+
 
 ## Sketch
 ```

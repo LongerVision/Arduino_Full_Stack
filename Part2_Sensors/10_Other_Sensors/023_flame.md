@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/023_flame.jpg)
+![Flame](../../Examples/sensor-kit-for-arduino/023_flame.jpg)
 
 
 ## Sketch

@@ -4,4 +4,4 @@ Students who take our Arduino course on-site will be given a **FREE** proprietar
 
 The proprietary Arduino exntension board designed by [Longer Vision Robot](http://www.longervisionrobot.com) can be plugged into the Arduino UNO R3 directly, which looks like:
 
-![Image](./LVR_Arduino_Vehicle.jpg)
+![LVR Arduino Extension Board](./LVR_Arduino_Extension_Board.jpg)

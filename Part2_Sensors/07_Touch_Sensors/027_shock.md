@@ -1,8 +1,8 @@
-# 7.2 LED Red Green
+# 7.2 Shock Sensor
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/027_shock.jpg)
+![Shock Sensor](../../Examples/sensor-kit-for-arduino/027_shock.jpg)
 
 
 ## Sketch

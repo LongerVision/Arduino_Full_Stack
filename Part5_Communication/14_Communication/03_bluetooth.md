@@ -2,14 +2,14 @@
 
 A **ZS-040** (detected as **HC-0X**)  bluetooth module is provided in our Arduino course on-site, which looks like:
 
-![Image](../../Examples/howtomechatronics/HC-05-Bluetooth-Module.jpg) 
+![HC-05 Bluetooth Module](../../Examples/howtomechatronics/HC-05-Bluetooth-Module.jpg) 
 
 The **ONLY** difference is that the provided bluetooth module has 4 pins but **NOT** 6 pins, without pin **STATE** and pin **EN**.
 
 
 ## Hardware Wiring
 
-![Image](../../Examples/howtomechatronics/003_bluetooth.jpg)
+![Bluetooth](../../Examples/howtomechatronics/003_bluetooth.jpg)
 
 ## Sketch
 The code can be found at [Examples_Arduino - arduinocc - _003_Bluetooth - _003_Bluetooth.ino](https://github.com/LongerVisionRobot/Examples_Arduino/blob/master/howtomechatronics/_003_Bluetooth/_003_Bluetooth.ino)
@@ -57,7 +57,7 @@ void loop() {
 
 <span style="color:red">**Note: Please remove your bluetooth module before flashing your code onto Arduino board. Otherwise, you'll obtain the following ERROR messages:**</span>
 
-![Image](../../Examples/howtomechatronics/avr_bluetooth_error.jpg)
+![AVR Bluetooth Error](../../Examples/howtomechatronics/avr_bluetooth_error.jpg)
 
 
 ## Mobile APPs
@@ -66,26 +66,26 @@ void loop() {
 
 This APP can be downloaded from [https://howtomechatronics.com/download/arduino-bluetooth-tutorial-example-android-app/?wpdmdl=2833](https://howtomechatronics.com/download/arduino-bluetooth-tutorial-example-android-app/?wpdmdl=2833)
 
-![Image](../../Examples/howtomechatronics/ArduinoBluetoothTutorialExampleApp.jpg)
+![Arduino Bluetooth Tutorial Example App](../../Examples/howtomechatronics/HowtoMechatronics_ArduinoBluetoothTutorialExampleApp.jpg)
 
 
 After the installation, by click on **Connect** on the **FIRST** page of this APP, you'll see all detected bluetooth devices as:
 
-![Image](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_DevicesFound.jpg)
+![Arduino Bluetooth App Devices Found](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_DevicesFound.jpg)
 
 By selecting one of the devices, you'll see the device is NOW **connected**.
 
-![Image](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_FrontPage.jpg)
+![Arduino Bluetooth App FrontPage](../../Examples/howtomechatronics/HowtoMechatronics_Arduino_Bluetooth_App_FrontPage.jpg)
 
 By clicking **Turn ON** and **Turn OFF**, you will see the led can be light on and off accordingly.
 
-![Image](../../Examples/howtomechatronics/led_on.jpg)
+![LED ON](../../Examples/howtomechatronics/led_on.jpg)
 
-![Image](../../Examples/howtomechatronics/led_off.jpg)
+![LED OFF](../../Examples/howtomechatronics/led_off.jpg)
 
 And, some serial message will be printed on the **Monitor Serial** dialog as:
 
-![Image](../../Examples/howtomechatronics/bluetooth_led_serial.jpg)
+![Bluetooth LED Serial](../../Examples/howtomechatronics/bluetooth_led_serial.jpg)
 
 
 ### <span style="color:blue">Longer Vision Robot LVControl</span>
@@ -95,15 +95,15 @@ And, some serial message will be printed on the **Monitor Serial** dialog as:
 
 The first page of **LVContrl** looks like:
 
-![Image](../../Examples/howtomechatronics/LVControl_V0.2.jpg)
+![LVControl_V0.2](../../Examples/howtomechatronics/LVControl_V0.2.jpg)
 
 By selecting page **BTSet**, we can easily **SEARCH FOR VISIBLE DEVICES**:
 
-![Image](../../Examples/howtomechatronics/LVControl_Bluetooth_Set.jpg)
+![LVControl Bluetooth Set](../../Examples/howtomechatronics/LVControl_Bluetooth_Set.jpg)
 
 After simply pair the device by just clicking on the listed device name, you will be able to see that our bluetooth device is now listed in **LIST PAIRED DEVICES**.
 
-![Image](../../Examples/howtomechatronics/LVControl_Bluetooth_Connected.jpg)
+![LVControl Bluetooth Connected](../../Examples/howtomechatronics/LVControl_Bluetooth_Connected.jpg)
 
 
 

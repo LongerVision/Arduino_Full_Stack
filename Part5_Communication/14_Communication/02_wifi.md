@@ -9,11 +9,11 @@ As in [**14.1 Serial**](../../Part5_Communication/14_Communication/01_serial.md)
 
 An **ESP8266** wifi module is provided in our Arduino course on-site, which looks like:
 
-![Image](../../Examples/geekstips/espressif_esp8266.jpg)
+![Espressif ESP8266](../../Examples/geekstips/espressif_esp8266.jpg)
 
 And its pins are defined as:
 
-![Image](../../Examples/geekstips/ESP8266-Pinout-GeeksTips-300x124.jpg)
+![Espressif ESP8266 Pin Definitions](../../Examples/geekstips/ESP8266-Pinout-GeeksTips-300x124.jpg)
 
 
 
@@ -78,13 +78,13 @@ Renaming mkspiffs-0.1.2-linux64 to mkspiffs
 ### STEP 2 - Add Additional Boards Manager URLs
 Start **Arduino IDE**, then click **File->Preferences->Settings**, fill [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json) into **Additional Boards Manager URLs**, as:
 
-![Image](../../Examples/geekstips/AdditionalBoardsManagerURLs.jpg)
+![Additional Boards Manager](../../Examples/geekstips/AdditionalBoardsManagerURLs.jpg)
 
 
 ### STEP 3 - Board Manager
 Then, restart **Arduino IDE**. Click **Tools->Board->Board Manager**, then we search **esp**, make sure **Arduino AVR Boards** and **esp8266** are installed. Please refer to the following image:
 
-![Image](../../Examples/geekstips/ArduinoESP8266.jpg)
+![Arduino ESP8266](../../Examples/geekstips/ArduinoESP8266.jpg)
 
 Without the installed Arduino AVR Boards, you will possibly meet the following **ERROR** message:
 
@@ -103,13 +103,13 @@ error: espcomm_open failed
 error: espcomm_upload_mem failed
 SPIFFS Upload failed!
 ```
-![Image](../../Examples/geekstips/espcomm_error.jpg)
+![espcomm Errors](../../Examples/geekstips/espcomm_error.jpg)
 
 
 
 By clicking **Tools->ESP8266 Sketch Data Upload**, you will see the following dialog:
 
-![Image](../../Examples/geekstips/spiffs_dialog.jpg)
+![Create SPIFFS image](../../Examples/geekstips/spiffs_dialog.jpg)
 
 By clicking **Yes**, the same **ERROR** messages will be given as:
 ```
@@ -129,7 +129,7 @@ error: espcomm_upload_mem failed
 SPIFFS Upload failed!
 ```
 
-![Image](../../Examples/geekstips/espcomm_error1.jpg)
+![SPIFFS Upload Failed!](../../Examples/geekstips/espcomm_error1.jpg)
 
 
 So, it seems we failed to flash our **ESP8266** Wifi module. But, we have to do something. This website [https://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html](https://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html) is just to solve this problem.

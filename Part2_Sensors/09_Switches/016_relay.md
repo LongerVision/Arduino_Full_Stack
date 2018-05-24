@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/016_relay.jpg)
+![Relay](../../Examples/sensor-kit-for-arduino/016_relay.jpg)
 
 
 ## Sketch

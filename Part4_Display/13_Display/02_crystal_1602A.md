@@ -3,7 +3,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/geek-workshop/studynotes/008_crystaldisplay1602A.jpg)
+![Crystal Display 1602A](../../Examples/geek-workshop/studynotes/008_crystaldisplay1602A.jpg)
 
 
 ## Sketch
@@ -52,8 +52,8 @@ for (i=Enable; i <= DI; i++) {
    pinMode(i,OUTPUT);
 }
 delay(100);
-// 短暂的停顿后初始化LCD
-// 用于LCD控制需要
+// Intialize LCD after a short-term detaly
+// particularly for LCD control
 LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
 delay(64);                      
 LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
@@ -78,7 +78,7 @@ void loop (void) {
   delay(10); 
   LcdCommandWrite(0x80+3); 
   delay(10);                     
-  // 写入欢迎信息 
+  // Write in the Welcome info
   LcdDataWrite('W');
   LcdDataWrite('e');
   LcdDataWrite('l');

@@ -1,8 +1,8 @@
-# 9.2 Switch - Mercury Tilt
+# 9.2  Mercury Tilt
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/014_switch_mercurytilt.jpg)
+![Mercury Tilt](../../Examples/sensor-kit-for-arduino/014_switch_mercurytilt.jpg)
 
 
 ## Sketch

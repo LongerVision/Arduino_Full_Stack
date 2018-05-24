@@ -2,7 +2,7 @@
 
 We provide a Micro Servo SG90 in our race car kit, which looks like:
 
-![Image](../../Examples/geek-workshop/essence/motor-servo.jpg)
+![Servo Motor](../../Examples/geek-workshop/essence/motor-servo.jpg)
 
 
 ## Example 1: Knob
@@ -11,7 +11,7 @@ Directly referenced from [Official Arduino Tutorial - Knob](https://www.arduino.
 
 ### Hardware Wiring
 
-![Image](../../Examples/geek-workshop/essence/001_servo_knob.jpg)
+![Servo Example 1 - Knob](../../Examples/geek-workshop/essence/001_servo_knob.jpg)
 
 
 ### Sketch
@@ -53,7 +53,7 @@ Directly referenced from [Official Arduino Tutorial - Sweep](https://www.arduino
 
 ### Hardware Wiring
 
-![Image](../../Examples/geek-workshop/essence/001_servo_sweep.jpg)
+![Servo Example 2 - Sweep](../../Examples/geek-workshop/essence/001_servo_sweep.jpg)
 
 
 ### Sketch

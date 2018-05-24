@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/020_joystick.jpg)
+![Joystick](../../Examples/sensor-kit-for-arduino/020_joystick.jpg)
 
 
 ## Sketch

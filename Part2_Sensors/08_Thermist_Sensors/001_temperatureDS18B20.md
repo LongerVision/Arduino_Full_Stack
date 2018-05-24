@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/001_DS18B20.jpg)
+![Temperature Sensor - DS18B20](../../Examples/sensor-kit-for-arduino/001_DS18B20.jpg)
 
 
 ## Sketch

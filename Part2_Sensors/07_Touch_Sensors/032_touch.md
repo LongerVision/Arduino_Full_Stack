@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/032_touch.jpg)
+![Touch Sensor](../../Examples/sensor-kit-for-arduino/032_touch.jpg)
 
 
 ## Sketch

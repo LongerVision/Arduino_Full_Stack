@@ -5,9 +5,9 @@
 * [http://www.arduino.org/](http://www.arduino.org/)
 
 ## 1.5.2 Third Party Open Source Code & Tutorials
-* [Github - Longer Vision](https://github.com/LongerVisionRobot/Arduino/)
+* [Github - Longer Vision Robot](https://github.com/LongerVisionRobot/Examples_Arduino)
 * [Official Tutorial](http://www.arduino.org/learning/tutorials)
-* [Github - Adafruit/](https://github.com/adafruit/)
+* [Github - Adafruit](https://github.com/adafruit/)
 * [Github - Tech Explorations Arduino: Step by Step](https://github.com/futureshocked/arduino_sbs/)
 * [Geek Workshop](http://www.geek-workshop.com/portal.php?mod=list&catid=1)
 
@@ -38,10 +38,10 @@
 ## 1.5.8 Arduino Cheat Sheet
 The following Arduino Cheat Sheet is cited from [http://robodino.org/resources/arduino](http://robodino.org/resources/arduino).
 
-![Image](./Arduino cheat sheet v02c.png)
+![Arduino Cheat Sheet](./Arduino cheat sheet v02c.png)
 
 ## 1.5.9 Evolution Tree for Arduino
 The following Evolution Tree for Arduino is cited from
 [http://imgur.com/yGRLPvL](http://imgur.com/yGRLPvL).
 
-![Image](./yGRLPvL.jpg)
+![Evolution Tree for Arduino](./yGRLPvL.jpg)

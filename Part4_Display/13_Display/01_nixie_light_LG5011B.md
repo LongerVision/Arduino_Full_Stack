@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/geek-workshop/studynotes/006_nixielightLG5011BSR.jpg)
+![Nixie Light LG5011B](../../Examples/geek-workshop/studynotes/006_nixielightLG5011BSR.jpg)
 
 
 ## Sketch

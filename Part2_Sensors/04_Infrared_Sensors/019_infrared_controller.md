@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/019_infrared_controller.jpg)
+![Infrared Controller](../../Examples/sensor-kit-for-arduino/019_infrared_controller.jpg)
 
 
 ## Sketch

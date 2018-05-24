@@ -4,7 +4,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/015_photoresistor.jpg)
+![Photoresistor 1](../../Examples/sensor-kit-for-arduino/015_photoresistor.jpg)
 
 
 ## Sketch
@@ -29,7 +29,7 @@ void loop() {
 
 ## Hardware Wiring
 
-![Image](../../Examples/geek-workshop/studynotes/005_photoresistor.jpg)
+![Photoresistor 2](../../Examples/geek-workshop/studynotes/005_photoresistor.jpg)
 
 
 ## Sketch

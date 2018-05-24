@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/033_microphone_bigsound.jpg)
+![Microphone Big Sound](../../Examples/sensor-kit-for-arduino/033_microphone_bigsound.jpg)
 
 
 ## Sketch

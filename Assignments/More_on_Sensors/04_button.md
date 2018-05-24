@@ -1,7 +1,10 @@
 # Button
 
+
 ## Hardware Wiring
-![Image](../Examples/geek-workshop/studynotes/04_button.jpg)
+
+![Button](../Examples/geek-workshop/studynotes/04_button.jpg)
+
 
 ## Sketch
 ```

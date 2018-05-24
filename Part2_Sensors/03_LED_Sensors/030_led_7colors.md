@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/030_led_7colors.jpg)
+![LED 7 Colors](../../Examples/sensor-kit-for-arduino/030_led_7colors.jpg)
 
 
 ## Sketch

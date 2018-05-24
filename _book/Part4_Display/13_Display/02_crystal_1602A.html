@@ -1500,7 +1500,7 @@
                                 
                                 <h1 id="132-crystal-display-1602a">13.2 Crystal Display 1602A</h1>
 <h2 id="hardware-wiring">Hardware Wiring</h2>
-<p><img src="../../Examples/geek-workshop/studynotes/008_crystaldisplay1602A.jpg" alt="Image"></p>
+<p><img src="../../Examples/geek-workshop/studynotes/008_crystaldisplay1602A.jpg" alt="Crystal Display 1602A"></p>
 <h2 id="sketch">Sketch</h2>
 <pre><code>int DI = 12;
 int RW = 11;
@@ -1546,8 +1546,8 @@ for (i=Enable; i &lt;= DI; i++) {
    pinMode(i,OUTPUT);
 }
 delay(100);
-// &#x77ED;&#x6682;&#x7684;&#x505C;&#x987F;&#x540E;&#x521D;&#x59CB;&#x5316;LCD
-// &#x7528;&#x4E8E;LCD&#x63A7;&#x5236;&#x9700;&#x8981;
+// Intialize LCD after a short-term detaly
+// particularly for LCD control
 LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
 delay(64);                      
 LcdCommandWrite(0x38);  // Setup 8-bit interface, 2-line display, 5x7 character size
@@ -1572,7 +1572,7 @@ void loop (void) {
   delay(10); 
   LcdCommandWrite(0x80+3); 
   delay(10);                     
-  // &#x5199;&#x5165;&#x6B22;&#x8FCE;&#x4FE1;&#x606F; 
+  // Write in the Welcome info
   LcdDataWrite(&apos;W&apos;);
   LcdDataWrite(&apos;e&apos;);
   LcdDataWrite(&apos;l&apos;);
@@ -1672,7 +1672,7 @@ void loop (void) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"next":{"title":"13.3 Crystal Display More","level":"2.17.3","depth":2,"path":"Part4_Display/13_Display/03_crystal_12864.md","ref":"Part4_Display/13_Display/03_crystal_12864.md","articles":[]},"previous":{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","ref":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part4_Display/13_Display/02_crystal_1602A.md","mtime":"2018-05-13T05:28:49.078Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-13T05:28:55.895Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"13.2 Crystal Display","level":"2.17.2","depth":2,"next":{"title":"13.3 Crystal Display More","level":"2.17.3","depth":2,"path":"Part4_Display/13_Display/03_crystal_12864.md","ref":"Part4_Display/13_Display/03_crystal_12864.md","articles":[]},"previous":{"title":"13.1 Nixie Light","level":"2.17.1","depth":2,"path":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","ref":"Part4_Display/13_Display/01_nixie_light_LG5011B.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part4_Display/13_Display/02_crystal_1602A.md","mtime":"2018-05-24T22:22:13.386Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-24T22:47:59.096Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

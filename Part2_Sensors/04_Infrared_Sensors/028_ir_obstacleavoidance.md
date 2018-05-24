@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/028_ir_obstacleavoidance.jpg)
+![Obstacle Avoidance](../../Examples/sensor-kit-for-arduino/028_ir_obstacleavoidance.jpg)
 
 
 ## Sketch

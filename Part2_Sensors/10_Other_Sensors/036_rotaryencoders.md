@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/036_rotaryencoders.jpg)
+![Rotary Encoders](../../Examples/sensor-kit-for-arduino/036_rotaryencoders.jpg)
 
 
 ## Sketch

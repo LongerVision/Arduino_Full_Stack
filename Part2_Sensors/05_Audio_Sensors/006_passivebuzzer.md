@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/sensor-kit-for-arduino/006_passivebuzzer.jpg)
+![Passive Buzzer](../../Examples/sensor-kit-for-arduino/006_passivebuzzer.jpg)
 
 
 ## Sketch

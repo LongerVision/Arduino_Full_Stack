@@ -2,7 +2,7 @@
 
 ## Hardware Wiring
 
-![Image](../../Examples/geek-workshop/studynotes/002_ledblinking.jpg)
+![LED Blinking](../../Examples/geek-workshop/studynotes/002_ledblinking.jpg)
 
 
 ## Sketch

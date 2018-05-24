@@ -4,12 +4,12 @@
 
 We **FIRST** assemble 2 speed sensors onto the rear wheels as follows:
 
-![Image](../../Examples/longervisionrobot/assemble_lvrarduino_speedsensor_1.jpg)
+![Assemble Speed Sensor 1](../../Examples/longervisionrobot/assemble_lvrarduino_speedsensor_1.jpg)
 
 
 We may have to un-assemble the top Acrylic plate to install these 2 speed sensors, as follows: 
 
-![Image](../../Examples/longervisionrobot/assemble_lvrarduino_speedsensor_2.jpg)
+![Assemble Speed Sensor 2](../../Examples/longervisionrobot/assemble_lvrarduino_speedsensor_2.jpg)
 
 
 ## Sketch
