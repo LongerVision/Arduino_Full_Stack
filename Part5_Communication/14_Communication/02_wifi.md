@@ -30,7 +30,6 @@ The same sketch in [**14.1 Serial**](../../Part5_Communication/14_Communication/
 ## Mobile APPs
 
 
-
 ## Option 2: Use ESP8266 without Arduino Board
 
 It is also possible to run the sketch on the **ESP8266** program without using an **Arduino UNO board**, for **ESP8266** comes with a MCU inside the module itself.
@@ -44,7 +43,9 @@ Students are encouraged to finish all examples after class.
 
 Both websites adopt Arduino IDE to implement/verify/compile the sketch, and flash/download the binary code onto an ESP8266 via Arduino UNO R3 board. Let's just see how it goes. 
 
-**<span style="color:red">Note</span>**: <span style="color:red">You do need a FD232RS as a proxy/bridge</span>.
+**<span style="color:red">Note</span>**: <span style="color:red">You do need a FD232RS as a proxy/bridge, which looks as follows:</span>
+
+![FTDI FT232RL USB to TTL Serial Adapter 3.3V/5V switch](../../Examples/geekstips/FT232RL.jpg)
 
 
 ### Preparation
@@ -86,7 +87,7 @@ Then, restart **Arduino IDE**. Click **Tools->Board->Board Manager**, then we se
 
 ![Arduino ESP8266](../../Examples/geekstips/ArduinoESP8266.jpg)
 
-Without the installed Arduino AVR Boards, you will possibly meet the following **ERROR** message:
+**Note**: Without the installed Arduino AVR Boards, you will possibly meet the following **ERROR** message:
 
 **<span style="color:red">SPIFFS Not Supported on avr</span>**
 

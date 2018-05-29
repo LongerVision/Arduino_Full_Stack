@@ -1522,7 +1522,8 @@ Students are encouraged to finish all examples after class.</li>
 <li>You can also refer to <a href="https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/" target="_blank">https://www.geekstips.com/esp8266-arduino-tutorial-iot-code-example/</a>.</li>
 </ul>
 <p>Both websites adopt Arduino IDE to implement/verify/compile the sketch, and flash/download the binary code onto an ESP8266 via Arduino UNO R3 board. Let&apos;s just see how it goes. </p>
-<p><strong><span style="color:red">Note</span></strong>: <span style="color:red">You do need a FD232RS as a proxy/bridge</span>.</p>
+<p><strong><span style="color:red">Note</span></strong>: <span style="color:red">You do need a FD232RS as a proxy/bridge, which looks as follows:</span></p>
+<p><img src="../../Examples/geekstips/FT232RL.jpg" alt="FTDI FT232RL USB to TTL Serial Adapter 3.3V/5V switch"></p>
 <h3 id="preparation">Preparation</h3>
 <p>In order to flash sketch onto <strong>ESP8266</strong> via an Arduino board, we need to follow the steps on 
 <a href="https://github.com/esp8266/Arduino" target="_blank">https://github.com/esp8266/Arduino</a>.</p>
@@ -1549,7 +1550,7 @@ Renaming mkspiffs-0.1.2-linux64 to mkspiffs
 <h3 id="step-3---board-manager">STEP 3 - Board Manager</h3>
 <p>Then, restart <strong>Arduino IDE</strong>. Click <strong>Tools-&gt;Board-&gt;Board Manager</strong>, then we search <strong>esp</strong>, make sure <strong>Arduino AVR Boards</strong> and <strong>esp8266</strong> are installed. Please refer to the following image:</p>
 <p><img src="../../Examples/geekstips/ArduinoESP8266.jpg" alt="Arduino ESP8266"></p>
-<p>Without the installed Arduino AVR Boards, you will possibly meet the following <strong>ERROR</strong> message:</p>
+<p><strong>Note</strong>: Without the installed Arduino AVR Boards, you will possibly meet the following <strong>ERROR</strong> message:</p>
 <p><strong><span style="color:red">SPIFFS Not Supported on avr</span></strong></p>
 <p>What is <strong>SPIFFS</strong>? For short, it is <strong>SPI Flash Filing System</strong>. For details, please refer to <a href="http://www.instructables.com/id/Using-ESP8266-SPIFFS/" target="_blank">http://www.instructables.com/id/Using-ESP8266-SPIFFS/</a>.</p>
 <p>Afterwards, we select <strong>Tools-&gt;Board-&gt;Generic ESP8266 Module</strong>. </p>
@@ -1642,7 +1643,7 @@ SPIFFS Upload failed!
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_bluetooth.md","ref":"Part5_Communication/14_Communication/03_bluetooth.md","articles":[]},"previous":{"title":"14.1 Serial","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_serial.md","ref":"Part5_Communication/14_Communication/01_serial.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu"],"pluginsConfig":{"collapsible-menu":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-05-24T22:30:49.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-24T23:06:09.622Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14.2 Wifi","level":"2.19.2","depth":2,"next":{"title":"14.3 Bluetooth","level":"2.19.3","depth":2,"path":"Part5_Communication/14_Communication/03_bluetooth.md","ref":"Part5_Communication/14_Communication/03_bluetooth.md","articles":[]},"previous":{"title":"14.1 Serial","level":"2.19.1","depth":2,"path":"Part5_Communication/14_Communication/01_serial.md","ref":"Part5_Communication/14_Communication/01_serial.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-menu","livereload"],"pluginsConfig":{"collapsible-menu":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part5_Communication/14_Communication/02_wifi.md","mtime":"2018-05-29T08:20:16.532Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-29T16:44:08.572Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1653,6 +1654,10 @@ SPIFFS Upload failed!
     
         
         <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
