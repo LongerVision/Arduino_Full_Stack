@@ -17,6 +17,7 @@
 ## 1.5.4 AVR C Compiler Resource
 * [Savannah NonGNU AVR Libc](http://www.nongnu.org/avr-libc/)
 * [GNU AVR-GCC](https://gcc.gnu.org/wiki/avr-gcc)
+* [Official Arduino Online Editor](https://create.arduino.cc/)
 * [Code Bender Cloud Compiler](https://codebender.cc/)
 
 ## 1.5.5 Popular Tools
